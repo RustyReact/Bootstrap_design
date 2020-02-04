@@ -1,0 +1,574 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#">Analytics & Archive</a></li>
+                                        <li><a href="profile_main.html" class="active">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container sidebar-container">
+            <div class="title-area">
+                    <div class="row">
+                        <h2 class="title">Settings</h2>
+                    </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container settings-sidebar-container setting-add-location">
+                    <div class="settings-sidebar">
+                        <a class="" href="#home">Roles</a>
+                        <a href="#news">Employees</a>
+                        <a class="active" href="#contact">Locations</a>
+                        <a href="#about">Special Weeks</a>
+                        <a href="" class="empty_menu"></a>
+                    </div>
+                    <div class="main-content-area no-border setting-location">
+                        <div class="container-fluid content-header-area">
+                            <div class="row right-button">
+                                <h3 class="title"><i class="flaticon-left-arrow"></i> Edit Location</h3>
+                                <span><a id="delete-location">Delete Location</a></span>
+                            </div>
+                        </div>
+                        <div class="container-fluid content-body-area">
+                            <form>
+                                <div class="block-item first-block">
+                                    <div class="content-item form-group">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-md-6 item">
+                                                <label for="name">Name</label>
+                                                <div class="content item-div-100p">
+                                                    <input type="text" class="form-control" id="name"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 item address-item">
+                                                <label for="address"><i class="fa fa-map-marker"></i>Address</label>
+                                                <div class="content item-div-100p">
+                                                    <input type="text" class="form-control" id="address"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-item">
+                                    <div class="container-fluid block-header-area">
+                                        <div class="row">
+                                            <h3 class="title"> Add Shifts</h3>
+                                        </div>
+                                    </div>    
+                                    <div class="block-content-area addshifts-area">
+                                        <div class="content-item form-group">
+                                            <div class="row">
+                                                <div class="col-xl-3 col-md-3 item">
+                                                    <label for="shift_starts_at_time">Shift start time</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control control-timepicker" id="shift_starts_at_time" placeholder="Select time" /> 
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-3 item">
+                                                    <label for="ends_at">Shift end time</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control control-timepicker" id="shift_ends_at_time" placeholder="Select time" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-item form-group">
+                                            <div class="row">
+                                                <div class="col-xl-6 col-md-6">
+                                                    <label for="shift_days">Shift day <span class="l-s"> &nbsp;&nbsp; (Multiselect)</span></label>
+                                                    <div class="content custom-control custom-select1 full-item-100p">
+                                                        <select class="" id="shift_days" multiple="multiple">
+                                                            <option title="Mon">Monday</option>
+                                                            <option title="Tue">Tuesday</option>
+                                                            <option title="Wed">Wednesday</option>
+                                                            <option title="Thu">Thursday</option>
+                                                            <option title="Fri">Friday</option>
+                                                            <option title="Sat">Saturday</option>
+                                                            <option title="Sun">Sunday</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-item form-group">
+                                            <div class="row">
+                                                <div class="col-xl-6 col-md-6 item">
+                                                    <label for="roles">Roles <span class="l-s"> &nbsp;&nbsp; (Multiselect)</span></label>
+                                                    <div class="content custom-control custom-select1 full-item-100p">
+                                                        <select class="form-control" id="roles" multiple="multiple">
+                                                            <option title="Doctor">Doctor</option>
+                                                            <option title="Nurse">Nurse</option>
+                                                            <option title="Role">Role</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-item form-group">
+                                            <div class="row">
+                                                <div class="col-xl-3 col-md-3 item">
+                                                    <label for="min_employees">Min. Emloyees</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control" id="min_employees"/> 
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-3 item">
+                                                    <label for="max_employees">Max. Employees</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control" id="max_employees"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="block-item-button genric-btn info-border circle arrow">Add Shift</button>
+
+                                        <div class="sub-block">
+                                            <div class="container-fluid block-header-area">
+                                                <div class="row">
+                                                    <h3 class="title">Shifts</h3>
+                                                </div>
+                                            </div>    
+                                            <div class="block-content-area table-responsive">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                      <tr>
+                                                        <th style="text-align:center;width: 10px;"></th>
+                                                        <th>Roles</th>
+                                                        <th>Shift time</th>
+                                                        <th>Days</th>
+                                                        <th>Emplyee count</th>
+                                                        <th style="text-align: right; width:20px"></th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>1</td>
+                                                        <td class="dobule-cell">Pyhsical Assistant,<br> Nurse, Doctor
+                                                        </td>
+                                                        <td>12:00 AM - 12:00 PM</td>
+                                                        <td>Mon</td>
+                                                        <td>1-5</td>
+                                                        <td><a>Edit</a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>2</td>
+                                                        <td>Doctor</td>
+                                                        <td>12:00 PM - 11:59 PM</td>
+                                                        <td class="dobule-cell-td">Mon, Tue, Wed, 
+                                                            <span class="block-disp">Thu, Fri, Sat, Sun</span>
+                                                        </td>
+                                                        <td>1-7</td>
+                                                        <td><a>Edit</a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>3</td>
+                                                        <td>Nurse</td>
+                                                        <td class="dobule-cell">06:00 AM - 12:00 PM<br>
+                                                                12:00 PM - 06:00 PM
+                                                        </td>
+                                                        <td>Mon, Tue</td>
+                                                        <td>3-6</td>
+                                                        <td><a>Edit</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                            </div>
+                                            <div class="container-fluid sub-block-header-area monday-area">
+                                                <div class="row">
+                                                    <h3 class="subtitle">Monday</h3>
+                                                </div>
+                                            </div>
+                                            <div class="sub-block-content-area table-responsive">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                      <tr>
+                                                        <th colspan="2" style="text-align:center;width: 10px;"></th>
+                                                        <th>12:00 AM</th>
+                                                        <th>06:00 AM</th>
+                                                        <th>12:00 PM</th>
+                                                        <th>06:00 PM</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>1</td>
+                                                        <td class="dobule-cell">Pyhsical Assistant,<br> Nurse, Doctor(1-5)
+                                                        </td>
+                                                        <td>
+                                                            <div class="bar-enabled">
+                                                            </div>
+                                                        </td>
+                                                        <td><div class="bar-enabled">
+                                                            </div></td>
+                                                        <td><div class="bar-disabled">
+                                                            </div></td>
+                                                        <td><div class="bar-disabled">
+                                                            </div></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>2</td>
+                                                        <td>Doctor(0-7)</td>
+                                                        <td><div class="bar-disabled">
+                                                            </div></td>
+                                                        <td><div class="bar-disabled">
+                                                            </div></td>
+                                                        <td><div class="bar-primary">
+                                                            </div></td>
+                                                        <td><div class="bar-primary">
+                                                            </div></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>3</td>
+                                                        <td>Nurse(3-6)</td>
+                                                        <td><div class="bar-disabled">
+                                                            </div></td>
+                                                        <td><div class="bar-success">
+                                                            </div></td>
+                                                        <td><div class="bar-success">
+                                                            </div></td>
+                                                        <td><div class="bar-success">
+                                                            </div></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="block-item">
+                                    <div class="container-fluid block-header-area">
+                                        <div class="row">
+                                            <h3 class="title">Categorization</h3>
+                                        </div>
+                                    </div>    
+                                    <div class="block-content-area">
+                                        <div class="content-item form-group">
+                                            <div class="row category-responsive">
+                                                <div class="col-xl-3 col-md-4 item">
+                                                    <label for="m_shifts_start"><img src="img/morning.png" alt="" />Morning shifts start</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control control-timepicker" id="m_shifts_start" placeholder="Select time" /> 
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-4 item">
+                                                    <label for="a_shifts_start"><img src="img/afternoon.png" alt="" />Afternoon shifts start</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control control-timepicker" id="a_shifts_start" placeholder="Select time" /> 
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-4 item">
+                                                    <label for="n_shifts_start"><img src="img/night.png" alt="" />Night shifts start</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control control-timepicker" id="n_shifts_start" placeholder="Select time" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-item form-group">
+                                            <div class="row">
+                                                <div class="col-xl-4 col-md-6 item">
+                                                    <label>Weekday shifts starts at</label>
+                                                    <div class="row add-location sub-row">
+                                                        <div class="col-xl-6 col-md-6 sub-item">
+                                                            <div class="content custom-control custom-select1">
+                                                                <select class="form-control selectpicker" id="starts_at_weekday">
+                                                                    <option disabled selected hidden>Select Day</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-md-6 sub-item">
+                                                            <div class="content custom-control custom-select1">
+                                                                <input type="text" class="form-control control-timepicker" id="weekday_shifts_start" placeholder="Select time" /> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-md-6 item category-item category-item-11">
+                                                    <label class="category-sub-label">Weekend shifts starts at</label>
+                                                    <div class="row">
+                                                        <div class="col-xl-6 col-md-6 sub-item">
+                                                            <div class="content custom-control custom-select1">
+                                                                <select class="form-control selectpicker" id="starts_at_weekend" >
+                                                                    <option disabled selected hidden>Select Day</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-md-6 sub-item">
+                                                            <div class="content custom-control custom-select1">
+                                                                <input type="text" class="form-control control-timepicker" id="weekend_shifts_start" placeholder="Select time" /> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-item leisure">
+                                    <div class="container-fluid block-header-area">
+                                        <div class="row">
+                                            <h3 class="title">Leisure</h3>
+                                            <label class="l-f">How many hours would you like employees to have between shifts?This is aminimum number.
+                                            </label>
+                                        </div>
+                                    </div>    
+                                    <div class="block-content-area">
+                                        <div class="content-item form-group">
+                                            <div class="content-item form-group">
+                                                <div class="content item-div">
+                                                    <input type="text" class="form-control" name="leisure"><span>Hours</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class=" genric-btn info circle arrow">Save</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="confirm-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Are you sure you want to delete<br>
+                    <span class="emp-to-del">Pediatric Wang</span> as a Location?
+                </div>
+
+                <div class="modal-footer">
+                    <button class="genric-btn info-border circle arrow" id="yes-btn">Yes</button>
+                    <button class="genric-btn info circle arrow" id="no-btn">No</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer_start -->
+    <footer class="footer">
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+        $('.selectpicker').selectpicker({dropupAuto:false, style:'btn-white'});
+
+        // $('.control-timepicker').attr("readonly", "readonly");
+
+        // $('#shift_starts_at_time').timepicker({
+        //     format: 'hh:MM TT',
+        //     iconsLibrary: 'fontawesome',
+        //     // disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        // });
+
+        // $('#shift_ends_at_time').timepicker({
+        //     format: 'hh:MM TT',
+        //     iconsLibrary: 'fontawesome',
+        //     // disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        // });
+
+        // $('#m_shifts_start').timepicker({
+        //     format: 'hh:MM TT',
+        //     iconsLibrary: 'fontawesome',
+        //     // disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        // });
+
+        // $('#a_shifts_start').timepicker({
+        //     format: 'hh:MM TT',
+        //     iconsLibrary: 'fontawesome',
+        //     // disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        // });
+
+        // $('#n_shifts_start').timepicker({
+        //     format: 'hh:MM TT',
+        //     iconsLibrary: 'fontawesome',
+        //     // disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        // });
+
+        // $('#weekday_shifts_start').timepicker({
+        //     format: 'hh:MM TT',
+        //     iconsLibrary: 'fontawesome',
+        //     // disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        // });
+
+        // $('#weekend_shifts_start').timepicker({
+        //     format: 'hh:MM TT',
+        //     iconsLibrary: 'fontawesome',
+        //     // disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        // });
+
+        $('#shift_days').multiselect({buttonWidth: '100%',
+                                    nonSelectedText: 'Select day(s)',
+                                    selectAllNumber: false,
+                                    numberDisplayed: 20,
+                                    allSelectedText: false,
+                                    buttonText: function(options, select) {
+                                        if (options.length === 0) {
+                                            return 'Select day(s)';
+                                        }else {
+                                             var labels = [];
+                                             options.each(function() {
+                                                 if ($(this).attr('label') !== undefined) {
+                                                     labels.push($(this).attr('label'));
+                                                 }
+                                                 else {
+                                                     labels.push($(this).attr("title"));
+                                                 }
+                                             });
+                                             return labels.join(', ') + '';
+                                         }
+                                     }
+                                    });
+        $('#roles').multiselect({buttonWidth: '100%',
+                                    nonSelectedText: 'Select role(s)',
+                                    selectAllNumber: false,
+                                    numberDisplayed: 20,
+                                    allSelectedText: false,
+                                    buttonText: function(options, select) {
+                                        if (options.length === 0) {
+                                            return 'Select role(s)';
+                                        }else {
+                                             var labels = [];
+                                             options.each(function() {
+                                                 if ($(this).attr('label') !== undefined) {
+                                                     labels.push($(this).attr('label'));
+                                                 }
+                                                 else {
+                                                     labels.push($(this).attr("title"));
+                                                 }
+                                             });
+                                             return labels.join(', ') + '';
+                                         }
+                                     }
+                               });
+
+        $("#delete-location").click(function(){
+            $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+        })
+
+        $("#yes-btn").click(function(){
+            $("#confirm-modal").modal("hide");
+        })
+
+        $("#no-btn").click(function(){
+            $("#confirm-modal").modal('hide');  
+        })
+    })
+
+
+</script>
+</html>

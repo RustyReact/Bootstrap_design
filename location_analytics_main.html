@@ -1,0 +1,277 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/analytics.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#" class="active">Analytics & Archive</a></li>
+                                        <li><a href="#">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container location-analytics location-analytics-main">
+            <div class="title-area">
+                <div class="row title-bar has-shadow">
+                    <small class="title-badge">Analytics & Archive</small>
+                    <h2 class="title"><i class="flaticon-left-arrow"></i>Archive</h2>
+                </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container container-fluid">
+                    <div class="row main-container">
+                        <div class="row col-12 col-lg-12 title">
+                            <span> Archive of Employees, Roles and Locations</span>
+                        </div>
+                        <div class="row col-12 col-lg-12 option-area">
+                            <div class="col-12 col-lg-1"></div>
+                            <div class="row col-12 col-lg-6 search-box">
+                                <i class="fa fa-user"></i>
+                                <div class="input-group">
+                                  <input id="search-text" type="text" class="form-control" name="search-text" placeholder="Search for employee, roles and locations here…">
+                                  <span class="input-group-addon"><i class="fa fa-search"></i></span>   
+                                </div>
+                            </div>
+                            <div class="year-select col-lg-3 col-12">
+                                <select class="form-control selectpicker" id="Role">
+                                    <option disabled selected hidden>Fiscal Year</option>
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-1 col-12 search-button">
+                                <button type="submit" id="search-button" class="genric-btn info circle arrow">Search</button>
+                            </div>
+                            <div class="col-lg-1 col-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="directory-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Employee Directory</h4>
+                        <div class="options-select">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" id="active-btn" class="btn btn-primary active">Active</button>
+                              <button type="button" id="inactive-btn" class="btn btn-primary">Inactive</button>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row search-box">
+                            <div class="input-group">
+                              <input id="search-emp" type="text" class="form-control" name="search-text" placeholder="Search for employees">
+                              <span class="input-group-addon"><i class="fa fa-search"></i></span>   
+                            </div>
+                        </div>
+                        <div class="table-responsive table-container active-directory">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="60px"></th>
+                                    <th>Employee name</th>
+                                    <th>Role</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/img_avatar.jpg" /></td>
+                                    <td>Alan Marti</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar1.png" /></td>
+                                    <td>Gauthier Drewitt</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar2.png" /></td>
+                                    <td>Hashim Briscam</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar3.png" /></td>
+                                    <td>Jontray Arnold</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar4.png" /></td>
+                                    <td>kip Collison</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar1.png" /></td>
+                                    <td>Monica Bottger</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <div class="table-responsive table-container inactive-directory">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="60px"></th>
+                                    <th>Employee name</th>
+                                    <th>Role</th>
+                                    <th>Year left</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar5.png" /></td>
+                                    <td>Bartoloměj Dohnal</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar6.png" /></td>
+                                    <td>Boris Ukhtomsky</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar7.png" /></td>
+                                    <td>Chineze Afamefuna</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar8.png" /></td>
+                                    <td>Marco Alves</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar9.png" /></td>
+                                    <td>Oea Romana</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar10.png" /></td>
+                                    <td>Ya Chin-Ho</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/jquery-ui/jquery.weekpicker.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $(".inactive-directory").hide();
+        $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+        $('.selectpicker').selectpicker({dropupAuto:false, style:'btn-white'});
+        $(".search-box i").click(function(){
+            $("#directory-modal").modal({backdrop: 'static', keyboard: false});
+        })
+
+        $("#inactive-btn").click(function(){
+            $(".options-select button").removeClass("active");
+            $(this).addClass("active");
+            $(".active-directory").hide();
+            $(".inactive-directory").show();
+        })
+
+        $("#active-btn").click(function(){
+            $(".options-select button").removeClass("active");
+            $(this).addClass("active");
+            $(".active-directory").show();
+            $(".inactive-directory").hide();
+        })
+    })
+</script>
+</html>

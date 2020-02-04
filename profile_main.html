@@ -1,0 +1,304 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="#">Schedule</a></li>
+                                        <li><a href="#">Analytics & Archive</a></li>
+                                        <li><a class="active" href="profile_main.html">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container"> 
+            <div class="title-area">
+                    <div class="row">
+                        <h2 class="title">Profile</h2>
+                    </div>
+            </div>
+            <div class="body-area no-title-area">
+                <div class="body-container container-fluid p-0">
+                    <div class="row">
+                        <div class="col-xl-1 col-md-1">
+                        </div>
+                        <div class="main-content-area profile-setting col-xl-10 col-md-12">
+                            <div class="main-area first-time-gen container-fluid">
+                                <div class="container-fluid content-header-area">
+                                    <div class="row">
+                                        <h3 class="title">Notifications</h3>
+                                    </div>
+                                </div>
+                                <h4 class="subtitle">Requests</h4>
+                                <div class="row setting-item">
+                                    <div class="profile-setting-title">
+                                        <label> New manual requests</label>
+                                    </div>
+                                    <div>
+                                        <div class="row setting-check">
+                                            <div item="checkbox-email">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="email" id="email">
+                                                        <label for="email">
+                                                            <i class="fa fa-envelope"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div item="checkbox-phone">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="phone" id="phone">
+                                                        <label for="phone">
+                                                            <i class="fa fa-phone"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="row setting-item">
+                                    <div class="profile-setting-title">
+                                        <label> Auto handled requests</label>
+                                    </div>
+                                    <div>
+                                        <div class="row setting-check">
+                                            <div item="checkbox-email">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="email1" id="email1">
+                                                        <label for="email1">
+                                                            <i class="fa fa-envelope"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div item="checkbox-phone">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="phone1" id="phone1">
+                                                        <label for="phone1">
+                                                            <i class="fa fa-phone"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4 class="subtitle">Schedule Generation</h4>
+                                <div class="row setting-item">
+                                    <div class="profile-setting-title">
+                                        <label> Next Iteration</label>
+                                    </div>
+                                    <div>
+                                        <div class="row setting-check">
+                                            <div item="checkbox-email">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="email2" id="email2">
+                                                        <label for="email2">
+                                                            <i class="fa fa-envelope"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div item="checkbox-phone">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="phone2" id="phone2">
+                                                        <label for="phone2">
+                                                            <i class="fa fa-phone"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4 class="subtitle">Employee Attendance</h4>
+                                <div class="row setting-item">
+                                    <div class="profile-setting-title">
+                                        <label> Late check-in</label>
+                                    </div>
+                                    <div>
+                                        <div class="row setting-check">
+                                            <div item="checkbox-email">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="email3" id="email3">
+                                                        <label for="email3">
+                                                            <i class="fa fa-envelope"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div item="checkbox-phone">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="phone3" id="phone3">
+                                                        <label for="phone3">
+                                                            <i class="fa fa-phone"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="row setting-item">
+                                    <div class="profile-setting-title">
+                                        <label> Early Leave</label>
+                                    </div>
+                                    <div>
+                                        <div class="row setting-check">
+                                            <div item="checkbox-email">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="email4" id="email4">
+                                                        <label for="email4">
+                                                            <i class="fa fa-envelope"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div item="checkbox-phone">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="phone4" id="phone4">
+                                                        <label for="phone4">
+                                                            <i class="fa fa-phone"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="row setting-item">
+                                    <div class="profile-setting-title">
+                                        <label> Absence</label>
+                                    </div>
+                                    <div>
+                                        <div class="row setting-check">
+                                            <div item="checkbox-email">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="email5" id="email5">
+                                                        <label for="email5">
+                                                            <i class="fa fa-envelope"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div item="checkbox-phone">
+                                                <div class="checkbox checkbox-primary">
+                                                    <span>
+                                                        <input type="checkbox" style="outline: none;" name="phone5" id="phone5">
+                                                        <label for="phone5">
+                                                            <i class="fa fa-phone"></i>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row gen-schedule-div">
+                                    <a href="#" class="genric-btn info circle arrow">Save</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+    <!-- footer_start -->
+    <footer class="footer">
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    
+
+    <script src="js/main.js"></script>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+    })
+</script>
+</html>

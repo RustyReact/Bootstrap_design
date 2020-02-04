@@ -1,0 +1,295 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#">Analytics & Archive</a></li>
+                                        <li><a href="profile_main.html" class="active">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container sidebar-container">
+            <div class="title-area">
+                <div class="row">
+                    <h2 class="title">Settings</h2>
+                </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container settings-sidebar-container setings-role settings-main emp-setting-main ">
+                    <div style="" class="settings-sidebar">
+                        <a class="" href="">Roles</a>
+                        <a href="" class="active">Employees</a>
+                        <a class="" href="#">Locations</a>
+                        <a href="">Special Weeks</a>
+                        <a href="" class="empty_menu"></a>
+                    </div>
+
+                    <div class="main-content-area">
+                        <div class="container-fluid content-header-area">
+                            <div class="row right-button">
+                                <h3 class="title">Employees</h3>
+                                <span><a><i class="fa fa-plus"></i> Add new Employee</a></span>
+                            </div>
+                        </div>
+                        <div class="container-fluid content-body-area">
+                            <div class="tab">
+                                <ul>
+                                    <li>
+                                        <a class="tablinks active" onclick="openTab(event, 'doctor-tab')">Doctor</a>
+                                    </li>
+                                    <li><a class="tablinks" onclick="openTab(event, 'nurse-tab')">Nurse</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="doctor-tab" class="tabcontent" style="display: block">
+                                <div class="search-box fix-s">
+                                    <div class="input-group">
+                                      <input id="search-text" type="text" class="form-control" name="search-text" placeholder="Search for Employee">
+                                      <span class="input-group-addon"><i class="fa fa-search"></i></span>   
+                                    </div>
+                                </div>
+                                <div class="fixed-column-table">
+                                    <div class="table-responsive table-responsive-fully fix-t">
+                                        <table class="table table-hover not-right">
+                                            <thead>
+                                              <tr>
+                                                <th>Employee</th>
+                                                <th>Type</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Ezequiel Dengra</td>
+                                                <td class="dobule-cell">Contractual<br><span>0.5 FTE</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Kip Collison</td>
+                                                <td class="dobule-cell">Contractual<br><span>0.5 FTE</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Evelyn Allen</td>
+                                                <td class="dobule-cell">Contractual<br><span>0.5 FTE</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>melissa Morillo</td>
+                                                <td class="dobule-cell">Contractual<br><span>0.5 FTE</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Leon Hunt</td>
+                                                <td class="dobule-cell">Contractual<br><span>0.5 FTE</span></td>
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-responsive table-responsive-fully scroll-t">
+                                        <table class="table table-hover">
+                                            <thead>
+                                              <tr>
+                                                <th>Max weekly work</th>
+                                                <th>Vacation Days</th>
+                                                <th>Sick Days</th>
+                                                <th>Personal Days</th>
+                                                <th>Admin Status</th>
+                                                <th style="text-align: right"></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>45 Hours</td>
+                                                <td>20</td>
+                                                <td>20</td>
+                                                <td>20</td>
+                                                <td>Yes</td>
+                                                <td><a>Edit</a></td>
+                                              </tr>
+                                              <tr>
+                                                <td>45 Hours</td>
+                                                <td>20</td>
+                                                <td>20</td>
+                                                <td>20</td>
+                                                <td>Yes</td>
+                                                <td><a>Edit</a></td>
+                                              </tr>
+                                              <tr>
+                                                <td>45 Hours</td>
+                                                <td>20</td>
+                                                <td>20</td>
+                                                <td>20</td>
+                                                <td>Yes</td>
+                                                <td><a>Edit</a></td>
+                                              </tr>
+                                              <tr>
+                                                <td>45 Hours</td>
+                                                <td>20</td>
+                                                <td>20</td>
+                                                <td>20</td>
+                                                <td>Yes</td>
+                                                <td><a>Edit</a></td>
+                                              </tr>
+                                              <tr>
+                                                <td>45 Hours</td>
+                                                <td>20</td>
+                                                <td>20</td>
+                                                <td>20</td>
+                                                <td>Yes</td>
+                                                <td><a>Edit</a></td>
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="pagination-block">
+                                    <div class="pagination-container">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="nurse-tab" class="tabcontent">
+                                <div class="search-box fix-s">
+                                    <div class="input-group">
+                                      <input id="search-text" type="text" class="form-control" name="search-text" placeholder="Search for Employee">
+                                      <span class="input-group-addon"><i class="fa fa-search"></i></span>   
+                                    </div>
+                                </div>
+                                <div class="table-responsive table-responsive-fully">
+                                </div>
+                                <div class="pagination-block">
+                                    <div class="pagination-container1">
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div> 
+
+    <!-- footer_start -->
+    <footer class="footer">
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+
+    <script src="js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/pagination.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.pagination-container').pagination({
+            dataSource: function(done){
+                var result = [];
+                for (var i = 1; i < 110; i++) {
+                    result.push(i);
+                }
+                done(result);
+             },
+             pageRange: 1,
+             callback: function(data, pagination) {
+                console.log(pagination);
+                $('.paginationjs-ellipsis').prev("li").find('a').addClass('pagination-border-right-radius');
+                $('.paginationjs-ellipsis').next("li").find('a').addClass('pagination-border-left-radius');
+            }
+        });
+
+        $('.pagination-container1').pagination({
+            dataSource: function(done){
+                var result = [];
+                for (var i = 1; i < 110; i++) {
+                    result.push(i);
+                }
+                done(result);
+             },
+             pageRange: 1,
+             callback: function(data, pagination) {
+                console.log(pagination);
+                $('.paginationjs-ellipsis').prev("li").find('a').addClass('pagination-border-right-radius');
+                $('.paginationjs-ellipsis').next("li").find('a').addClass('pagination-border-left-radius');
+            }
+        });
+    })
+
+    function openTab(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+</script>
+</html>

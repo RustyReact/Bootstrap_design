@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="no-margin" style="overflow: hidden;">
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="#">Schedule</a></li>
+                                        <li><a href="#">Analytics & Archive</a></li>
+                                        <li><a href="profile_main.html">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container">  
+            <div class="title-area">
+                <div class="row">
+                </div>
+            </div>
+
+            <div class="body-area no-title-area">
+                <div class="body-container container-fluid p-0">
+                    <div class="row">
+                        <div class="col-xl-1 col-md-1">
+                        </div>
+                        <div class="main-content-area schedule-gen col-xl-10 col-md-12">
+                            <div class="main-area first-time-gen">
+                                <div class="container-fluid content-header-area">
+                                    <div class="row">
+                                        <h3 class="title">First-Time Schedule Generation</h3>
+                                    </div>
+                                </div>                    
+                                <h4 class="subtitle">Set Fiscal Year</h4>
+                                <div class="row period">
+                                    <div class="col-xl-6 col-md-6">
+                                        <div class="content-item form-group">
+                                            <label for="starts_at"> Starts at</label>
+                                            <input type="text" class="form-control custom-control" id="starts_at" readonly="readonly" placeholder="Select date">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-md-6">
+                                        <div class="content-item form-group">
+                                            <label for="ends_at"> Ends at</label>
+                                            <input type="text" class="form-control custom-control" id="ends_at" readonly="readonly" placeholder="Select date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="subtitle" style="margin-top:10px;">Manual Shifts</h4>
+                                    <label class="sub-label">What should happen to manually added shifts?</label>
+                                <div class="row">
+                                    <div class="radio radio-primary">
+                                        <span>
+                                          <input type="radio" name="membership" style="outline: none" id="preserve" checked>
+                                          <label for="preserve">
+                                            Preserve them
+                                          </label>
+                                        </span>
+                                        <span style="margin-left: 40px;">
+                                            <input type="radio" style="outline: none;" name="membership" id="override" >
+                                            <label for="override">
+                                                Override them
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row gen-schedule-div">
+                                    <a href="#" class="genric-btn info circle arrow">Generate Schedule
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>   
+        </div>
+    </div>
+    <!-- footer_start -->
+    <footer class="footer">
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    
+
+    <script src="js/main.js"></script>
+
+    <script>
+           
+    </script>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+        $('.selectpicker').selectpicker({dropupAuto:false, style:'btn-white'});
+
+        $('#starts_at').datepicker({
+            iconsLibrary: 'fontawesome',
+            // disableDaysOfWeek: [0, 0],
+            icons: {
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            },
+            open: function(e){
+                var p = $(this).offset();
+                var p_T = p.top + 10;
+                $(".gj-picker").css({'top': p_T + "px"});
+            }
+        });
+
+        $('#ends_at').datepicker({
+            iconsLibrary: 'fontawesome',
+            // disableDaysOfWeek: [0, 0],
+            icons: {
+             rightIcon: '<span class="fa fa-caret-down"></span>'
+            },
+            open: function(e){
+                var p = $(this).offset();
+                var p_T = p.top + 10;
+                $(".gj-picker").css({'top': p_T + "px"});
+            }
+        });
+    })
+</script>
+</html>

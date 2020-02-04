@@ -1,0 +1,3507 @@
+
+
+/* 
+	1. Basic CSS
+*/
+body{
+	font-family: Rubik;/* "Segoe UI", sans-serif;*/
+}
+.header-area .main-header-area .main-menu ul li a{
+	font-family: Rubik Medium, Rubik-Medium;
+}
+
+.main-body{
+	margin-top: 64px;
+}
+
+.title,
+#reportrange span,
+.body-title,
+.block-title h4,
+.circle-number span,
+.role-title span,
+.role-item, .role-subitem span, .role-item-s,
+.ui-datepicker-month,
+.ui-datepicker th span,
+.sub-block-content-area .table thead th,
+.sub-block-header-area h3
+{
+	font-family: Rubik Medium, Rubik-Medium;
+}
+
+.role-subitem-title{
+	font-family: Rubik;
+}
+
+.role-analytics{
+	font-family: Rubik Medium, Rubik-Medium;
+}
+
+.role-analytics table tr td,
+.month-calendar-comment li,
+.calendar-comments li,
+.role-analytics .table tr th,
+.donutLegend ul li,
+.title-badge{
+	font-family: Rubik;
+}
+
+.donutLegend ul li span,
+.time-card-block table th,
+.time-card-block table td span{
+	font-family: Rubik Medium, Rubik-Medium!important;
+}
+
+input[type="text"]{
+	font-family: Rubik;/* "Segoe UI", sans-serif;*/
+}
+
+label, span{
+	color: #494860;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+i{
+	color: #7B798E;
+}
+
+input[type="text"]{
+	font-size: 14px;
+	color: #494860;
+}
+
+a, .search-box i, .sub-block-header-area i {
+	cursor: pointer!important;
+}
+
+#reportrange, #reportrange span{
+	cursor: pointer!important;
+}
+
+.genric-btn{
+	font-weight: 400;
+	font-family: Rubik Medium;
+}
+
+.form-control{
+	height: 40px;
+	border-color: #E5E4E8;
+	color: #494860;
+}
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.bootstrap-select .btn-white{ /* bootstrap select dropdown*/
+	color: #7B798E;
+	font-size: 14px;
+    background-color: #fff;
+    border-color: #E5E4E8;
+    height: 40px;
+}
+
+.bootstrap-select .dropdown-menu {
+    padding-top: 10px;
+    padding-right: 1px;
+    margin-top: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #f9f9f9;
+}
+
+.radio label{
+	color:#7B798E;
+}
+
+input[type="radio"]:checked~label{
+	color:#494860;
+}
+
+.radio label{
+	width: 136px;
+}
+
+.radio span~span{
+	margin-left:  50px;
+}
+
+::placeholder {
+  color: #7B798E!important;
+  opacity: 1;
+}
+
+@media screen and (min-width: 800px){
+	.main-body, .header-area .container-fluid {
+	   /*-moz-transform: scale(0.9, 0.9)!important;*/
+	   zoom: 0.9!important;
+	   zoom: 90%!important;
+	}
+}
+/* Table */
+.table-responsive, {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: auto;
+}
+
+table{
+	border: 1px solid #F0F0F0;
+}
+
+.table thead th {
+    border-bottom: 1px solid #F0F0F0;
+    color: #7B798E;
+    font-weight: 400;
+    background: rgba(123, 121, 142, 0.04);
+    border-top: 0px;
+    padding: 1rem;
+    font-size: 14px;
+    white-space:nowrap;
+}
+
+.table tr td {
+    padding: 1rem;
+    border-top: 1px solid #E5E4E8;
+    color: #494860;
+    font-size: 14px;
+    white-space:nowrap;
+}
+
+.table-container{
+	border: 1px solid #F0F0F0;
+	overflow-y: hidden;
+}
+
+.table-container table{
+	border: none;
+}
+
+#shift-history-content .table tr td{
+	padding-top: 1.7rem;
+	padding-bottom: 1.7rem;
+}
+
+.table tr td.double-cell{
+	padding-top: 13px!important;
+	padding-bottom: 5px!important;
+}
+
+.table tr td.triple-cell{
+	padding-top: 7px!important;
+	padding-bottom: 1px!important;
+}
+
+.table tr td:last-child{
+	/*text-align: right;
+}
+
+table{
+	/*min-width: 756px;*/
+}
+
+.block-content-area.hasborder table tr td:first-child, 
+.sub-block-content-area table td, 
+.sub-block-content-area table th {
+    border-right: 1px solid #E5E4E8;
+}
+
+.sub-block-content-area .table tr th:nth-child(1), {
+	width: 28%;
+}
+
+.sub-block-content-area .table tr th:nth-child(2), 
+.sub-block-content-area .table tr th:nth-child(3), 
+.sub-block-content-area .table tr th:nth-child(4), 
+.sub-block-content-area .table tr th:nth-child(5) {
+	width: 18%;
+}
+
+.sub-block-content-area .table tr td:nth-child(1){
+	width: 5%;
+}
+
+.sub-block-content-area .table tr td:nth-child(3), 
+.sub-block-content-area .table tr td:nth-child(4), 
+.sub-block-content-area .table tr td:nth-child(5), 
+.sub-block-content-area .table tr td:nth-child(6) {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sub-block-content-area .table thead th {
+    background: white;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.sub-block-content-area table,
+.sub-block table,
+.block-item table{
+	margin-bottom: 0;
+}
+
+.table.number-contain tbody tr td:first-child {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Table Fully Responsive */
+.table-responsive-fully table{
+	min-width: 0px;
+}
+
+/* End */
+.bar-enabled{
+	height: 17px;
+	background: #BBBBC8
+}
+
+.bar-disabled{
+	height: 17px;
+	background: rgba(187, 187, 200, 0.15);
+}
+
+.bar-primary{
+	height: 17px;
+	background: #ACD1FF;
+}
+
+.bar-success{
+	height: 17px;
+	background: #7090B9;
+}
+/* CheckBox Style */
+input[type="checkbox"] {
+    height: 1.1em;
+    width: 1.1em;
+    vertical-align: middle;
+    margin: 0 0.4em 0.4em 0;
+    margin-top: 3px;
+    border: 1px solid #E5E4E8;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+/* border radius for checkbox */
+.multiselect-container input[type="checkbox"] {
+    height: 1.2em;
+    width: 1.2em;
+    vertical-align: middle;
+    margin: 0 0.4em 0.4em 0;
+    border: 1px solid #E5E4E8;
+    background: white;
+    -webkit-appearance: none;
+}
+
+/* border radius for checkbox */
+.multiselect-container input[type="checkbox"] {
+    -webkit-border-radius:2px;
+    border-radius:2px;
+}
+
+.multiselect-container input[type="checkbox"]:checked {
+    border-color:#2F89FC;
+}
+
+/* checkbox checked */
+.multiselect-container input[type="checkbox"]:checked:before {
+	position: absolute;
+    font-weight: bold;
+    background: #2F89FC;
+    color: white;
+    content: '\2713';
+    -webkit-margin-start: 0;
+    margin-left: 0px;
+    font-size: 0.9em;
+    width: 15px;
+    height: 15px;
+    padding-left: 2px;
+}
+
+button.multiselect{
+	border: 1px solid #E5E4E8;
+	text-align: left;
+}
+
+.fa-caret-down:before {
+    content: "\f0d7";
+    color: #7B798E;
+}
+
+.dropdown-toggle::after {
+    font-size: 14px;
+    float: right;
+    margin-top: 10px;
+    margin-right: -6px;
+    color: #7B798E;
+}
+
+.multiselect-container{
+	border: none;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    padding-left: 25px;
+}
+
+.multiselect-container label{
+	width: 100%!important;
+	font-size: 14px;
+	padding-left: 0!important;
+    padding-top: 4px!important;
+    padding-bottom: 4px!important;
+}
+
+div.table-responsive::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
+	border-radius: 10px;
+	background-color: white;
+}
+
+div.table-responsive::-webkit-scrollbar
+{
+	height: 2px;
+	background-color: white;
+}
+
+div.table-responsive::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
+	background-color: rgba(187, 187, 200, 0.6);
+}
+
+.row{
+	margin: 0;
+	padding: 0;
+}
+
+.title-area{
+	padding: 0px 27px 10px 27px;
+}
+
+.title-bar.row{
+	display: block;
+	padding-left: 24px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+}
+
+.title-bar small{
+	font-size: 12px;
+    color: #7B798E;
+    margin-left: 54px;
+    letter-spacing: -0.05rem;
+}
+
+.title{
+	font-size: 24px;
+}
+
+.has-shadow .title{
+	font-size: 20px;
+}
+
+.title i{
+	margin-right: 12px;
+}
+
+.action-bar{
+	justify-content: space-between;
+	padding: 13px 21px 13px 13px;
+	box-shadow: 0px 18px 10px -10px rgba(173,173,173,0.1), 0px -8px 10px -10px rgba(100,100,100,0.1);
+}
+
+#reportrange{
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+#reportrange span{
+	font-size: 20px;
+}
+
+#reportrange i{
+	margin-left: 20px;
+}
+
+.search-box{
+	display: flex;
+	flex-wrap: nowrap;
+	margin-top: 2px;
+}
+
+.search-box .fa-user{
+	display: inline-block;
+    margin-right: 17px;
+    margin-top: 11px;
+    color: #494860;
+}
+
+.search-box .input-group-addon i{
+	position: absolute;
+	margin-top: 12px;
+	margin-left: -23px;
+	color: #7B798E;
+	z-index: 4;
+}
+
+#search-text{
+	padding-right: 30px;
+}
+
+.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.body-area{
+	padding: 5px 64px;
+}
+
+.body-container {
+    border: 1px solid #E5E4E8;
+    padding: 30px 30px 30px 30px;
+    border-radius: 4px;
+}
+
+.emp-analytics .body-container,
+.role-analytics .body-container{
+	padding-top: 23px;
+}
+
+.body-title{
+	color:#282731;
+	font-size: 24px;
+}
+
+.body-title-area, .block-title{
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.block-title-no-space{
+	margin-bottom: 0px!important;
+}
+
+.shifts .block-title{
+	margin-bottom: 11px;
+}
+
+.action-icon a{
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+.body-title-area,.collapse-btn-m,
+.spec_week_history_title{
+	cursor: pointer;
+}
+
+.print-action{
+	margin-right: 25px;
+}
+
+.print-action i{
+	font-size: 16px;
+}
+
+.print-action img{
+	width: 25px;
+}
+
+.block-item{
+	border: 1px solid #E5E4E8;
+	border-radius: 4px;
+	padding: 18px 22px;
+	padding-bottom: 30px;
+}
+
+.block-title h4{
+	font-size: 16px;
+	color: #282731;
+}
+
+.use-role-item{
+	display: flex;
+	width: 198px;
+	justify-content: space-between;
+}
+
+.location-analytics .role-block{
+	flex-wrap: nowrap;
+}
+
+.role-block .use-role-item:nth-child(2){
+} 
+
+.circle-number{
+	width: 40px;
+	height: 40px;
+	background: rgba(47, 137, 252, 0.1);
+	border: 1px solid rgba(47, 137, 252, 0.3);
+	border-radius: 50%;
+	color: #282731;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	font-family: Rubik Medium, Rubik-Medium
+}
+
+.circle-number span{
+	color: #282731;
+	top: 6px;
+	position: relative;
+}
+
+.role-area{
+	width: 146px;
+	margin-top: 9px;
+}
+
+.role-item, .role-item-s{
+	color: #7B798E;
+	font-size: 10px;
+}
+
+.role-subitem{
+	color: #7B798E;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.role-item span, .role-subitem span{
+	font-size: 12px;
+}
+
+.role-item .role-item-s{
+	font-size: 10px;
+}
+
+.role-subitem{
+	margin-left: 17px;
+}
+
+.role-subitem-title{
+	font-size: 10px
+}
+
+.collapse-widget{
+	padding-top: 24px;
+}
+
+.block-item + .block-item{
+	margin-top: 16px;
+}
+
+.detail-mark .badge-m{
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background:  #B2EA9A;
+	margin-right: 7px;
+}
+
+.detail-mark .badge-detail{
+	margin-top: -14px;
+}
+
+.badge-detail span{
+	font-size: 10px;
+}
+
+.badge-detail div:last-child{
+	margin-top: -5px;
+}
+
+.detail-mark{
+	margin-right: 18px;
+}
+
+.detail-row .detail-mark:first-child{
+	margin-right: 30px;
+}
+
+.detail-row a{
+	margin-top: -12px;
+}
+
+.spec_widget .block-body .detail-row{
+	margin-bottom: -10px;
+    margin-top: 7px;
+}
+
+.special-week-widget .block-body .detail-row{
+	margin-bottom: -10px;
+    margin-top: 9px;
+}
+
+.badge-m.success-color{
+	background: #9AE0EA;
+}
+
+.collapse-action i{
+	cursor: pointer;
+}
+
+.location-analytics .block-item .collapse-action i{
+	margin-right: -5px;
+}
+
+#spec_week_history_content .row:not(.detail-mark):not(.detail-row){
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 15px;
+}
+
+#spec_week_history_content .responsive-block{
+	margin-top: 5px;
+}
+
+#spec_week_history_content .row.initial-block .col-lg-2,
+#spec_week_history_content .row.initial-block .col-lg-3{
+	display: flex;
+	max-width: 144px;
+	padding: 0px;
+}
+
+.responsive-block div.col-lg-2,
+.responsive-block div.col-lg-3{
+	padding: 10px 0px;
+	display: flex;
+	justify-content: space-around;
+}
+
+#spec_week_history_content #jan-calendar,
+#spec_week_history_content #jul-calendar{
+	/*padding-left: 0px;*/
+	/*justify-content: flex-start;*/
+}
+#jun-calendar,
+#dec-calendar{
+	/*margin-right: -21px;*/
+}
+
+.attending-week-color1{
+	background: #B2EA9A!important;
+}
+
+.attending-week-1 .attending-week-color1{
+	background: #81C1FD!important;
+}
+
+.attending-week-color2{
+	background: #9AE0EA!important;
+}
+
+.attending-week-2 .attending-week-color2{
+	background: #FD81EC!important;
+}
+
+.sub-block-header-area h3{
+	font-size: 16px;
+	padding: 10px 0px;
+	color: #494860
+}
+
+.role-analytics .sub-block-header-area h3{
+	font-size: 20px;
+}
+
+.location-analytics .sub-block-header-area h3{
+	padding-top: 34px;
+	padding-bottom: 15px;
+}
+
+.location-analytics .block-item.shifts{
+	padding: 0;
+	padding-bottom: 30px;
+}
+
+.location-analytics .shifts .block-title{
+	padding-top: 17px ;
+	padding-left: 22px;
+}
+
+.location-analytics .shifts .block-body{
+	padding: 0px 12px;
+}
+
+.collapse-padding{
+	padding-bottom: 6px;
+}
+
+.spec_widget.hide-badge{
+	padding-bottom: 15px;
+}
+
+.location-analytics td span{
+	font-size: 14px;
+	color: #494860;
+}
+
+/* Role Analytics */
+.anal-item{
+	flex-direction: column;
+}
+
+.anal-title span{
+	font-size: 10px;
+	color: #7B798E;
+}
+
+.anal-content span{
+	font-size: 16px;
+}
+
+.action-icon .anal-item{
+	margin-right: 55px;
+	margin-top: -10px;
+}
+
+.role-analytics .body-container{
+	padding-left: 0;
+}
+
+.role-analytics .block-item {
+    padding: 19px 30px;
+}
+
+.role-analytics .sub-block{
+	padding-left: 23px;
+	padding-right: 23px;
+}
+
+.left-marked{
+	margin-top: -11px;
+}
+
+.left-marked::before {
+    position: absolute;
+    content: "";
+    background: #B2EA9A;
+    width: 9px;
+    height: 54px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.color-1 .left-marked::before{
+	background: #704AF6;
+}
+
+.color-2 .left-marked::before{
+	background: #FF9D6A;
+}
+
+.color-3 .left-marked::before{
+	background: #6AB0FF;
+}
+
+.blue-marked-color::before{
+	background: #0E4B99;
+}
+
+.nurse .blue-marked-color::before{
+	background: #2F89FC;
+}
+
+.left-marked-area .body-title{
+	padding-left: 30px;
+}
+
+.role-analytics .body-title-area{
+	padding: 10px 0px 10px 0px;
+}
+
+.collapse-header{
+	padding-bottom: 0!important;
+}
+
+.role-analytics .collapse-header{
+	margin-bottom: -7px;
+}
+
+.emp-analytics .collapse-header{
+	margin-bottom: -5px;
+}
+
+.role-analytics .body-content{
+	padding-left: 30px;
+}
+
+.role-analytics .block-header-title{
+	margin-bottom: 20px;
+}
+
+.role-analytics .block-title h4{
+	font-family: Rubik Bold;
+	font-size: 15px;
+}
+
+.ct-chartTitle{
+	margin-bottom: -12px;
+}
+
+.mb-4{
+	margin-bottom: 0rem!important;
+}
+
+.analyticsOverviewCard {
+    padding: 0px !important;
+    height: 99px;
+}
+
+.analyticsOverviewCard > .row > .col-12{
+	height: 110px;
+}
+
+.donutLegend {
+    height: 100%;
+}
+
+.donutLegend ul li {
+    color: #7B798E;
+    font-size: 12px;
+    display: block;
+    white-space: nowrap;
+    /*width: 160px;*/
+}
+
+.donutLegend ul li span{
+	font-size: 12px;
+	color: #282731;
+}
+
+.donutLegend ul li::before {
+    font-family: "FontAwesome";
+    content: "\f111";
+    margin-right: .3rem;
+    font-size: 7px;
+}
+
+.donutLegend ul li:nth-child(1)::before {
+    color: #2F89FC;
+}
+
+.donutLegend ul li:nth-child(2)::before {
+    color: #A8D1FF;
+}
+
+.ct-square {
+    margin-left: -8px;
+    margin-top: 8px;
+}
+
+.ct-legend {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: inline-block;
+    padding-top: 1rem;
+    margin-left: -9px;
+    padding-inline-start: .15rem !important;
+}
+
+.ct-series-a .ct-slice-donut-solid{
+  fill: #2F89FC !important;
+}
+.ct-series-b .ct-slice-donut-solid{
+  fill: #A8D1FF !important;
+}
+
+.shiftAnalyzationChartTitle{
+	font-size: 12px;
+	color: #7B798E;
+}
+
+.analyticsOverviewCard1{
+	justify-content: flex-end;
+}
+
+.analyticsOverviewCard1 .anal-item:last-child{
+	margin-left: 55px;
+}
+
+.sub-block .block-title h6{
+	font-size: 13px;
+	color: #282731;
+	font-weight: 400;
+}
+
+.tr-color-contain tr:nth-child(even){background-color: rgba(123, 121, 142, 0.04);}
+
+.sub-block .collapse-action{
+	margin-top: -7px;
+}
+
+.block-title.small span{
+	font-size: 13px;
+	color: #282731;
+}
+
+.block-title.small{
+	margin-bottom: 6px;
+}
+
+.block-item.table-full-container{
+	padding: 18px 15px;
+}
+
+.shift-time-badge span{
+	margin-left: 13px;
+}
+
+.shift-time-badge::before {
+    font-family: "FontAwesome";
+    content: "\f111";
+    margin-right: .3rem;
+    font-size: 9px;
+}
+
+.shift-badge-success::before{
+	color: #78DC89;
+}
+
+.shift-badge-warning::before{
+	color: #FFCE76;
+}
+
+.shift-badge-danger::before{
+	color: #FF4057;
+}
+
+.spec-week-history-block{
+	flex-wrap: nowrap;
+	padding-left: 24px;
+	padding-right: 17px;
+	padding-bottom: 27px;
+	margin-top: -11px;
+}
+
+.role-analytics .week-history-block{
+	padding: 0;
+}
+
+.role-analytics .week-history-block .block-title{
+	padding: 12px 16px 2px 16px;
+}
+
+.calendar-comments li{
+	display: flex;
+	justify-content: space-between;
+}
+
+.calendar-comments li,
+.calendar-comments li span{
+	font-size: 12px;
+	color: #494860;
+}
+
+.calendar-comments{
+	width: 360px;
+	margin-left: 17px;
+	margin-top: 20px;
+}
+
+.calendar-comments ul li{
+	border-style: solid;
+	border-color: #E5E4E8;
+	border-width: 1px 1px 0px 1px;
+	padding: 5px 10px;
+}
+
+.calendar-comments ul li:first-child{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.calendar-comments ul li:last-child{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.calendar-comments ul li:last-child{
+	border-bottom:  1px solid #E5E4E8;
+}
+
+.calendar-comments ul > li > span:first-child::before {
+    color:#81C1FD;
+    font-family: "FontAwesome";
+    content: "\f111";
+    margin-right: 11px;
+    font-size: 9px;
+}
+
+.calendar-comments ul > li > span .double-comment-badge::before {
+    color: #FD81EC;
+    font-family: "FontAwesome";
+    content: "\f111";
+    margin-right: 5px;
+    font-size: 9px;
+    margin-left: -14px;
+}
+
+.calendar-comments ul li span.pink-color::before {
+    color:#FD81EC;
+}
+
+.month-calendar-comment{
+	margin-top: 2px;
+}
+
+.month-calendar-comment li{
+	font-size: 10px;
+	color: #494860;
+}
+
+.emp-analytics .month-calendar-comment{
+	text-align: center;
+	margin-top: 1px;
+}
+
+.week-history-block{
+	padding-right: 6px;
+}
+
+.role-analytics .collapse-widget{
+	padding-top: 14px;
+}
+
+.role-analytics .collapse-widget.reduce-padding{
+	padding-bottom: 5px!important;
+}
+
+.role-analytics .collapse-widget.reduce-padding1{
+	padding-bottom: 11px!important;
+}
+
+/* Employee Analytics */
+.title-b{
+	font-family: Rubik;
+	margin-left: 5px;
+}
+
+.user-avatar{
+	width: 50px;
+    border: 2px solid #E5E4E8;
+    border-radius: 50%;
+    margin-top: -11px;
+    height:50px;
+}
+
+.user-name{
+	flex-direction: column;
+	margin-top: -7px;
+	padding-left: 15px;
+}
+
+.user-name span{
+	font-size: 20px;
+	color: #282731;
+}
+
+.user-name small{
+	font-size: 14px;
+	color: #7B798E;
+	margin-top: -4px;
+	font-family: Rubik;
+}
+
+.block-container .analyticsOverviewCard {
+    border: 1px solid #E5E4E8;
+    padding: 1.2rem 1.4rem !important;
+    border-radius: 4px;
+    padding-bottom: 0px !important;
+    height: 155px;
+}
+
+.shift-anal-card-body > div:nth-child(2),
+.shift-anal-card-body > div:nth-child(3){
+	/*margin-left: -10px;*/
+}
+
+.block-container .performance-card{
+	padding-top: 2rem!important;
+}
+
+.block-container .moonlighting{
+	padding-top: 2rem!important;
+	padding-left: 2.1rem!important;
+	padding-right: 0.9rem!important;
+	padding-bottom: 1.5rem!important
+}
+
+.block-container .paidtimeoff{
+	padding-top: 1.5rem!important;
+}
+
+.block-container .analyticsOverviewContainer .analyticsOverviewCard:nth-child(2),
+.block-container .analyticsOverviewContainer .analyticsOverviewCard:nth-child(4){
+	margin-left: 20px;
+}
+
+.analyticsCardDivider {
+	margin-top: 18px;
+}
+
+.block-container .donutLegend ul li {
+    /*letter-spacing: -0.05rem;*/
+}
+
+.overviewCircleButton {
+    background: rgb(47, 137, 252, 0.1) !important;
+    border-color: rgb(47, 137, 252, 0.3) !important;
+    color: #282731 !important;
+    font-weight: bold !important;
+    width: 43px;
+    height: 43px;
+    padding: 0px;
+    border-radius: 50% !important;
+    font-size: 12px !important;
+    text-align: center;
+    font-weight: 400!important;
+    opacity: 1!important;
+}
+
+.overviewCircleButton span{
+	font-size: 12px;
+	position: relative;
+	top: -2px;
+	left: -4px;
+}
+
+.moonlighting .overviewCircleButton span{
+	top: -3px;
+	left: 0;
+}
+
+.chartTextContainer {
+    padding-top: .4rem;
+    margin-left: -8px;
+}
+
+.moonlighting .chartTextContainer{
+	margin-left: 9px;
+}
+
+.chartTextContainer div:last-child{
+	margin-top: -9px;
+}
+
+.shiftAnalyzationChartTitle,
+.shiftAnalyzationChartNumber {
+    font-size: 10px;
+}
+
+.shiftAnalyzationChartTitle{
+	font-size: 10px;
+}
+
+.shiftAnalyzationChartNumber{
+	color:#282731;
+	font-size: 12px;
+}
+
+.analyticsOverviewCardTitle {
+    color: #000;
+    font-weight: bold;
+    line-height: 1rem;
+    margin-top: .2rem;
+    margin-bottom: 1rem;
+}
+
+.shift-anal-card{
+	justify-content: space-between;
+}
+
+.shift-anal-card .analyticsOverviewCardTitle{
+	margin-bottom: 0rem;
+}
+
+.performance-card .analyticsOverviewCardTitle{
+	margin-bottom: -14px;
+}
+
+.moonlighting .analyticsOverviewCardTitle{
+	margin-bottom: -1.5rem;
+}
+
+.paidtimeoff .analyticsOverviewCardTitle{
+	margin-bottom: -1.7rem;
+}
+
+.paidtimeoff .chartTextContainer{
+	margin-top: -10px;
+}
+
+/*.moonlighting .chartContainer > .row .col-4{
+	flex: auto;
+	max-width: none;
+}
+
+.moonlighting .chartContainer > .row{
+	flex-wrap: nowrap;
+}*/
+
+.paidtimeoff .chartContainer > div:first-child{
+	margin-bottom: 9px;
+	margin-top: 29px;
+}
+
+.paidtimeoff .chartTextContainer div:nth-child(2){
+	margin-top: -5px;
+}
+
+.paidtimeoff .chartTextContainer div:last-child{
+	margin-left: 10px;
+	margin-top: -6px;
+}
+
+.paidtimeoff .shiftAnalyzationChartNumber,
+.paidtimeoff .shiftAnalyzationChartTitle{
+	font-size: 12px;
+}
+
+.paidtimeoff .chartTextContainer .shiftAnalyzationChartTitle{
+	font-family: Rubik;
+}
+
+.approval-t1{
+	display: none;
+	font-family: Rubik;
+	font-size: 12px;
+	color: #7B798E
+}
+
+.paidtimeoff .title-c span{
+	font-size: 11px;
+}
+
+.moonlighting .mb-4{
+	margin-bottom: -1.6rem!important;
+}
+
+.m-44{
+	margin-bottom: 15px;
+}
+
+.analyticsOverviewCardTitle span{
+	font-size: 16px;
+	font-weight: 400;
+	color: #282731;
+}
+
+.block-container + .block-item{
+	margin-top: 20px
+}
+
+.emp-analytics .block-title h4 {
+    font-weight: 400;
+}
+
+.constraints-block .block-title{
+	margin-bottom: -2px;
+}
+
+.constraints-block .block-title h4{
+	font-family: Rubik Medium, Rubik-Medium;
+}
+
+.constraints-block .block-body{
+	justify-content: space-between;
+}
+
+.recurring-container{
+	display: flex;
+	justify-content: space-between;
+	width: 265px;
+}
+
+.recurring p{
+	margin-bottom: 4px;
+}
+
+.recurring p.small-container{
+	margin-bottom: 2px;
+}
+
+.recurring-container{
+	margin-bottom: 8px;
+}
+
+.recurring-items + .recurring-items{
+	margin-left: 16px;
+}
+
+.recurring-items > span{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #fff;
+  line-height: 24px;
+  text-align: center;
+  display: inline-block;
+}
+
+.recurring-items > span span{
+	margin-top: -1px;
+    position: absolute;
+    margin-left: -4px;
+    font-size: 14px;
+    color: white;
+}
+
+.recurring-items > span span.flow{
+	margin-left: -5px;
+}
+
+.recurring-items > span span.flow1{
+	margin-left: -6px;
+}
+
+.primary-color{
+	background: #78DC89!important;
+}
+
+.primary-color-svg{
+	fill: #78DC89!important;
+}
+
+.warning-color{
+	background: #F5C671!important;
+}
+
+.warning-color-svg{
+	fill: #F5C671!important;
+}
+
+.danger-color{
+	background: #FF4057!important;
+}
+
+.danger-color-svg{
+	fill: #FF4057!important;
+}
+
+.recurring .small{
+	font-size: 10px;
+	color: #7B798E;
+	margin-top: -10px;
+}
+
+.holidays button{
+	background: rgba(123, 121, 142, 0.1);
+	color: #7B798E;
+	font-size: 12px;
+	padding: 7px 8px;
+	border-radius: 4px;
+	border: none;
+}
+
+.holidays button:last-child{
+	margin-left: 10px;
+}
+
+.priority-blocks table{
+	min-width: 545px!important;
+}
+
+.priority-blocks table tr td {
+    padding: 5px 20px;
+    font-size: 12px;
+    border: 1px solid #E3E3E3;
+    color: #494860;
+    font-family: Rubik Medium, Rubik-Medium
+}
+
+.week-tr td:nth-child(2),
+.week-tr td:nth-child(3){
+	background: #F2F8FF;
+}
+
+.years-tr td:nth-child(2),
+.years-tr td:nth-child(3){
+	background: #FFFBF5;
+}
+
+.emp-analytics .block-item{
+	padding: 14px 14px;
+}
+
+.emp-analytics .constraints-block {
+    padding: 20px 20px 20px 33px;
+}
+
+.time-card-block .sub-block-header-area,
+.time-card-block .block-body{
+	padding: 0px 20px;
+}
+
+.time-card-block .sub-block-header-area{
+	padding-left: 0px;
+}
+
+.time-card-block th{
+	text-align: center;
+}
+
+.time-card-block .table tr td {
+    padding-top: 0.5rem!important;
+    padding-bottom: 0.5rem!important;
+    text-align: center!important;
+
+}
+.time-card-block .table tr td span{
+	color: #7B798E;
+}
+
+.time-card-block .table tr td:not(:nth-child(1)),
+.time-card-block .table tr th:not(:nth-child(1)){
+	border-left: 1px solid #F0F0F0;
+}
+
+.time-card-block tr td:nth-child(8){
+	font-size: 16px;
+}
+
+.time-card-block .total-number{
+	font-family: Rubik;
+	font-weight: bold;
+	font-size: 16px;
+	color: #494860!important;
+}
+
+.emp-analytics .table td a{
+	color: #2F89FC;
+	cursor: pointer
+}
+
+.emp-analytics .table td a:hover{
+	color: #2F89FC;
+	cursor: pointer
+}
+
+.emp-analytics .badge-detail span {
+    font-size: 10px;
+    color: #494860;
+    font-family: Rubik;
+}
+
+.emp-analytics .special-week{
+	/*margin-top: 10px;*/
+}
+
+.emp-analytics .special-week .detail-row{
+	margin-top: 12px!important;
+}
+
+.emp-analytics .attendance-block{
+	padding-bottom: 35px;
+}
+
+.emp-analytics .attendance-block.collapse-padding{
+	padding-bottom: 8px;
+}
+
+.attendance-block .sub-block-header-area{
+	justify-content: space-between;
+}
+
+.attendance-block .detail-mark .badge-detail {
+    margin-top: 12px;
+}
+
+.attendance-block .detail-mark .badge-m {
+    margin-top: 18px;
+}
+
+.emp-analytics .attendance-block .badge-detail span {
+	font-size: 14px;
+	color: #7B798E
+}
+
+.emp-analytics .attendance-block .badge-detail span.badge-number {
+    color: #282731;
+    font-family: Rubik Medium, Rubik-Medium;
+}
+
+.emp-analytics .attendance-block .detail-mark {
+     margin-left: 30px; 
+     margin-right: 0;
+}
+
+
+#attendance-history-content .table tr th{
+	background: white;
+	font-family: Rubik Medium, Rubik-Medium;
+	color: #282828;
+}
+
+#attendance-history-content .table tbody tr th{
+	font-family: Rubik;
+	font-size: 14px;
+	color: #282828;
+	font-weight: 400;
+}
+
+#attendance-history-content .table{
+	/*min-width: 800px;*/
+}
+
+#attendance-history-content .table tr td,
+#attendance-history-content .table tr th{
+	border: 1px solid #F3F3F3;
+	padding: 5px;
+	text-align: center;
+}
+
+#attendance-history-content .month-table-wrap .table tr td:first-child,
+#attendance-history-content .month-table-wrap .table tr th:first-child{
+	text-align: right;
+	border-width: 0px 0px 0px 0px;
+	padding-right: 16px;
+}
+
+#attendance-history-content .table{
+	border: none;
+}
+
+#attendance-history-content .table tbody tr td{
+	padding: 3px;
+	vertical-align: middle;
+}
+
+#attendance-history-content .table tbody tr td div{
+	width: 18px;
+	height: 18px;
+	background: white;
+	border-radius: 50%;
+}
+
+table.attendence-title-tb{
+	border: none;
+	width: 100%;
+	min-width: 100%;
+	padding: 0px!important;
+}
+
+.attendance-block .block-title.small {
+    margin-bottom: 5px;
+}
+
+.attendance-block .sub-block-header-area h3 {
+    padding: 6px 0px;
+}
+
+.attendance-area {
+	position:relative;
+	overflow:hidden;
+	flex-wrap: nowrap;
+	display: flex;
+}
+
+.attendance-area .month-table-wrap{
+	width: auto!important;
+	overflow: hidden;
+}
+
+.table-wrap {
+	width:100%;
+	overflow:auto;
+}
+
+.clone {
+	position:absolute;
+	top:0;
+	left:0;
+	pointer-events:none;
+}
+.clone th, .clone td {
+	visibility:hidden
+}
+.clone td, .clone th {
+	border-color:transparent
+}
+.clone tbody th {
+	visibility:visible;
+	color:red;
+	font-family: Rubik!important;
+	font-size: 14px;
+}
+
+.month-table-wrap table tr td{
+	height: 28.89px!important;
+}
+
+.month-table-wrap .fixed-side{
+	visibility: hidden;
+}
+
+.clone .fixed-side {
+	background:white;
+	visibility:visible;
+}
+.clone thead, .clone tfoot{background:transparent;}
+
+
+/* location analytics main */
+.title-bar.has-shadow{
+	box-shadow: 0px 18px 10px -10px rgba(173,173,173,0.1), 0px 0px 10px -10px rgba(100,100,100,0.1);
+}
+
+.location-anaytics-main .main-container{
+	flex-direction: column;
+}
+
+.location-analytics-main .main-container .title{
+	justify-content: center;
+	padding: 10px 5px 30px 5px;
+}
+
+.location-analytics-main #search-text,
+.location-analytics-main .bootstrap-select .btn-white{
+	height: 56px;
+}
+
+.location-analytics-main .search-box .fa-user{
+    margin-top: 17px;
+}
+
+.location-analytics-main .search-box .input-group-addon i {
+	margin-top: 19px;
+}
+
+.location-analytics-main .genric-btn{
+	height: 56px;
+	border-radius: 30px;
+	padding: 0px 35px;
+}
+
+.location-analytics-main .title span{
+	font-size: 32px;
+	color: #282731;
+}
+
+.location-analytics-main .search-box{
+	margin-top: 0;
+}
+
+.location-analytics-main .search-button{
+	margin-left: -15px
+}
+
+.location-analytics-main .body-container{
+	border: none;
+	margin-top: 15%;
+}
+
+.role-analytics-main .title {
+    justify-content: center;
+    padding: 19px 5px 15px 5px;
+}
+
+.role-analytics-main .btn-primary.active{
+    color: #2F89FC!important;
+    background-color: #E2EEFE!important;
+    font-family: Rubik Medium, Rubik-Medium!important;
+}
+
+.options-select button{
+	width: 91px;
+	padding: 10px 5px;
+	font-size: 14px;
+	color: #7B798E;
+	background: rgba(0, 0, 0, 0.1);
+	border: none;
+	outline: none;
+	box-shadow: none!important;
+	font-family: Rubik;
+}
+
+.options-select button:focus,
+.options-select button:active{
+	outline: none!important;
+}
+
+.btn-primary:hover {
+    background-color: #2F89FC;
+}
+
+.options-select button.active:hover{
+	background-color: #CEE3FF!important;
+}
+
+.role-analytics-main .title-bar{
+	display: flex;
+}
+
+.role-analytics-main .title-bar .left-panel> div{
+	padding-left: 9px;
+}
+
+.role-analytics-main .options-select{
+	padding-top: 12px;
+	padding-left: 45px!important;
+}
+
+.search-action-area{
+	margin-top: 12px;
+}
+
+.role-analytics-main .genric-btn{
+	font-size: 13px;
+}
+
+.pagination-block{
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.paginationjs{
+	display: flex;
+	justify-content: center;
+}
+
+/* Modal */
+
+.modal {
+    top: 69px;
+}
+
+.modal-dialog {
+    max-width: 668px;
+}
+
+.modal-header{
+	align-items: center;
+	border-bottom: none;
+}
+
+.modal-content{
+	padding: 1.1rem 1.1rem;
+}
+
+.modal-body{
+	padding-top: 0px;
+}
+
+.modal-body .table-responsive{
+	margin-top: 10px;
+}
+
+.modal input[type="text"]{
+	height: 48px;
+}
+
+.modal .search-box .input-group-addon i{
+	margin-top: 15px;
+}
+
+.modal-title{
+	font-size: 24px;
+	font-family: Rubik Medium;
+}
+
+.modal .options-select{
+	margin-left: 33px;
+}
+
+.close{
+	color: #7B798E;
+}
+
+.modal .options-select button.active{
+	font-family: Rubik Medium;
+	background: #E2EEFE !important;
+	color: #2F89FC!important;
+}
+
+.modal table{
+	margin-bottom: 0!important;
+}
+
+.modal .user-avatar{
+	border: none;
+	width: 33px;
+	height: 33px;
+	position: absolute;
+	margin-top: -6px;
+}
+
+.modal .table thead th,
+.modal .table tbody tr td {
+    padding: 1rem!important;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+  display: none;
+}
+
+.tooltip.show {
+    opacity: 1!important;
+}
+
+.tooltip-inner 
+{
+	background: #f5f7f8;
+    max-width: 440px;
+    padding: 28px 30px;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19) !important;
+}
+
+.tooltip-title{
+	color: #1d2129;
+    font-size: 21px;
+    line-height: 25px;
+    padding-bottom: 6px;
+    text-align: left;
+    font-family: Rubik Medium;
+}
+
+.tooltip-content{
+	color: #4b4f56;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    font-family: Rubik;
+}
+
+@media screen and (max-width: 450px){
+	.tooltip-inner {
+	    width: 95%;
+	    padding: 18px 20px;
+	}
+
+	.tooltip-title{
+		font-size: 14px;
+	}
+
+	.tooltip-content{
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.modal-dialog {
+	    max-width: 70%;
+	}
+
+	.modal-title{
+		font-size: 17px;
+	}
+
+	.modal .options-select button {
+	    width: 66px;
+	    font-size: 12px;
+	}
+
+	.modal .options-select {
+	    margin-left: 13px;
+	}
+}
+
+@media screen and (max-width: 620px){
+
+	.modal-dialog {
+	    max-width: 88%;
+	}
+
+	.modal-title{
+		font-size: 14px;
+	}
+
+	.modal .options-select button {
+	    width: 50px;
+	    font-size: 10px;
+	}
+
+	.modal-dialog {
+	    margin: 1.75rem auto!important;
+	}
+}
+
+@media screen and (max-width: 500px){
+
+	.modal-dialog {
+	    max-width: 93%;
+	}
+
+	.modal-content{
+		padding: 0.2rem;
+	}
+
+	.modal-title{
+		font-size: 12px;
+	}
+
+	.modal .options-select button {
+	    width: 56px;
+	    font-size: 10px;
+	}
+
+	.modal-dialog {
+	    margin: 0.75rem auto!important;
+	    margin-top: 0rem!important;
+	}
+}
+
+@media screen and (max-width: 1390px){
+	.calendar-comments {
+	    width: 450px;
+	}
+}
+
+@media screen and (max-width: 1380px){
+	.role-analytics .spec-week-history-block{
+		padding-bottom: 19px;
+	}
+}
+
+@media screen and (max-width: 1270px){
+	.title-area {
+	    padding: 0;
+	}
+
+	.body-area {
+	    padding: 0;
+	    padding-top: 13px;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	/*.role-analytics #shift-history-content .table{
+		min-width: 500px!important;
+	}*/
+	.role-analytics .sub-block-header-area h3 {
+	    font-size: 17px;
+	    padding: 0;
+	}
+
+	#shift-history-content .table thead th, #shift-history-content .table tr td{
+	    font-size: 10px;
+	    padding: 10px 5px;
+	}
+
+	.o-c, .r-c{
+		font-size: 10px;
+	}
+
+	.shift-time-badge span {
+	    font-size: 11px;
+	}
+
+	#attendance-history-content .table thead th, #attendance-history-content .table tr td {
+	     font-size: 10px;
+	}
+
+	#attendance-history-content .table tbody tr th {
+	    font-size: 12px;
+	}
+
+	#attendance-history-content .table tbody tr td div {
+	    width: 14px;
+	    height: 14px;
+	    border-radius: 50%;
+	}
+
+	.attendance-block .sub-block-header-area h3 {
+	    font-size: 15px;
+	}
+
+	.emp-analytics .attendance-block .badge-detail span {
+	    font-size: 12px;
+	}
+
+	.priority-blocks table {
+	    min-width: auto!important;
+	}
+}
+
+@media screen and (max-width: 500px){
+	#shift-history-content .table thead th, #shift-history-content .table tr td {
+	    font-size: 8px;
+	    padding: 9px 5px;
+	}
+
+	.role-analytics .shift-time-badge span {
+	    font-size: 8px;
+	}
+
+	.shift-time-badge::before {
+	    font-size: 6px;
+	    margin-right: 0.1rem;
+	}
+
+	.o-c, .r-c {
+	    font-size: 8px;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	#attendance-history-content .detail-row {
+	    margin-top: -8px;
+	}
+}
+
+@media screen and (max-width: 1160px){
+	.chartTextContainer {
+	    margin-left: 1px;
+	}
+}
+
+@media screen and (max-width: 1153px){
+	/*.priority-blocks table{
+		min-width: 500px!important;
+	}*/
+}
+
+@media screen and (max-width: 1200px){
+	
+	.time-card-block .table thead th, .time-card-block .table tr td, .time-card-block .table tr td span {
+	    font-size: 11px;
+	    padding: 10px 5px;
+	}
+
+	.time-card-block .total-number {
+	    font-size: 12px;
+	}
+
+	.time-card-block tr td:nth-child(8) {
+	    font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 800px){
+
+	.time-card-block .table thead th{
+		padding: 10px 0px;
+	}
+
+	.time-card-block .table thead th, .time-card-block .table tr td, .time-card-block .table tr td span {
+	    font-size: 10px;
+	    padding: 5px 1px;
+	}
+}
+
+@media screen and (max-width: 580px){
+	
+	.time-card-block .table thead th, .time-card-block .table tr td, .time-card-block .table tr td span {
+	    font-size: 8px;
+	    padding: 0px 1px;
+	}
+
+	.time-card-block .table thead th{
+		padding: 7px 1px;
+	}
+
+	.time-card-block .total-number {
+	    font-size: 8px;
+	}
+
+	.time-card-block tr td:nth-child(8) {
+	    font-size: 8px;
+	}
+}
+
+@media screen and (max-width: 1037px){
+	.priority-blocks table{
+		/*min-width: 400px!important;*/
+	}
+}
+
+@media screen and (min-width: 991px) and (max-width: 1097px){
+	.role-analytics-main .genric-btn {
+	    padding: 0 10px;
+	}
+}
+
+@media screen and (max-width: 991px){
+	.analyticsOverviewCard{
+		margin-bottom: -6px;
+		height: 70px;
+	}
+
+	.role-analytics-main .button-container {
+	    text-align: center;
+	    margin-top: 10px;
+	    margin-bottom: 5px;
+	}
+
+	.role-analytics-main .search-action-area {
+	     margin-top: 0px; 
+	}
+}
+
+@media screen and (max-width: 991px){
+	.analyticsOverviewCard1{
+		justify-content: flex-start;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 991px){
+
+	.block-container .performance-card{
+		margin-top: 50px;
+		margin-left: 0px !important;
+		margin-bottom: 0;
+		padding-top: 1.2rem!important;
+		padding-bottom: 2rem!important;
+	}
+
+	.performance-card .analyticsOverviewCardTitle{
+		margin-bottom: 1rem;
+	}
+
+	.block-container .paidtimeoff{
+		margin-top: 49px;
+		margin-left: 0px!important;
+		margin-bottom: -2px;
+	}
+
+	.block-container .moonlighting {
+	    padding-top: 1.2rem!important;
+	    padding-left: 1.2rem!important;
+	    padding-bottom: 2.2rem!important;
+	}
+
+	.empty-div{
+		display: none
+	}
+
+	.emp-analytics .analyticsOverviewCard > .row > .col-12 {
+	    height: 93px;
+	}
+
+	.emp-analytics .moonlighting.analyticsOverviewCard > .row > .col-12 {
+	    height: 71px;
+	}
+
+	.ct-square{
+		/*margin-top: 0px;*/
+	}
+
+	.ct-square:before {
+	    padding-bottom: 0%;
+	}
+
+	.chartTextContainer {
+	    margin-left: -8px;
+	}
+}
+
+@media screen and (max-width: 991px){
+	.location-analytics-main .year-select > div{
+	    margin-top: 11px;
+	    margin-left: 13px;
+	}
+
+	.location-analytics-main .search-button {
+	    text-align: center;
+	    margin-top: 30px;
+	    margin-left: 0;
+	    display: flex;
+	    justify-content: flex-end;
+	}
+
+	.location-analytics-main .search-button .genric-btn{
+		height: 45px;
+		padding: 0px 30px;
+	}
+
+	.moonlighting .analyticsOverviewCardTitle{
+		margin-bottom: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 980px){
+	.calendar-comments {
+	    width: 550px;
+	}
+}
+
+@media screen and (max-width: 933px){
+	.priority-blocks table{
+		/*min-width: 300px!important;*/
+	}
+}
+
+@media screen and (max-width: 900px){
+	.table tr td {
+	    font-size: 13px;
+	}
+
+	.table thead th {
+	    font-size: 13px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.time-card-block .table {
+	    /*min-width: 620px!important;*/
+	}
+}
+
+@media screen and (max-width: 870px){
+	.role-analytics #shift-history-content .table{
+		/*min-width: 750px!important;*/
+	}
+
+	.emp-analytics #shift-history-content .table {
+	    /*min-width: 650px!important;*/
+	}
+}
+
+@media screen and (max-width: 853px){
+	.emp-analytics .action-icon {
+	    margin-top: 5px;
+	}
+	.emp-analytics .action-icon {
+	    padding-left: 30px;
+	}
+}
+
+@media screen and (max-width: 851px){
+	.priority-blocks table{
+		/*min-width: 600px!important;*/
+	}
+}
+
+@media screen and (max-width: 880px){
+	.holidays {
+		margin-right: 220px;
+	}
+}
+
+
+@media screen and (max-width: 830px){
+	.calendar-comments {
+	    width: 650px;
+	}
+
+	.attendance-block .sub-block-header-area h3 {
+	    margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.container {
+	    padding-right: 1px;
+	    padding-left: 1px;
+	}
+
+	.body-container {
+	    padding: 28px  1px 5px 1px;
+	}
+
+	.role-analytics .body-content {
+	    padding-left: 1px;
+	}
+
+	.location-analytics .collapse-action i{
+		margin-right: 0px;
+	}
+
+	.location-analytics .block-item .collapse-action i {
+	    margin-right: 4px;
+	}
+}
+
+@media screen and (max-width: 820px){
+	.ma-4 > div:nth-child(2) {
+	    margin: 0px -16px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.table{
+		/*min-width: 550px!important;*/
+	}
+
+	.role-analytics .table{
+		/*min-width: 450px!important;*/
+	}
+
+	.table thead th, .table tr td {
+	    font-size: 11px;
+	    padding: 10px 5px;
+	}
+
+	.table thead th, .table tr td {
+	    font-size: 11px;
+	    padding: 10px 5px;
+	}
+
+	.time-card-block tr td:nth-child(8) {
+	    font-size: 11px;
+	}
+
+	.time-card-block .table {
+	    /*min-width: 620px!important;*/
+	}
+
+	.location-analytics td span {
+	    font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.role-analytics .collapse-header {
+	     margin-bottom: 11px; 
+	}
+
+	.approval-t{
+		display: none;
+	}
+
+	.approval-t1{
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 780px){
+
+	.location-analytics .role-block {
+	    justify-content: space-between;
+	}
+}
+
+@media screen and (max-width: 560px){
+	.attendance-block .sub-block-header-area{
+		flex-direction: column;
+	}
+	#attendance-history-content .detail-row {
+	    /*margin-left: 10px;*/
+	    justify-content: flex-end;
+	}
+	#attendance-history-content .detail-row .detail-mark:nth-child(2){
+		margin-left: 7px;
+		margin-right: 7px;
+	}
+}
+
+@media screen and (max-width: 769px){
+	.analyticsOverviewCard > .row > .col-12 {
+	    height: 76px;
+	}
+
+	.role-analytics .block-item {
+	    padding: 16px 8px;
+	}
+
+	.role-analytics .collapse-widget.reduce-padding1 {
+	    padding-bottom: 14px!important;
+	}
+
+	.role-analytics .block-item:last-child {
+	    padding: 18px 15px;
+	}
+
+	.role-analytics .collapse-widget.reduce-padding {
+	    padding-bottom: 9px!important;
+	}
+
+	.role-analytics .block-item.week-history-block {
+	    padding: 0;
+	}
+}
+
+@media screen and (max-width: 768px){
+
+	.time-card-block .block-body {
+	    padding: 0px 0px;
+	}
+}
+
+@media screen and (max-width: 776px){
+	.shift-anal-card-body > div:nth-child(2), .shift-anal-card-body > div:nth-child(3) {
+	     margin-left: 0px; 
+	}
+
+	.block-container .performance-card {
+    	margin-top: 27px;
+    }
+
+    .block-container .performance-card {
+	    padding-bottom: 1rem!important;
+	}
+
+    .block-container .moonlighting {
+	    padding-bottom: 2.2rem!important;
+	    margin-top: -3px;
+	}
+	.block-container .paidtimeoff {
+	    margin-top: 27px;
+	}
+
+	.chartTextContainer {
+	    margin-left: 15px;
+	}
+
+	.moonlighting .chartTextContainer {
+	    /*margin-left: -11px;*/
+	}
+
+	.block-container .analyticsOverviewCard {
+	    padding: 1rem 1rem !important;
+	    padding-bottom: 0px !important;
+	    height: 135px;
+	}
+
+	.emp-analytics .block-container .analyticsOverviewCard {
+	    padding: 1rem 0.3rem !important;
+	    padding-bottom: 0px !important;
+	    height: 135px;
+	}
+
+	.emp-analytics .block-container .analyticsOverviewCard.moonlighting {
+	    height: 100px;
+	}
+
+	.moonlighting .analyticsOverviewCardTitle {
+	    margin-bottom: -0.9rem;
+	}
+}
+
+@media screen and (min-width: 776px) and (max-width: 991px){
+	.block-container .performance-card {
+    	margin-top: 35px;
+    }
+    .block-container .paidtimeoff {
+	    margin-top: 35px;
+	}
+}
+
+@media screen and (max-width: 760px){
+	.role-analytics .action-icon {
+	    padding-left: 30px;
+	}
+
+	.action-icon .anal-item {
+	    margin-right: 15px;
+	}
+}
+
+@media screen and (max-width: 750px){
+	.emp-analytics .attendance-block .detail-mark {
+	    margin-left: 10px;
+	}
+}
+
+
+@media screen and (max-width: 730px){
+	.calendar-comments {
+	    width: 850px;
+	}
+}
+
+@media screen and (max-width: 895px){
+
+	.holidays {
+		margin-right: 100px;
+	}
+}
+
+@media screen and (max-width: 630px){
+	.emp-analytics .shift-anal-card-body > div:not(:first-child){
+		/*margin-left: -1.1rem;*/
+	}
+}
+
+@media screen and (max-width: 594px){
+	.emp-analytics .shift-anal-card-body > div:not(:first-child){
+		/*margin-left: -1.2rem;*/
+	}
+}
+
+@media screen and (max-width: 929px){
+	.constraints-block .block-body{
+		flex-direction: column;
+	}
+
+	.holidays{
+		margin: 15px 0px!important;
+	}
+
+	.first-re{
+	    margin-bottom: 22px;
+	}
+
+	.holidays > div{
+		margin-top: -10px!important;
+	}
+
+	.priority-blocks table{
+		margin-top: -10px!important;
+		min-width:  90%!important;
+	}
+}
+
+@media screen and (max-width: 594px){
+	.emp-analytics .shift-anal-card-body > div:not(:first-child){
+		/*margin-left: -0.9rem;*/
+	}
+
+	.donutLegend ul li {
+	    font-size: 10px;
+	    /*width: 140px;*/
+	}
+
+	.shiftAnalyzationChartTitle {
+	    font-size: 8px;
+	}
+
+	.donutLegend ul li span {
+	    font-size: 9px;
+	    color: #282731;
+	}
+
+	.role-analytics .ct-legend {
+	    padding-top: 1.1rem;
+	}
+
+	.emp-analytics .ct-legend {
+	    padding-top: 1.3rem;
+	    margin-left: -13px;
+	}
+}
+
+@media screen and (max-width: 570px){
+	.constraints-block .block-body{
+		flex-direction: column;
+	}
+
+	.holidays p{
+		padding-bottom: 0;
+	}
+
+	.holidays > div{
+		margin-top: -10px;
+		margin-bottom: 8px;
+	}
+}
+
+@media screen and (max-width: 575px){
+	.overviewCircleButton {
+	    width: 37px;
+	    height: 37px;
+	    font-size: 9px !important;
+	}
+
+	.shiftAnalyzationChartNumber {
+	    font-size: 10px;
+	}
+
+	.performance-card .analyticsOverviewCardTitle {
+	    /*margin-bottom: -1.5rem;*/
+	}
+
+	.performance-card .chartTextContainer,
+	.paidtimeoff .chartTextContainer,
+	.moonlighting .chartTextContainer
+	 {
+	    margin-left: 9px;
+	    padding-top: 0;
+	    margin-top: -4px;
+	}
+
+	.performance-card .absences{
+		margin-top: 5px;
+	}
+
+	.moonlighting .chartTextContainer
+	 {
+	    margin-top: 3px;
+	}
+
+	.paidtimeoff .title-c span {
+   	 	font-size: 9px;
+	}
+
+	.paidtimeoff .shiftAnalyzationChartNumber, .paidtimeoff .shiftAnalyzationChartTitle, .approval-t1, .approval-t {
+	    font-size: 9px;
+	}
+}
+
+@media screen and (max-width: 687px){
+
+	.attendance-block .sub-block-header-area h3 {
+	    margin-left: 25px;
+	}
+
+	#attendance-history-content .detail-row {
+	    margin-left: 10px;
+	}
+	
+}
+
+@media screen and (max-width: 659px){
+	.emp-analytics .action-icon a {
+	    position: absolute;
+	    right: 26px;
+	}
+}
+
+@media screen and (max-width: 693px){
+	.location-analytics-main .title span {
+	    font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 630px){
+	.role-analytics .action-icon {
+	    padding-left: 30px;
+	}
+}
+
+@media screen and (max-width: 450px){
+	#attendance-history-content .month-table-wrap .table tr th:first-child{
+		padding-right: 20px;
+	}
+}
+
+@media screen and (max-width: 630px){
+	.sub-block-content-area table {
+	    /*min-width: 350px!important;*/
+	}
+
+	.sub-block-content-area .table tr th:nth-child(2), 
+	.sub-block-content-area .table tr th:nth-child(3), 
+	.sub-block-content-area .table tr th:nth-child(4), 
+	.sub-block-content-area .table tr th:nth-child(5) {
+	    width: 14%;
+	}
+
+	.block-disp{
+		display: block;
+	}
+
+	.double-cell-td{
+		padding: 2px 5px!important;
+	}
+
+	.loc-shifts-table {
+	    /*min-width: 420px!important;*/
+	}
+}
+
+@media screen and (max-width: 610px){
+	.calendar-comments {
+	    width: 950px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.sub-block-content-area .table thead th {
+	    padding: 6px 4px;
+	    font-size: 8px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.spec-week-history-block {
+	    flex-wrap: wrap;
+	}
+
+	.calendar-comments {
+	    width: 350px;
+	    padding: 0px 55px;
+	    justify-content: space-around;
+	    margin: 0;
+	}
+}
+
+@media screen and (max-width: 590px){
+	.priority-blocks table{
+		/*min-width: 200px!important;*/
+	}
+}
+
+@media screen and (max-width: 650px){
+
+	.role-area{
+		margin-top: 2px;
+		width: 120px;
+		margin-left: 3px;
+	}
+
+	.use-role-item {
+	    width: 145px;
+	}
+
+	.circle-number {
+	    width: 30px;
+	    height: 30px;
+	    font-size: 12px;
+	}
+	.location-analytics .role-block{
+		justify-content: space-between;
+	}
+
+	.role-item, .role-subitem, .role-item-s {
+	    font-size: 8px;
+	}
+
+	.role-block .use-role-item:nth-child(2) {
+	    margin-left: 0px;
+	    margin-right: 0px;
+	}
+
+	.role-item .role-item-s{
+		font-size: 8px;
+	}
+
+	.role-title span{
+		font-size: 11px;
+	}
+
+	.role-item span, .role-subitem span {
+	     font-size: 10px; 
+	}
+}
+
+@media screen and (max-width: 500px){
+	.role-area{
+		width: 80px;
+	}
+}
+
+@media screen and (max-width: 573px){
+	.role-block .use-role-item:nth-child(2) {
+	    margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 550px){
+	.detail-row{
+		justify-content: flex-end;
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.attendance-block .detail-row{
+		justify-content: space-between;
+		width: auto;
+	}
+
+	.hide-badge .detail-row{
+		justify-content: flex-end;
+		margin-top: 0px!important;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 470px){
+	.emp-analytics .anal-content span {
+	    font-size: 12px;
+	}
+
+	.emp-analytics .action-icon .anal-title span {
+	    font-size: 7px;
+	}
+
+	.role-analytics .anal-content{
+		margin-top: -4px;
+	}
+}
+
+@media screen and (max-width: 550px){
+
+	.emp-analytics .body-title-area {
+    	padding: 10px 0px 0px 0px;
+	}
+
+	.emp-analytics .body-title-area, .block-title {
+	    justify-content: space-between;
+	    margin-bottom: 11px;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.use-role-item {
+	    width: 120px;
+	}
+}
+
+@media screen and (max-width: 701px){
+	#attendance-history-content .detail-row,
+	.attendance-block .sub-block-header-area h3 {
+	    margin-left: 0px;
+	}
+
+	.emp-analytics .attendance-block .detail-mark {
+	    margin-left: 3px;
+	}
+}
+
+@media screen and (max-width: 420px){
+	.moonlighting .chartTextContainer {
+	    margin-left: 7px;
+	    margin-top: 0px;
+	}
+}
+
+@media screen and (max-width: 490px){
+
+	.moonlighting .chartTextContainer {
+	    margin-left: 7px;
+	}
+
+	.role-analytics-main .title-bar .left-panel> div {
+	    padding-left: 0px;
+	}
+
+	.role-analytics-main .options-select {
+	    padding-left: 10px!important;
+	}
+}
+
+@media screen and (max-width: 470px){
+	.role-item .role-item-s{
+		display: block;
+		margin-left: 16px;
+	}	
+
+	.emp-analytics .attendance-block .detail-mark {
+	    margin-left: 10px;
+	}
+}
+
+@media screen and (max-width: 448px){
+	.emp-analytics .attendance-block .badge-detail span {
+	    font-size: 9px;
+	}
+	.attendance-block .sub-block-header-area h3 {
+	    font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 435px){
+	.location-analytics-main .title span {
+	    font-size: 18px;
+	}
+
+	.options-select button {
+	    width: 81px;
+	    font-size: 12px;
+	}
+
+	.role-analytics-main .options-select {
+	    padding-top: 14px;
+	}
+}
+
+@media screen and (max-width: 650px){
+	.emp-analytics .attendance-block .badge-detail span {
+	    font-size: 9px;
+	}
+}
+
+@media screen and (max-width: 570px){
+	.role-analytics .body-title-area{
+		flex-direction: column;
+
+	}
+
+	.role-analytics .action-icon{
+		margin-top: 10px;
+	}
+
+	.role-analytics .action-icon a {
+	    position: absolute;
+	    right: 26px;
+	    margin-top: -32px;
+	}
+
+	.role-analytics .body-title-area {
+	    padding: 10px 0px 0px 0px;
+	}
+}
+
+@media screen and (max-width: 950px){
+
+	.emp-analytics .body-title-area{
+		flex-direction: column;
+	}
+
+	.emp-analytics .action-icon a {
+	    position: absolute;
+	    right: 26px;
+	    margin-top: -32px;
+	}
+
+	.emp-analytics .body-title-area {
+	    padding: 10px 0px 0px 0px;
+	}
+
+	.emp-analytics .action-icon {
+	    padding-left: 30px;
+	}
+
+	.emp-analytics .action-icon {
+	    margin-top: 12px;
+	}
+}
+
+@media screen and (max-width: 496px){
+	#attendance-history-content .detail-row {
+	    /*margin-top: -18px;*/
+	    margin-bottom: 7px;
+	}
+	.attendence-title-tb{
+		margin-top: 13px;
+	}
+}
+
+@media screen and (max-width: 467px){
+	.location-analytics .table thead th,
+	.location-analytics .table tr td {
+	    font-size: 8px;
+	}
+
+	.location-analytics td span {
+	    font-size: 8px;
+	}
+
+	.location-analytics .double-cell-td{
+	    padding-top: 5px!important;
+	}
+}
+
+@media screen and (max-width: 450px){
+	.emplyee-working_hour_content .table thead th, .table tr td {
+	    font-size: 9px;
+	}
+}
+
+@media screen and (max-width: 443px){
+	.location-analytics-main .title span {
+	    font-size: 18px;
+	}
+}
+
+/* Media Queries */
+@media screen and (max-width: 420px) {
+
+	.title-area{
+		padding: 0;
+	}
+
+	.title-bar.row {
+		padding: 0px;
+	}
+
+	.date-range-select{
+		padding: 0;
+	}
+
+	#reportrange span {
+	    font-size: 16px;
+	}
+
+	.body-area {
+		padding: 0;
+	    padding-top: 13px;
+	}
+
+	.block-body{
+		justify-content: flex-start;
+	}
+
+	.detail-row {
+	    flex-wrap: nowrap;
+	    margin-top: 5px;
+	}
+
+	.detail-row .detail-mark:first-child {
+	    margin-right: 8px;
+	}
+
+	.collapse-widget {
+	    padding-right: 0;
+	    padding-left: 0;
+	}
+
+	.collapse-widget .block-title{
+		padding-left: 22px;
+	}
+
+	.location-analytics .collapse-widget .block-title{
+		padding-left: 0px;
+	}
+
+	.location-analytics .spec_week_history_title{
+		margin-top: 4px;
+	}
+
+	.role-analytics .collapse-widget .block-title{
+		padding-left: 5px;
+	}
+
+	.collapse-widget .block-title.small{
+		padding-left: 0px;
+	}
+
+	.detail-row a {
+	    margin-top: -36px;
+	    margin-left: 72px;
+	}
+
+	#jan-calendar,
+	#jul-calendar{
+		margin-left: 0px;
+	}
+	#jun-calendar,
+	#dec-calendar{
+		margin-right: 0px;
+	}
+
+	#mar-calendar,
+	#apr-calendar,
+	#sep-calendar, #oct-calendar{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.table {
+	    /*min-width: 550px!important;*/
+	}
+
+	.table.loc-shifts-table{
+		/*min-width: 420px!important;*/
+	}
+
+	#shift-history-content .table{
+		/*min-width: 800px!important;*/
+	}
+
+	.shifts .block-body {
+	     justify-content: flex-start; 
+	     padding: 0px 5px!important;
+	 }
+
+	 .role-analytics .action-icon a{
+	 	position: absolute;
+	 	right: 26px;
+	 	margin-top: -32px;
+	 }
+
+	 .role-analytics .action-icon{
+	 	padding-left: 30px;
+	 }
+
+	 .action-icon .anal-item {
+	    margin-right: 30px;
+	}
+
+	.action-icon .anal-item:nth-child(3) {
+	    margin-right: 23px;
+	}
+	.action-icon .anal-title span {
+	    font-size: 8px;
+	}
+
+	.analyticsOverviewCard1 {
+	    flex-wrap: nowrap;
+	}
+
+	.analyticsOverviewCard1 .anal-item {
+	    margin-left: 13px;
+	    margin-top: -50px;
+	}
+
+	.sub-block .collapse-action{
+		margin-right: 5px;
+	}
+
+	.sub-block{
+		margin-top: 10px;
+	}
+
+	.sub-block .table {
+	    /*min-width: 550px!important;*/
+	}
+
+	.role-analytics .sub-block .table{
+		/*min-width: 450px!important;*/
+	}
+
+	.sub-block .table th,.sub-block .table tr td{
+		padding-left: 10px;
+		padding-right: 0px
+	}
+
+	.role-analytics .block-item{
+		padding: 18px 5px;
+	}
+
+	.spec-week-history-block {
+	     padding: 0px;
+	}
+
+	.emp-analytics .block-item{
+		padding: 18px 5px;
+	}
+
+	.role-analytics .block-item:last-child{
+		padding: 18px 0px;
+	}
+
+	.role-analytics .block-item.week-history-block {
+	    padding-bottom: 0;
+	}
+
+	.spec-week-history-block {
+	    flex-wrap: wrap;
+	}
+
+	.emp-analytics .action-icon{
+		/*margin-top: 12px;*/
+	}
+
+	.block-container .analyticsOverviewContainer .analyticsOverviewCard:nth-child(2), 
+	.block-container .analyticsOverviewContainer .analyticsOverviewCard:nth-child(4) {
+	    margin-left: 0px;
+	    margin-top: -3px;
+	}
+
+	.priority-blocks p,
+	.holidays p{
+		margin-top: 10px;
+	}
+
+	.priority-blocks table {
+	    /*min-width: 300px!important;*/
+	}
+
+	.emp-analytics .detail-row {
+	    margin-top: 16px;
+	    margin-left: 14px;
+	}
+
+	.time-card-block .sub-block-header-area, .time-card-block .block-body {
+	     padding: 0px 0px; 
+	}
+
+	.emp-analytics .badge-detail{
+		/*margin-left: 12px;*/
+	}
+
+	.attendance-block .detail-mark .badge-detail {
+	    margin-left: 0px;
+	}
+
+	.emp-analytics .detail-row a {
+	    margin-left: 45px;
+	}
+
+	.emp-analytics .block-item:last-child {
+	    padding: 18px 10px;
+	}
+
+	.emp-analytics .attendance-block .detail-mark {
+	    margin-right: 0;
+	}
+
+	.emp-analytics .attendance-block .detail-row {
+	     margin-top: 0px; 
+	     margin-left: 0px; 
+	     margin-bottom: 8px;
+	}
+
+	.emp-analytics .sub-block-header-area h3 {
+		padding-bottom: 0;
+		margin-bottom: 2px;
+	}
+
+	.emp-analytics .action-icon .anal-title span {
+	    font-size: 7px;
+	}
+
+	.location-analytics-main .title span {
+	    font-size: 18px;
+	}
+
+	.location-analytics-main .year-select > div{
+		margin-top: 11px;
+		margin-left: 13px;
+	}
+
+	.location-analytics-main .search-button{
+		text-align: center;
+		margin-top: 30px;
+		margin-left: 0;
+	}
+
+	.role-analytics-main .button-container{
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+
+	/* table responsive*/
+	.table thead th,
+	.table tr td {
+	    font-size: 11px;
+	    padding: 10px 5px;
+	}
+
+	.modal .table thead th, .modal .table tbody tr td {
+	     padding: 0.9rem 0.5rem!important; 
+	}
+
+	.location-analytics .table thead th,
+	.location-analytics .table tr td {
+	    font-size: 8px;
+	}
+
+	#shift-history-content .table tr td {
+	    padding-top: 1rem;
+	    padding-bottom: 1rem;
+	}
+
+	#shift-history-content .table tr td.double-cell {
+	    padding-top: 8px!important;
+	    padding-bottom: 5px!important;
+	}
+
+	.role-analytics .week-history-block .block-title {
+	    padding-top: 0px;
+	}
+
+	#attendance-history-content .table tbody tr td div {
+	    width: 14px;
+	    height: 14px;
+	    border-radius: 50%;
+	    margin-left: 1px;
+	    margin-top: 0px;
+	}
+
+	.time-card-block .table tr td {
+	    /*padding-top: 0.2rem!important;*/
+	    padding-bottom: 0.2rem!important;
+	}
+
+	.time-card-block .total-number {
+	    font-size: 12px;
+	}
+
+	.time-card-block tr td:nth-child(8) {
+	    font-size: 11px;
+	}
+
+	.analyticsOverviewCard{
+		margin-bottom: 44px;
+	}
+
+	.role-analytics .analyticsOverviewCard1{
+		margin-bottom: -5px;
+	}
+
+	.emp-analytics .analyticsOverviewCard{
+		margin-bottom: 22px;
+	}
+
+	.emp-analytics .performance-card,
+	.emp-analytics .paidtimeoff{
+		margin-bottom: 0px;
+	}
+
+	#attendance-history-content .detail-row{
+		/*margin-top: -11px;*/
+	}
+
+	.hide-badge .collapse-action i{
+		margin-top: 17px;
+	}
+
+	.emp-analytics .hide-badge .collapse-action i{
+		margin-top: 27px;
+	}
+
+	.spec_widget.hide-badge i{
+		margin-top: 11px;
+	}
+
+	.location-analytics .spec_widget.hide-badge i,
+	.emp-analytics .special-week-widget.hide-badge i{
+		margin-top: 2px;
+	}
+
+	.overviewCircleButton {
+	    width: 25px;
+	    height: 25px;
+	    font-size: 8px !important;
+	}
+
+	.shiftAnalyzationChartNumber {
+	    font-size: 8px;
+	}
+
+	.performance-card .chartTextContainer,
+	.paidtimeoff .chartTextContainer {
+	    margin-left: -2px;
+	    margin-top: -.4rem;
+	}
+
+	.performance-card .absences{
+		margin-top: -0.1rem;
+	}
+
+	.analyticsOverviewCard .ma-4 > div:nth-child(2){
+		margin: 0px -10px;
+	}
+
+	.donutLegend ul li {
+	    font-size: 8px;
+	    /*width: 105px;*/
+	}
+
+	.paidtimeoff .chartTextContainer div:nth-child(2) {
+	    margin-top: -12px;
+	    white-space: nowrap;
+	}
+
+	.location-analytics-main ::placeholder,
+	.location-analytics-main .filter-option-inner-inner{
+		font-size: 10px;
+	}
+
+	.emp-analytics .attendance-block .block-title.small {
+	    margin-bottom: 0px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.detail-row a {
+	    margin-top: -36px;
+	    margin-left: 22px;
+	}	
+
+	.location-analytics .ui-datepicker,
+	.role-analytics .ui-datepicker {
+	    max-width: 143px!important;
+	}
+
+	.emp-analytics .ui-datepicker{
+		max-width: 136px!important;
+	}
+
+	.action-icon .anal-item {
+	    margin-right: 20px;
+	}
+
+	.action-icon .anal-item:nth-child(3) {
+	    margin-right: 11px;
+	}
+
+	.action-icon .anal-title span {
+	    font-size: 7px;
+	}
+
+	.anal-content span {
+	    font-size: 11px;
+	}
+
+	.analyticsOverviewCard1 .anal-item {
+	    margin-top: -40px;
+	}
+
+	.emp-analytics .detail-row a {
+	    margin-left: 6px;
+	}
+
+	.location-analytics-main .title span {
+	    font-size: 15px;
+	}
+
+	.priority-blocks table {
+	    /*min-width: 250px!important;*/
+	}
+
+	.priority-blocks table tr td {
+	    padding: 5px 12px;
+	}
+
+	.emp-analytics .attendance-block .detail-row {
+	    margin-top: .2rem;
+	    margin-left: 0px;
+	    margin-bottom: 8px;
+	}
+
+	.options-select button {
+	    width: 70px;
+	    font-size: 10px;
+	}
+
+	.role-analytics-main .options-select {
+	    padding-top: 16px;
+	}
+
+	.use-role-item {
+	    width: 90px;
+	}
+
+	.location-analytics .role-subitem {
+		margin-left: 3px;
+	}
+
+	.use-role-item{
+		margin-right: 10px!important;
+	}
+
+	.role-area{
+		width: 58px;
+	}
+
+	.location-analytics .block-item{
+		padding-right: 0px;
+		padding: 10px;
+	}
+
+	.location-analytics .shifts .block-title {
+	    padding-left: 10px;
+	}
+}
+
+@media screen and (max-width: 420px){
+	.location-analytics .role-block{
+		margin-bottom: 12px;
+    	margin-top: 21px;
+	}
+}
+
+@media screen and (max-width: 356px){
+	.role-analytics-main .options-select {
+	    padding-top: 0;
+	    padding-bottom: 10px;
+	}
+
+	.role-block {
+	    flex-wrap: wrap;
+	}
+
+	.action-icon .anal-item {
+	    margin-right: 11px;
+	}
+}

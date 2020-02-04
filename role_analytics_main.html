@@ -1,0 +1,1762 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/webfont.css"> 
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"
+        integrity="sha256-IvM9nJf/b5l2RoebiFno92E5ONttVyaEEsdemDC6iQA=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/analytics.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#" class="active">Analytics & Archive</a></li>
+                                        <li><a href="#">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container role-analytics role-analytics-main">
+            <div class="title-area">
+                <div class="row title-bar has-shadow">
+                    <div class="row col-12 col-md-12 col-lg-6 left-panel">
+                        <div class="">
+                            <h2 class="title">Analytics & Archive</h2>
+                        </div>
+                        <div class="options-select">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" id="emplyee-option" class="btn btn-primary active">Employee</button>
+                              <button type="button" id="roles-option" class="btn btn-primary">Roles</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-12 col-md-12 col-lg-6 search-action-area">
+                        <div class="col-12 col-md-12 col-lg-8 search-box">
+                            <i class="fa fa-user"></i>
+                            <div class="input-group">
+                              <input id="search-text" type="text" class="form-control" name="search-text" placeholder="Search for Role">
+                              <span class="input-group-addon"><i class="fa fa-search"></i></span>   
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4 button-container">
+                            <button type="button" class="block-item-button genric-btn info-border circle arrow">Go to Archive</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container container-fluid">
+                    <div class="row body-title-area collapse-header body-collapse">
+                        <div class="left-marked-area row">
+                            <h3 class="left-marked blue-marked-color"></h3>
+                            <h3 class="body-title">Doctor</h3>
+                        </div>
+                        <div class="row action-icon">
+                            <div class="row anal-item">
+                                <div class="anal-title">
+                                    <span>TOTAL NUMBER OF <span>PEOPLE</span></span>
+                                </div>
+                                <div class="anal-content"><span>50</span></div>
+                            </div>
+                            <div class="row anal-item">
+                                <div class="anal-title">
+                                    <span>TOTAL SHIFTS</span>
+                                </div>
+                                <div class="anal-content"><span>50</span></div>
+                            </div>
+                            <div class="row anal-item">
+                                <div class="anal-title">
+                                    <span>TOTAL HOURS WORKED</span>
+                                </div>
+                                <div class="anal-content"><span>400</span></div>
+                            </div>
+                            <a class="print-action"><img src="img/printer.png" /></a>
+                            <a class="collapse-action"><i id="body-collapse" class="body-collapse fa fa-caret-down"></i></a>
+                        </div>
+                    </div>
+                    <div class="body-content collapse">
+                        <h5 class="block-header-title">Shift Analyzation</h5>
+                        <div class="block-item">
+                            <div class="block-title">
+                                <h4> 0.75 Full Time Employees </h4>
+                            </div>
+                            <div class="row block-body role-block">
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard">
+                                    <div class="col-12 row no-gutters mb-4 ma-4">
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKDAY</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut1-1" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut1Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKEND</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut2-1" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut2Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartTitle"> LOCATION DISTRIBUTION</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut3-1" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut3Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>10</span> Emergency Ward</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>10</span> Pediatric Wing</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard1">
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>TOTAL HOURS <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>100</span></div>
+                                    </div>
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>AVERAGE SHIFT TIME <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>09h 03m</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-item sub-block collapse-widget emplyee_working_hours_widget collapse-w">
+                                <div class="row block-title emplyee_working_hours_title collapse-t collapse-btn-m">
+                                    <h6> Employee's Working Hours </h6>
+                                    <a class="collapse-action"><i id="emplyee_working_hours1" class="emplyee_working_hours fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                                <div id="emplyee_working_hours_content" class="row block-body collapse show emplyee_working_hours_content collapse-content-m">
+                                    <div class="block-content-area no-border table-responsive table-container">
+                                        <table class="table table-hover tr-color-contain">
+                                            <thead>
+                                              <tr>
+                                                <th>Emplyee Name</th>
+                                                <th>Working Hours</th>
+                                                <th>Percentage of total Working Hours</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Lu Zhou
+                                                </td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Rahul Malviya</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Slavcho Karbashewski</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Sukhbirpal Dhalan</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-item">
+                            <div class="block-title">
+                                <h4> 0.75 Full Time Employees </h4>
+                            </div>
+                            <div class="row block-body role-block">
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard">
+                                    <div class="col-12 row no-gutters mb-4 ma-4">
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKDAY</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut11-1" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut11Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKEND</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut21-1" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut21Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartTitle"> LOCATION DISTRIBUTION</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut31-1" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut31Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>10</span> Emergency Ward</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>10</span> Pediatric Wing</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard1">
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>TOTAL HOURS <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>100</span></div>
+                                    </div>
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>AVERAGE SHIFT TIME <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>09h 03m</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-item sub-block collapse-widget emplyee_working_hours_widget1 collapse-w">
+                                <div class="row block-title emplyee_working_hours1_title collapse-t collapse-btn-m">
+                                    <h6> Employee's Working Hours </h6>
+                                    <a class="collapse-action"><i id="emplyee_working_hours1" class="emplyee_working_hours fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                                <div id="emplyee_working_hours_content1" class="row block-body collapse show emplyee_working_hours_content collapse-content-m">
+                                    <div class="block-content-area no-border table-responsive table-container">
+                                        <table class="table table-hover tr-color-contain">
+                                            <thead>
+                                              <tr>
+                                                <th>Emplyee Name</th>
+                                                <th>Working Hours</th>
+                                                <th>Percentage of total Working Hours</th>
+                                                <th style="text-align: right; width:20px"></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Lu Zhou
+                                                </td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Rahul Malviya</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Slavcho Karbashewski</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Sukhbirpal Dhalan</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-item">
+                            <div class="block-title">
+                                <h4> 0.25 Full Time Employees </h4>
+                            </div>
+                            <div class="row block-body role-block">
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard">
+                                    <div class="col-12 row no-gutters mb-4 ma-4">
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKDAY</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut12-1" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut12Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKEND</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut22-1" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut22Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartTitle"> LOCATION DISTRIBUTION</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut32-1" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut32Legend" class="donutLegend">
+                                                   <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>10</span> Emergency Ward</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>10</span> Pediatric Wing</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard1">
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>TOTAL HOURS <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>100</span></div>
+                                    </div>
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>AVERAGE SHIFT TIME <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>09h 03m</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-item sub-block collapse-widget emplyee_working_hours_widget2 collapse-w">
+                                <div class="row block-title emplyee_working_hours2_title collapse-t collapse-btn-m">
+                                    <h6> Employee's Working Hours </h6>
+                                    <a class="collapse-action"><i id="emplyee_working_hours2" class="fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                                <div id="emplyee_working_hours_content2" class="row block-body collapse show emplyee_working_hours_content collapse-content-m">
+                                    <div class="block-content-area no-border table-responsive table-container">
+                                        <table class="table table-hover tr-color-contain">
+                                            <thead>
+                                              <tr>
+                                                <th>Emplyee Name</th>
+                                                <th>Working Hours</th>
+                                                <th>Percentage of total Working Hours</th>
+                                                <th style="text-align: right; width:20px"></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Lu Zhou
+                                                </td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Rahul Malviya</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Slavcho Karbashewski</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Sukhbirpal Dhalan</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-item collapse-widget table-full-container shift-history-widget collapse-w">
+                                <div class="row block-title small shift-history-title collapse-t collapse-btn-m">
+                                    <span> Shift History </span>
+                                    <a class="collapse-action"><i id="shift-history" class="fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                                <div id="shift-history-content" class="row block-body collapse show collapse-content-m">
+                                    <div class="sub-block-header-area">
+                                        <div class="row">
+                                            <h3>April 2019
+                                            <span style="margin-left:10px;margin-right:10px;"><i class="fa fa-caret-left"></i></span>
+                                            <span><i class="fa fa-caret-right"></i></span></h3>
+                                        </div>
+                                    </div>
+                                    <div class="block-content-area no-border table-responsive table-container">
+                                        <table class="table table-hover tr-color-contain">
+                                            <thead>
+                                              <tr>
+                                                <th>Date</th>
+                                                <th>Employee</th>
+                                                <th>Shift time</th>
+                                                <th>Scheduled</th>
+                                                <th>Actual</th>
+                                                <th>Clock-in</th>
+                                                <th>Clock-out</th>
+                                                <th>Location</th>
+                                                <th>Type</th>
+                                                <th style="text-align: right; width:20px"></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>April 01
+                                                </td>
+                                                <td>Corabelle Durrad</td>
+                                                <td class="double-cell shift-time-badge shift-badge-success">9:00 AM - 6:00 PM
+                                                    <br><span>Worked Full Shift</span></td>
+                                                <td>09h 00m</td>
+                                                <td>09h 00m</td>
+                                                <td>9:00 AM</td>
+                                                <td>6:00 AM</td>
+                                                <td>Pediatric Wing</td>
+                                                <td>Monnlighting</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>April 02</td>
+                                                <td>Florieke Krebber</td>
+                                                <td class="triple-cell shift-time-badge shift-badge-warning">9:00 AM - 6:00 PM<br><span>Late by 10min</span><br><span>Early leave by 10 min</span></td>
+                                                <td>09h 00m</td>
+                                                <td>08h 40m</td>
+                                                <td>9:10 AM</td>
+                                                <td>5:50 PM</td>
+                                                <td>Pediatric Wing</td>
+                                                <td>Contract</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>April 03</td>
+                                                <td>Hagashi Mako</td>
+                                                <td class="double-cell shift-time-badge shift-badge-warning">
+                                                    9:00 AM - 6:00 PM<br><span>Early leave by 10min</span></td>
+                                                <td>09h 00m</td>
+                                                <td>08h 50m</td>
+                                                <td>9:00 AM</td>
+                                                <td>5:50 PM</td>
+                                                <td>Pediatric Wing</td>
+                                                <td>Moonlighting</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>April 04</td>
+                                                <td>Olivia Evans</td>
+                                                <td class="double-cell shift-time-badge shift-badge-danger">
+                                                    9:00 AM - 6:00 PM<br><span>Absent</span></td>
+                                                <td>00h 00m</td>
+                                                <td>00h 00m</td>
+                                                <td> - </td>
+                                                <td> - </td>
+                                                <td>Pediatric Wing</td>
+                                                <td>Moonlighting</td>
+                                                <td></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    <div class="pagination-block">
+                                        <div class="pagination-container">
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="block-item week-history-block">
+                            <div class="row block-title small">
+                                <span> Special week history </span>
+                            </div>
+                            <div class="row spec-week-history-block">
+                                <div id="spec_week_history_content" class="row block-body collapse show">
+                                    <div class="row initial-block ib-1">
+
+                                        <div id="jan-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 jan-calendar">
+                                        </div>
+                                        <div id="feb-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                        <div id="mar-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                        <div id="apr-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                        <div id="may-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                        <div id="jun-calendar"  class="attending-week-2 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                    </div>
+                                    <div class="row initial-block ib-2">
+                                        <div id="jul-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                        <div id="aug-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                        <div id="sep-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                        <div id="oct-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                        <div id="nov-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                        <div id="dec-calendar"  class="attending-week-2 col-lg-3 col-md-4 col-sm-6 col-6">
+                                        </div>
+                                    </div>
+                                    <div class="row responsive-block"></div>
+                                </div>
+                                <div class="calendar-comments">
+                                    <ul>
+                                        <li><span><span class="double-comment-badge">Ekaterina Tankova</span></span><span>2</span></li>
+                                        <li><span>Emmalynn Mazzia</span><span>1</span></li>
+                                        <li><span>Fatima Cambeiro</span><span>2</span></li>
+                                        <li><span>Gvozden Boskovsky</span><span>2</span></li>
+                                        <li><span>Richaro Kann</span><span>3</span></li>
+                                        <li><span class="pink-color">Sotietje Boksem</span><span>1</span></li>
+                                        <li><span>Ekaterina Tankova</span><span>2</span></li>
+                                        <li><span>Emmalynn Mazzia</span><span>1</span></li>
+                                        <li><span>Fatima Cambeiro</span><span>3</span></li>
+                                        <li><span>Gvozden boskovsky</span><span>1</span></li>
+                                        <li><span>Richardo Kann</span><span>2</span></li>
+                                        <li><span class="pink-color">Sotietje Boksem</span><span>1</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body-area nurse">
+                <div class="body-container container-fluid">
+                    <div class="row body-title-area collapse-header body-collapse">
+                        <div class="left-marked-area row">
+                            <h3 class="left-marked blue-marked-color"></h3>
+                            <h3 class="body-title">Nurse</h3>
+                        </div>
+                        <div class="row action-icon">
+                            <div class="row anal-item">
+                                <div class="anal-title">
+                                    <span>TOTAL NUMBER OF <span>PEOPLE</span></span>
+                                </div>
+                                <div class="anal-content"><span>50</span></div>
+                            </div>
+                            <div class="row anal-item">
+                                <div class="anal-title">
+                                    <span>TOTAL SHIFTS</span>
+                                </div>
+                                <div class="anal-content"><span>50</span></div>
+                            </div>
+                            <div class="row anal-item">
+                                <div class="anal-title">
+                                    <span>TOTAL HOURS WORKED</span>
+                                </div>
+                                <div class="anal-content"><span>400</span></div>
+                            </div>
+                            <a class="print-action"><img src="img/printer.png" /></a>
+                            <a class="collapse-action"><i id="body-collapse" class="body-collapse fa fa-caret-down"></i></a>
+                        </div>
+                    </div>
+                    <div class="body-content collapse">
+                        <h5 class="block-header-title">Shift Analyzation</h5>
+                        <div class="block-item">
+                            <div class="block-title">
+                                <h4> 0.75 Full Time Employees </h4>
+                            </div>
+                            <div class="row block-body role-block">
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard">
+                                    <div class="col-12 row no-gutters mb-4 ma-4">
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKDAY</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut1-2" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut1Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKEND</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut2-2" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut2Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartTitle"> LOCATION DISTRIBUTION</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut3-2" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut3Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>10</span> Emergency Ward</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>10</span> Pediatric Wing</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard1">
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>TOTAL HOURS <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>100</span></div>
+                                    </div>
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>AVERAGE SHIFT TIME <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>09h 03m</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-item sub-block collapse-widget emplyee_working_hours_widget collapse-w">
+                                <div class="row block-title emplyee_working_hours_title collapse-t collapse-btn-m">
+                                    <h6> Employee's Working Hours </h6>
+                                    <a class="collapse-action"><i id="emplyee_working_hours1" class="emplyee_working_hours fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                                <div id="emplyee_working_hours_content" class="row block-body collapse show emplyee_working_hours_content collapse-content-m">
+                                    <div class="block-content-area no-border table-responsive table-container">
+                                        <table class="table table-hover tr-color-contain">
+                                            <thead>
+                                              <tr>
+                                                <th>Emplyee Name</th>
+                                                <th>Working Hours</th>
+                                                <th>Percentage of total Working Hours</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Lu Zhou
+                                                </td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Rahul Malviya</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Slavcho Karbashewski</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Sukhbirpal Dhalan</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-item">
+                            <div class="block-title">
+                                <h4> 0.75 Full Time Employees </h4>
+                            </div>
+                            <div class="row block-body role-block">
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard">
+                                    <div class="col-12 row no-gutters mb-4 ma-4">
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKDAY</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut11-2" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut11Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKEND</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut21-2" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut21Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartTitle"> LOCATION DISTRIBUTION</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut31-2" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut31Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>10</span> Emergency Ward</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>10</span> Pediatric Wing</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard1">
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>TOTAL HOURS <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>100</span></div>
+                                    </div>
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>AVERAGE SHIFT TIME <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>09h 03m</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-item sub-block collapse-widget emplyee_working_hours_widget1 collapse-w">
+                                <div class="row block-title emplyee_working_hours1_title collapse-t collapse-btn-m">
+                                    <h6> Employee's Working Hours </h6>
+                                    <a class="collapse-action"><i id="emplyee_working_hours1" class="emplyee_working_hours fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                                <div id="emplyee_working_hours_content1" class="row block-body collapse show emplyee_working_hours_content collapse-content-m">
+                                    <div class="block-content-area no-border table-responsive table-container">
+                                        <table class="table table-hover tr-color-contain">
+                                            <thead>
+                                              <tr>
+                                                <th>Emplyee Name</th>
+                                                <th>Working Hours</th>
+                                                <th>Percentage of total Working Hours</th>
+                                                <th style="text-align: right; width:20px"></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Lu Zhou
+                                                </td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Rahul Malviya</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Slavcho Karbashewski</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Sukhbirpal Dhalan</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-item">
+                            <div class="block-title">
+                                <h4> 0.25 Full Time Employees </h4>
+                            </div>
+                            <div class="row block-body role-block">
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard">
+                                    <div class="col-12 row no-gutters mb-4 ma-4">
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKDAY</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut12-2" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut12Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartNumber">10</span><span
+                                                    class="shiftAnalyzationChartTitle"> WEEKEND</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut22-2" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut22Legend" class="donutLegend">
+                                                    <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                            <div class="col-12 ct-chartTitle">
+                                                <span class="shiftAnalyzationChartTitle"> LOCATION DISTRIBUTION</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <div id="donut32-2" class="ct-chart ct-square"></div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="donut32Legend" class="donutLegend">
+                                                   <ul class="ct-legend ct-legend-inside">
+                                                        <li class="ct-series-0" data-legend="0"><span>10</span> Emergency Ward</li>
+                                                        <li class="ct-series-1" data-legend="1"><span>10</span> Pediatric Wing</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg row no-gutters analyticsOverviewCard1">
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>TOTAL HOURS <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>100</span></div>
+                                    </div>
+                                    <div class="row anal-item">
+                                        <div class="anal-title">
+                                            <span>AVERAGE SHIFT TIME <span></span></span>
+                                        </div>
+                                        <div class="anal-content"><span>09h 03m</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-item sub-block collapse-widget emplyee_working_hours_widget2 collapse-w">
+                                <div class="row block-title emplyee_working_hours2_title collapse-t collapse-btn-m">
+                                    <h6> Employee's Working Hours </h6>
+                                    <a class="collapse-action"><i id="emplyee_working_hours2" class="fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                                <div id="emplyee_working_hours_content2" class="row block-body collapse show emplyee_working_hours_content collapse-content-m">
+                                    <div class="block-content-area no-border table-responsive table-container">
+                                        <table class="table table-hover tr-color-contain">
+                                            <thead>
+                                              <tr>
+                                                <th>Emplyee Name</th>
+                                                <th>Working Hours</th>
+                                                <th>Percentage of total Working Hours</th>
+                                                <th style="text-align: right; width:20px"></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Lu Zhou
+                                                </td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Rahul Malviya</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Slavcho Karbashewski</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Sukhbirpal Dhalan</td>
+                                                <td>09h 03m</td>
+                                                <td>10%</td>
+                                                <td></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-item collapse-widget table-full-container shift-history-widget collapse-w">
+                                <div class="row block-title small shift-history-title collapse-t collapse-btn-m">
+                                    <span> Shift History </span>
+                                    <a class="collapse-action"><i id="shift-history" class="fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                                <div id="shift-history-content" class="row block-body collapse show collapse-content-m">
+                                    <div class="sub-block-header-area">
+                                        <div class="row">
+                                            <h3>April 2019
+                                            <span style="margin-left:10px;margin-right:10px;"><i class="fa fa-caret-left"></i></span>
+                                            <span><i class="fa fa-caret-right"></i></span></h3>
+                                        </div>
+                                    </div>
+                                    <div class="block-content-area no-border table-responsive table-container">
+                                        <table class="table table-hover tr-color-contain">
+                                            <thead>
+                                              <tr>
+                                                <th>Date</th>
+                                                <th>Employee</th>
+                                                <th>Shift time</th>
+                                                <th>Scheduled</th>
+                                                <th>Actual</th>
+                                                <th>Clock-in</th>
+                                                <th>Clock-out</th>
+                                                <th>Location</th>
+                                                <th>Type</th>
+                                                <th style="text-align: right; width:20px"></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>April 01
+                                                </td>
+                                                <td>Corabelle Durrad</td>
+                                                <td class="double-cell shift-time-badge shift-badge-success">9:00 AM - 6:00 PM
+                                                    <br><span>Worked Full Shift</span></td>
+                                                <td>09h 00m</td>
+                                                <td>09h 00m</td>
+                                                <td>9:00 AM</td>
+                                                <td>6:00 AM</td>
+                                                <td>Pediatric Wing</td>
+                                                <td>Monnlighting</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>April 02</td>
+                                                <td>Florieke Krebber</td>
+                                                <td class="triple-cell shift-time-badge shift-badge-warning">9:00 AM - 6:00 PM<br><span>Late by 10min</span><br><span>Early leave by 10 min</span></td>
+                                                <td>09h 00m</td>
+                                                <td>08h 40m</td>
+                                                <td>9:10 AM</td>
+                                                <td>5:50 PM</td>
+                                                <td>Pediatric Wing</td>
+                                                <td>Contract</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>April 03</td>
+                                                <td>Hagashi Mako</td>
+                                                <td class="double-cell shift-time-badge shift-badge-warning">
+                                                    9:00 AM - 6:00 PM<br><span>Early leave by 10min</span></td>
+                                                <td>09h 00m</td>
+                                                <td>08h 50m</td>
+                                                <td>9:00 AM</td>
+                                                <td>5:50 PM</td>
+                                                <td>Pediatric Wing</td>
+                                                <td>Moonlighting</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>April 04</td>
+                                                <td>Olivia Evans</td>
+                                                <td class="double-cell shift-time-badge shift-badge-danger">
+                                                    9:00 AM - 6:00 PM<br><span>Absent</span></td>
+                                                <td>00h 00m</td>
+                                                <td>00h 00m</td>
+                                                <td> - </td>
+                                                <td> - </td>
+                                                <td>Pediatric Wing</td>
+                                                <td>Moonlighting</td>
+                                                <td></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    <div class="pagination-block">
+                                        <div class="pagination-container">
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="block-item week-history-block">
+                            <div class="row block-title small">
+                                <span> Special week history </span>
+                            </div>
+                            <div class="row spec-week-history-block">
+                                <div id="spec_week_history_content" class="row block-body collapse show">
+                                    <div class="row initial-block ib-1">
+
+                                        <div id="jan-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 jan-calendar">
+                                        </div>
+                                        <div id="feb-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 feb-calendar">
+                                        </div>
+                                        <div id="mar-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 mar-calendar">
+                                        </div>
+                                        <div id="apr-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 apr-calendar">
+                                        </div>
+                                        <div id="may-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 may-calendar">
+                                        </div>
+                                        <div id="jun-calendar"  class="attending-week-2 col-lg-3 col-md-4 col-sm-6 col-6 jun-calendar">
+                                        </div>
+                                    </div>
+                                    <div class="row initial-block ib-2">
+                                        <div id="jul-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 jul-calendar">
+                                        </div>
+                                        <div id="aug-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 aug-calendar">
+                                        </div>
+                                        <div id="sep-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 sep-calendar">
+                                        </div>
+                                        <div id="oct-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 oct-calendar">
+                                        </div>
+                                        <div id="nov-calendar"  class="attending-week-1 col-lg-3 col-md-4 col-sm-6 col-6 nov-calendar">
+                                        </div>
+                                        <div id="dec-calendar"  class="attending-week-2 col-lg-3 col-md-4 col-sm-6 col-6 dec-calendar">
+                                        </div>
+                                    </div>
+                                    <div class="row responsive-block"></div>
+                                </div>
+                                <div class="calendar-comments">
+                                    <ul>
+                                        <li><span><span class="double-comment-badge">Ekaterina Tankova</span></span><span>2</span></li>
+                                        <li><span>Emmalynn Mazzia</span><span>1</span></li>
+                                        <li><span>Fatima Cambeiro</span><span>2</span></li>
+                                        <li><span>Gvozden Boskovsky</span><span>2</span></li>
+                                        <li><span>Richaro Kann</span><span>3</span></li>
+                                        <li><span class="pink-color">Sotietje Boksem</span><span>1</span></li>
+                                        <li><span>Ekaterina Tankova</span><span>2</span></li>
+                                        <li><span>Emmalynn Mazzia</span><span>1</span></li>
+                                        <li><span>Fatima Cambeiro</span><span>3</span></li>
+                                        <li><span>Gvozden boskovsky</span><span>1</span></li>
+                                        <li><span>Richardo Kann</span><span>2</span></li>
+                                        <li><span class="pink-color">Sotietje Boksem</span><span>1</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="modal" id="directory-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Employee Directory</h4>
+                        <div class="options-select">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" id="active-btn" class="btn btn-primary active">Active</button>
+                              <button type="button" id="inactive-btn" class="btn btn-primary">Inactive</button>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row search-box">
+                            <div class="input-group">
+                              <input id="search-emp" type="text" class="form-control" name="search-text" placeholder="Search for employees">
+                              <span class="input-group-addon"><i class="fa fa-search"></i></span>   
+                            </div>
+                        </div>
+                        <div class="table-responsive  active-directory">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="60px"></th>
+                                    <th>Employee name</th>
+                                    <th>Role</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/img_avatar.jpg" /></td>
+                                    <td>Alan Marti</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar1.png" /></td>
+                                    <td>Gauthier Drewitt</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar2.png" /></td>
+                                    <td>Hashim Briscam</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar3.png" /></td>
+                                    <td>Jontray Arnold</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar4.png" /></td>
+                                    <td>kip Collison</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar1.png" /></td>
+                                    <td>Monica Bottger</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <div class="table-responsive  inactive-directory">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="60px"></th>
+                                    <th>Employee name</th>
+                                    <th>Role</th>
+                                    <th>Year left</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar5.png" /></td>
+                                    <td>Bartoloměj Dohnal</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar6.png" /></td>
+                                    <td>Boris Ukhtomsky</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar7.png" /></td>
+                                    <td>Chineze Afamefuna</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar8.png" /></td>
+                                    <td>Marco Alves</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar9.png" /></td>
+                                    <td>Oea Romana</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar10.png" /></td>
+                                    <td>Ya Chin-Ho</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS here -->
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist-plugin-legend/0.6.2/chartist-plugin-legend.min.js"
+        integrity="sha256-LkXH5CAC8vTIG9oLUGvOv2Jx6wq8VDAQXgvBgohNolU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
+        integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+        integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/jquery-ui/jquery.weekpicker.js"></script>
+    <script type="text/javascript" src="js/pagination.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $(".body-collapse").click(function(e){
+            if ($("a.print-action").is(e.target.parentElement) == false){
+                $(".body-content").collapse("hide");
+                var _p = $(this).parents('.body-area');
+                _p.find(".body-content").collapse('toggle'); // toggle collapse
+            }
+        });
+
+        $(".inactive-directory").hide();
+        $(".search-box i").click(function(){
+            $("#directory-modal").modal({backdrop: 'static', keyboard: false});
+        })
+
+        $("#inactive-btn").click(function(){
+            $(".options-select button").removeClass("active");
+            $(this).addClass("active");
+            $(".active-directory").hide();
+            $(".inactive-directory").show();
+        })
+
+        $("#active-btn").click(function(){
+            $(".options-select button").removeClass("active");
+            $(this).addClass("active");
+            $(".active-directory").show();
+            $(".inactive-directory").hide();
+        })
+
+        $(".body-content").on('shown.bs.collapse', function(e){
+            if ($(this).is(e.target)) {
+               drawChart();
+           }
+        });
+
+        $(".body-content").on('hidden.bs.collapse', function(e){
+            if ($(this).is(e.target)) {
+                var _p = $(this).parents('.body-area');
+                _p.find(".body-title-area").addClass("collapse-header");
+                var _a = _p.find("i.body-collapse");
+                toggleCollapseIcon(_a);
+            }
+        });
+
+        $(".body-content").on('show.bs.collapse', function(e){
+            if ($(this).is(e.target)) {
+                var _p = $(this).parents('.body-area');
+                _p.find(".body-title-area").removeClass("collapse-header");
+                var _a = _p.find("i.body-collapse");
+                toggleCollapseIcon(_a);
+            }
+        });
+
+        $(".collapse-btn-m").click(function(){
+            var _p = $(this).parents(".collapse-w");
+            _p.find(".collapse-content-m").collapse('toggle');
+        })
+
+        $(".collapse-content-m").on('hidden.bs.collapse', function(){
+            var _p = $(this).parents(".collapse-w");
+            _p.find(".collapse-t").addClass("block-title-no-space");
+
+            if (_p.hasClass("shift-history-widget")){
+                _p.addClass("reduce-padding1");
+            }else{
+                _p.addClass("reduce-padding");
+            }
+            toggleCollapseIcon(_p.find("i.collapse-btn-m"));
+        });
+
+        $(".collapse-content-m").on('show.bs.collapse', function(){
+            var _p = $(this).parents(".collapse-w");
+            _p.find(".collapse-t").removeClass("block-title-no-space");
+            if (_p.hasClass("shift-history-widget")){
+                _p.removeClass("reduce-padding1");
+            }else{
+                _p.removeClass("reduce-padding");
+            }
+
+            toggleCollapseIcon(_p.find("i.collapse-btn-m"));
+        });
+
+        // var selScrollable = '.table-responsive';
+        // var scrollLeftPrev = 0;
+        // $('body').on('touchmove', selScrollable, function(e) {
+        //     if (e.currentTarget.scrollLeft <=0 ){
+        //         e.stopPropagation();
+        //         e.currentTarget.scrollLeft = 0;
+        //     }else{
+        //         var elem=$(this);
+        //         var newScrollLeft = elem.scrollLeft();
+        //         var width = elem.width();
+        //         var scrollWidth=elem.get(0).scrollWidth;
+        //         var offset = 10;
+        //         if (scrollWidth- newScrollLeft-width <= offset) {
+        //             e.currentTarget.scrollLeft = scrollLeftPrev;
+        //             return;
+        //         }
+        //         scrollLeftPrev = newScrollLeft;
+        //     }
+        // });
+
+        $(".body-area").each(function(){
+            $(this).find('#jan-calendar').weekpicker({"setDate":"01/12/2019", "isSelected":false});
+            $(this).find('#feb-calendar').weekpicker({"setDate":"02/12/2019", "isSelected":false});
+            $(this).find('#mar-calendar').weekpicker({"setDate":"03/12/2019", "isSelected":false});
+            $(this).find('#apr-calendar').weekpicker({"setDate":"04/12/2019", "isSelected":false});
+            $(this).find('#may-calendar').weekpicker({"setDate":"05/12/2019", "isSelected":false});
+            $(this).find('#jun-calendar').weekpicker({"setDate":"06/12/2019", "isSelected":false});
+            $(this).find('#jul-calendar').weekpicker({"setDate":"07/12/2019", "isSelected":false});
+            $(this).find('#aug-calendar').weekpicker({"setDate":"08/12/2019", "isSelected":false});
+            $(this).find('#sep-calendar').weekpicker({"setDate":"09/12/2019", "isSelected":false});
+            $(this).find('#oct-calendar').weekpicker({"setDate":"10/12/2019", "isSelected":false});
+            $(this).find('#nov-calendar').weekpicker({"setDate":"11/12/2019", "isSelected":false});
+            $(this).find('#dec-calendar').weekpicker({"setDate":"12/12/2019", "isSelected":false});
+
+            selectCurrentWeek1($(this).find('#jan-calendar'), 1);
+            selectCurrentWeek1($(this).find('#feb-calendar'), 2);
+            selectCurrentWeek1($(this).find('#mar-calendar'), 3);
+            selectCurrentWeek1($(this).find('#apr-calendar'), 4);
+            selectCurrentWeek1($(this).find('#may-calendar'), 5);
+            selectCurrentWeek2($(this).find('#jun-calendar'), 1);
+            selectCurrentWeek1($(this).find('#jul-calendar'), 1);
+            selectCurrentWeek1($(this).find('#aug-calendar'), 2);
+            selectCurrentWeek1($(this).find('#sep-calendar'), 3);
+            selectCurrentWeek1($(this).find('#oct-calendar'), 4);
+            selectCurrentWeek1($(this).find('#nov-calendar'), 5);
+            selectCurrentWeek2($(this).find('#dec-calendar'), 1);
+        })
+
+        var html = '<ul class="month-calendar-comment">' +
+                        '<li> Attending Week 1</li>' +
+                        '<li> 07:00AM - 03:00PM</li>' +
+                    '</ul>'
+        var html2 = '<ul class="month-calendar-comment">' +
+            '<li> Attending Week 2</li>' +
+            '<li> 07:00AM - 03:00PM</li>' +
+        '</ul>'
+        $(".attending-week-1 .ui-datepicker").append(html);
+        $(".attending-week-2 .ui-datepicker").append(html2);
+
+        showResponsiveTable();
+        $(window).resize(function(){
+            showResponsiveTable();
+        });
+
+        $('.pagination-container').pagination({
+            dataSource: function(done){
+                var result = [];
+                for (var i = 1; i < 110; i++) {
+                    result.push(i);
+                }
+                done(result);
+             },
+             pageRange: 1,
+             callback: function(data, pagination) {
+                console.log(pagination);
+                $('.paginationjs-ellipsis').prev("li").find('a').addClass('pagination-border-right-radius');
+                $('.paginationjs-ellipsis').next("li").find('a').addClass('pagination-border-left-radius');
+            }
+        });
+    })
+
+    function toggleCollapseIcon(obj){
+        if (obj.hasClass("fa-caret-up")){
+            obj.removeClass("fa-caret-up");
+            obj.addClass("fa-caret-down");
+        }else{
+            obj.removeClass("fa-caret-down");
+            obj.addClass("fa-caret-up");
+        }
+    }
+
+    function showResponsiveTable(){
+        var w = $(window).width();
+        if (w <= 1350){
+
+            $(".responsive-block").each(function(){
+                $(this).show();
+                var _p = $(this).parents(".spec-week-history-block");
+                $(this).append(_p.find("#jan-calendar"));
+                $(this).append(_p.find("#feb-calendar"));
+                $(this).append(_p.find("#mar-calendar"));
+                $(this).append(_p.find("#apr-calendar"));
+                $(this).append(_p.find("#may-calendar"));
+                $(this).append(_p.find("#jun-calendar"));
+                $(this).append(_p.find("#jul-calendar"));
+                $(this).append(_p.find("#aug-calendar"));
+                $(this).append(_p.find("#sep-calendar"));
+                $(this).append(_p.find("#oct-calendar"));
+                $(this).append(_p.find("#nov-calendar"));
+                $(this).append(_p.find("#dec-calendar"));
+            });
+
+            $(".initial-block").html("");
+            $(".initial-block").hide();
+        }else{
+            $(".initial-block").show();
+
+            $(".ib-1").each(function(){
+                var _p = $(this).parents(".spec-week-history-block");
+                $(this).append(_p.find("#jan-calendar"));
+                $(this).append(_p.find("#feb-calendar"));
+                $(this).append(_p.find("#mar-calendar"));
+                $(this).append(_p.find("#apr-calendar"));
+                $(this).append(_p.find("#may-calendar"));
+                $(this).append(_p.find("#jun-calendar"));
+            });
+            $(".ib-2").each(function(){
+                var _p = $(this).parents(".spec-week-history-block");
+                $(this).append(_p.find("#jul-calendar"));
+                $(this).append(_p.find("#aug-calendar"));
+                $(this).append(_p.find("#sep-calendar"));
+                $(this).append(_p.find("#oct-calendar"));
+                $(this).append(_p.find("#nov-calendar"));
+                $(this).append(_p.find("#dec-calendar"));
+            });
+
+            $(".responsive-block").html("");
+            $(".responsive-block").hide();
+        }
+        drawChart();
+    }
+
+    function selectCurrentWeek1(obj, weekNumber) {
+            window.setTimeout(function () {
+
+                var i = 0;
+                obj.find('tbody tr:nth-child(' + weekNumber + ')').find('td').each(function(){
+                        var tt = $(this).find("a");
+                        if (tt.length == 0) {
+                            tt = $(this).find("span");
+                            $(this).addClass("enable-day");
+                        }
+                        var text = $.trim($(this).text());
+                        if (i == 0){
+                            tt.addClass("first-week-td-select");
+                        }
+                        if (i == 6){
+                            tt.addClass("last-week-td-select");
+                        }
+                        tt.addClass("ui-tr-week-selected");
+                        tt.addClass("attending-week-color1");
+                        i++;
+                    });
+            }, 1);
+
+    }
+
+    function selectCurrentWeek2(obj, weekNumber) {
+            window.setTimeout(function () {
+
+                var i = 0;
+                obj.find('tbody tr:nth-child(' + weekNumber + ')').find('td').each(function(){
+                        var tt = $(this).find("a");
+                        if (tt.length == 0) {
+                            tt = $(this).find("span");
+                            $(this).addClass("enable-day");
+                        }
+                        var text = $.trim($(this).text());
+                        if (i == 0){
+                            tt.addClass("first-week-td-select");
+                        }
+                        if (i == 6){
+                            tt.addClass("last-week-td-select");
+                        }
+                        tt.addClass("ui-tr-week-selected");
+                        tt.addClass("attending-week-color2");
+                        i++;
+                    });
+            }, 1);
+
+    }
+
+    function drawChart(){
+        var height, width;
+        if (window.matchMedia('(max-width: 600px').matches){
+            height = 45;
+            width = 8
+        }else{
+            height = 55;
+            width = 11
+        }
+
+        var _w = $("#donut1-1").width();
+        for (var i = 1; i < 6; i ++){
+            var _b = $("#donut1-" + i);
+            if (_b.parents(".body-content").hasClass("show")){
+                _w = _b.width();
+            }
+        }
+
+        if (window.matchMedia('(max-width: 991px').matches){
+            width = _w / 7.5;
+        }else{ 
+            width = _w / 5.5;
+        }
+        if (window.matchMedia('(max-width: 700px').matches){
+            width = _w / 6;
+        }
+
+        for (var i = 1; i < 3; i ++){
+
+            new Chartist.Pie('#donut1-'+i,
+                {
+                  series: [5, 5]
+                },
+                {
+                   donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  showLabel: false,
+                  height: height+'px'
+                });
+            new Chartist.Pie('#donut11-'+i,
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  showLabel: false,
+                  height: height+'px'
+                });
+            new Chartist.Pie('#donut12-'+i,
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  showLabel: false,
+                  height: height+'px'
+                });
+            new Chartist.Pie('#donut2-'+i,
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  showLabel: false,
+                  height: height+'px'
+                });
+            new Chartist.Pie('#donut21-'+i,
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  showLabel: false,
+                  height: height+'px'
+                });
+            new Chartist.Pie('#donut22-'+i,
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  showLabel: false,
+                  height: height+'px'
+                });
+            new Chartist.Pie('#donut3-'+i,
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  showLabel: false,
+                  height: height+'px'
+                });
+            new Chartist.Pie('#donut31-'+i,
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  showLabel: false,
+                  height: height+'px'
+                });
+            new Chartist.Pie('#donut32-'+i,
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  showLabel: false,
+                  height: height+'px'
+                });
+        }
+    }
+</script>
+</html>

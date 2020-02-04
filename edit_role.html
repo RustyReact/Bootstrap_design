@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="" style="overflow: hidden;">
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#">Analytics & Archive</a></li>
+                                        <li><a href="profile_main.html" class="active">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container sidebar-container">        
+            <div class="title-area">
+                    <div class="row">
+                        <h2 class="title">Settings</h2>
+                    </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container settings-sidebar-container">
+                    <div class="settings-sidebar">
+                        <a class="active" href="add_new_role.html">Roles</a>
+                        <a class="" href="add_new_emp.html">Employees</a>
+                        <a href="#">Locations</a>
+                        <a href="#">Special Weeks</a>
+                        <a href="" class="empty_menu"></a>
+                    </div>
+
+                    <div class="main-content-area">
+                        <div class="container-fluid content-header-area">
+                            <div class="row right-button">
+                                <h3 class="title"><i class="flaticon-left-arrow"></i> Edit Roles</h3>
+                                <span><a id="delete-role">Delete Role</a></span>
+                            </div>
+                        </div>
+                        <div class="container-fluid content-body-area">
+                            <form>
+                                <div class="form-group">
+                                    <label for="role_name">Role name</label>
+                                    <input type="text" class="form-control custom-control" id="role_name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fte_cap">FTE cap</label>
+                                    <div class="content item-div">
+                                        <input type="text" class="form-control" id="fte_cap"><span>Hours</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="max_moon">Max Moonlighting</label>
+                                    <div class="content item-div">
+                                        <input type="text" class="form-control" id="max_moon"><span>Hours</span>
+                                    </div>
+                                </div>
+                                <button type="submit" class="genric-btn info circle arrow">Save</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <div class="modal" id="confirm-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Are you sure you want to delete<br>
+                    <span class="emp-to-del">Pediatric Wang</span> as a Role?
+                </div>
+
+                <div class="modal-footer">
+                    <button class="genric-btn info-border circle arrow" id="yes-btn">Yes</button>
+                    <button class="genric-btn info circle arrow" id="no-btn">No</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer_start -->
+    <footer class="footer">
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#delete-role").click(function(){
+            $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+        })
+
+        $("#yes-btn").click(function(){
+            $("#confirm-modal").modal("hide");
+        })
+
+        $("#no-btn").click(function(){
+            $("#confirm-modal").modal('hide');  
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,1451 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"
+        integrity="sha256-IvM9nJf/b5l2RoebiFno92E5ONttVyaEEsdemDC6iQA=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/analytics.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#" class="active">Analytics & Archive</a></li>
+                                        <li><a href="#">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container role-analytics emp-analytics">
+            <div class="title-area">
+                <div class="row title-bar">
+                    <small class="title-badge">Analytics & Archive</small>
+                    <h2 class="title"><i class="flaticon-left-arrow"></i>Archive</h2>
+                </div>
+                <div class="row action-bar">
+                    <div class="col-12 col-lg-4 date-range-select">
+                        <div id="reportrange" class="btn">
+                            <span></span> <i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4"></div>
+                    <div class="col-12 col-lg-4 search-box">
+                        <i class="fa fa-user"></i>
+                        <div class="input-group">
+                          <input id="search-text" type="text" class="form-control" name="search-text" placeholder="Search for Employee">
+                          <span class="input-group-addon"><i class="fa fa-search"></i></span>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container container-fluid">
+                    <div class="row body-title-area body-collapse">
+                        <div class="left-marked-area row">
+                            <h3 class="left-marked"></h3>
+                            <div class="row body-title">
+                                <img class="user-avatar" src="img/img_avatar.jpg" />
+                                <div class="user-name row">
+                                    <span>Darren Adams</span>
+                                    <small>Doctor FTE</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row action-icon">
+                            <div class="row anal-item">
+                                <div class="anal-title">
+                                    <span>TOTAL SHIFTS WORKED</span>
+                                </div>
+                                <div class="anal-content"><span>27/30</span></div>
+                            </div>
+                            <div class="row anal-item">
+                                <div class="anal-title">
+                                    <span>TOTAL HOURS WORKED</span>
+                                </div>
+                                <div class="anal-content"><span>230/250</span></div>
+                            </div>
+                            <div class="row anal-item">
+                                <div class="anal-title">
+                                    <span>AVERAGE SHIFT TIME</span>
+                                </div>
+                                <div class="anal-content"><span>8<span class="title-b">Hours</span> 5<span class="title-b">Minutes</span></span></div>
+                            </div>
+                            <a class="print-action"><img src="img/printer.png" /></a>
+                            <a class="collapse-action"><i id="body-collapse" class="body-collapse fa fa-caret-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="body-content collapse show">
+                        <div class="block-container">
+                            <div class="row no-gutters analyticsOverviewContainer">
+                                <div class="col-12 row no-gutters">
+                                    <div class="col-12 col-lg col-md-12 row no-gutters analyticsOverviewCard shift-anal-card">
+                                        <div class="col-12 analyticsOverviewCardTitle">
+                                            <span>Shift Analyzation</span>
+                                        </div>
+                                        <div class="col-12 row no-gutters mb-4 shift-anal-card-body">
+                                            <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                                <div class="col-12 ct-chartTitle">
+                                                    <span class="shiftAnalyzationChartNumber">10</span><span
+                                                        class="shiftAnalyzationChartTitle"> WEEKDAY</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                                <div class="col-12 ct-chartTitle">
+                                                    <span class="shiftAnalyzationChartNumber">10</span><span
+                                                        class="shiftAnalyzationChartTitle"> WEEKEND</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                                <div class="col-12 ct-chartTitle">
+                                                    <span class="shiftAnalyzationChartTitle"> LOCATION DISTRIBUTION</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 row no-gutters mb-4 shift-anal-card-body">
+                                            <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                                <div class="col-4">
+                                                    <div id="donut1-1" class="ct-chart ct-square"></div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div id="donut1Legend" class="donutLegend">
+                                                        <ul class="ct-legend ct-legend-inside">
+                                                            <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                            <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                                <div class="col-4">
+                                                    <div id="donut2-1" class="ct-chart ct-square"></div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div id="donut2Legend" class="donutLegend">
+                                                        <ul class="ct-legend ct-legend-inside">
+                                                            <li class="ct-series-0" data-legend="0"><span>5</span> Day Shifts</li>
+                                                            <li class="ct-series-1" data-legend="1"><span>5</span> Night Shifts</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-4 col-lg-4 row no-gutters">
+                                                <div class="col-4">
+                                                    <div id="donut3-1" class="ct-chart ct-square"></div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div id="donut3Legend" class="donutLegend">
+                                                        <ul class="ct-legend ct-legend-inside">
+                                                            <li class="ct-series-0" data-legend="0"><span>10</span> Emergency Ward</li>
+                                                            <li class="ct-series-1" data-legend="1"><span>10</span> Pediatric Wing</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg col-md-12 row no-gutters analyticsOverviewCard performance-card">
+                                        <div class="col-12 analyticsOverviewCardTitle">
+                                            <span>Performance</span>
+                                        </div>
+                                        <div class="col-12 row no-gutters mb-4">
+
+                                            <div class="col-4 row no-gutters">
+                                                <div class="col-12 row no-gutters chartContainer">
+                                                    <div class="col-3 col-md-3 col-lg-4">
+                                                        <button class="btn btn-primary btn-lg overviewCircleButton" disabled>40%</button>
+                                                    </div>
+                                                    <div class="col-9 col-md-9 col-lg-8 row no-gutters">
+                                                        <div class="col-12 chartTextContainer">
+                                                            <div><span class="shiftAnalyzationChartTitle">ON TIME</span></div>
+                                                            <div>
+                                                            <span class="shiftAnalyzationChartNumber">50%</span>
+                                                            <span class="shiftAnalyzationChartTitle">EARLY LEAVE</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 row no-gutters chartContainer">
+                                                <div class="col-12 row no-gutters">
+                                                    <div class="col-3 col-md-3 col-lg-4">
+                                                        <button class="btn btn-primary btn-lg overviewCircleButton" disabled>40%</button>
+                                                    </div>
+                                                    <div class="col-9 col-md-9 col-lg-8 row no-gutters">
+                                                        <div class="col-12 chartTextContainer">
+                                                            <div>
+                                                            <span class="shiftAnalyzationChartTitle">LATE CHECK-IN</span></div>
+                                                            <div>
+                                                            <span class="shiftAnalyzationChartNumber">50%</span>
+                                                            <span class="shiftAnalyzationChartTitle">EARLY LEAVE</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 row no-gutters chartContainer">
+                                                <div class="col-12 row no-gutters">
+                                                    <div class="col-3 col-md-3 col-lg-4">
+                                                        <button class="btn btn-primary btn-lg overviewCircleButton" disabled>20%</button>
+                                                    </div>
+                                                    <div class="col-9 col-md-9 col-lg-8 row no-gutters">
+                                                        <div class="col-12 chartTextContainer absences">
+                                                            <span class="shiftAnalyzationChartTitle">ABSENCES</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 row no-gutters analyticsCardDivider">
+                                    <div class="col-12 col-lg col-md-12 row no-gutters analyticsOverviewCard moonlighting">
+                                        <div class="col-12 analyticsOverviewCardTitle">
+                                            <span>Moonlighting</span>
+                                        </div>
+                                        <div class="col-12 row no-gutters mb-4">
+
+                                            <div class="col-4 col-md-4 col-lg-4 row no-gutters chartContainer">
+                                                <div class="col-12 row no-gutters">
+                                                    <div class="responsive-item">
+                                                        <button class="btn btn-primary btn-lg overviewCircleButton" disabled>10</button>
+                                                    </div>
+                                                    <div class="responsive-item1">
+                                                        <div class="chartTextContainer">
+                                                            <span class="shiftAnalyzationChartTitle">SHIFTS</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-4 col-lg-4 row no-gutters chartContainer">
+                                                <div class="col-12 row no-gutters">
+                                                    <div class="responsive-item">
+                                                        <button class="btn btn-primary btn-lg overviewCircleButton" disabled>80</button>
+                                                    </div>
+                                                    <div class="responsive-item1">
+                                                        <div class="chartTextContainer">
+                                                            <span class="shiftAnalyzationChartTitle">HOURS</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-4 col-lg-4 row no-gutters empty-div">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg col-md-12 row no-gutters analyticsOverviewCard paidtimeoff">
+                                        <div class="col-12 analyticsOverviewCardTitle">
+                                            <span>Paid Time Off</span>
+                                        </div>
+                                        <div class="col-12 row no-gutters m-44">
+
+                                            <div class="col-4 col-md-4 row no-gutters chartContainer">
+                                                <div class="col-12 title-c">
+                                                    <span class="shiftAnalyzationChartTitle  short-title">SICK DAYS</span>
+                                                </div>
+                                                <div class="col-12 row no-gutters cont">
+                                                    <div class="col-3 col-md-3 col-lg-4">
+                                                        <button class="btn btn-primary btn-lg overviewCircleButton" disabled>50%</button>
+                                                    </div>
+                                                    <div class="col-9 col-md-9 col-lg-8 row no-gutters">
+                                                        <div class="col-12 chartTextContainer">
+                                                            <div>
+                                                            <span class="shiftAnalyzationChartNumber">5/10</span><span
+                                                                class="shiftAnalyzationChartTitle"> Used</span></div>
+                                                            <div>
+                                                            <span class="shiftAnalyzationChartNumber">5</span><span
+                                                                class="shiftAnalyzationChartTitle"> Pending<span class="approval-t1"> &nbsp;Approval</span></div>
+                                                            <div>
+                                                                <span
+                                                                class="shiftAnalyzationChartTitle approval-t"> Approval</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-4 row no-gutters chartContainer">
+                                                <div class="col-12 title-c">
+                                                    <span class="shiftAnalyzationChartTitle">VACATION DAYS</span>
+                                                </div>
+                                                <div class="col-12 row no-gutters cont">
+                                                    <div class="col-3 col-md-3 col-lg-4">
+                                                        <button class="btn btn-primary btn-lg overviewCircleButton" disabled>40%</button>
+                                                    </div>
+                                                    <div class="col-9 col-md-9 col-lg-8 row no-gutters">
+                                                        <div class="col-12 chartTextContainer">
+                                                            <div>
+                                                            <span class="shiftAnalyzationChartNumber">5/10</span><span
+                                                                class="shiftAnalyzationChartTitle"> Used</span></div>
+                                                            <div>
+                                                            <span class="shiftAnalyzationChartNumber">5</span><span
+                                                                class="shiftAnalyzationChartTitle"> Pending<span class="approval-t1"> &nbsp;Approval</span></div>
+                                                            <div>
+                                                                <span
+                                                                class="shiftAnalyzationChartTitle approval-t"> Approval</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-4 row no-gutters chartContainer">
+                                                <div class="col-12 title-c">
+                                                    <span class="shiftAnalyzationChartTitle">PERSONAL DAYS</span>
+                                                </div>
+                                                <div class="col-12 row no-gutters cont">
+                                                    <div class="col-3 col-md-3 col-lg-4">
+                                                        <button class="btn btn-primary btn-lg overviewCircleButton" disabled>40%</button>
+                                                    </div>
+                                                    <div class="col-9 col-md-9 col-lg-8 row no-gutters">
+                                                        <div class="col-12 chartTextContainer">
+                                                            <div>
+                                                            <span class="shiftAnalyzationChartNumber">5/10</span><span
+                                                                class="shiftAnalyzationChartTitle"> Used</span></div>
+                                                            <div>
+                                                            <span class="shiftAnalyzationChartNumber">5</span><span
+                                                                class="shiftAnalyzationChartTitle"> Pending<span class="approval-t1"> &nbsp;Approval</span></div>
+                                                            <div>
+                                                                <span
+                                                                class="shiftAnalyzationChartTitle approval-t"> Approval</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-item constraints-block">
+                            <div class="block-title">
+                                <h4> Constraints </h4>
+                            </div>
+                            <div class="row block-body row">
+                                <div class="recurring">
+                                    <p><span>Recurring</span></p>
+                                    <div class="recurring-container first-re">
+                                        <div class="recurring-items">
+                                            <span class="primary-color">S</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="warning-color">M</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="danger-color">T</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="warning-color">W</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="danger-color">T</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="primary-color">F</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="danger-color">S</span>
+                                        </div>
+                                    </div>
+                                    <p class="small-container"><span>Weekly</span></p>
+                                    <p class="small">Week of 01 Jan 2019</p>
+                                    <div class="recurring-container">
+                                        <div class="recurring-items">
+                                            <span class="warning-color">S</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="warning-color">M</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="warning-color">T</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="warning-color">W</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="warning-color">T</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="primary-color">F</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="danger-color">S</span>
+                                        </div>
+                                    </div>
+                                    <p class="small">Week of 01 Jan 2019</p>
+                                    <div class="recurring-container">
+                                        <div class="recurring-items">
+                                            <span class="primary-color">S</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="warning-color">M</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="danger-color">T</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="warning-color">W</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="danger-color">T</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="primary-color">F</span>
+                                        </div>
+                                        <div class="recurring-items">
+                                            <span class="danger-color">S</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="holidays">
+                                    <p><span>Holidays Constraints</span></p>
+                                    <div class="row">
+                                        <button>Newyears</button>
+                                        <button>Easter</button>
+                                    </div>
+                                </div>
+                                <div class="priority-blocks">
+                                    <p><span>Priority blocks</span></p>
+                                    <table>
+                                        <tr class="week-tr">
+                                            <td style="width: 40%">Pediatri Wing</td>
+                                            <td style="width: 30%">1.Weekend</td>
+                                            <td style="width: 30%">2.Weekday</td>
+                                        </tr>
+                                        <tr class="week-tr">
+                                            <td>Nursery</td>
+                                            <td>1.Weekend</td>
+                                            <td>2.Weekday</td>
+                                        </tr>
+                                        <tr class="years-tr">
+                                            <td>Holidays</td>
+                                            <td>1.Newyears</td>
+                                            <td>2.Easter</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-item collapse-widget time-card-block collapse-w">
+                                <div class="row block-title small collapse-t collapse-btn-m">
+                                    <span> Time Card </span>
+                                    <a class="collapse-action"><i id="time-card" class="fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                               
+                                <div id="time-card-content" class="row block-body collapse show collapse-content-m">
+                                    <div class="sub-block-header-area">
+                                        <div class="row">
+                                            <h3>April 2019
+                                            <span style="margin-left:10px;margin-right:10px;"><i class="fa fa-caret-left"></i></span>
+                                            <span><i class="fa fa-caret-right"></i></span></h3>
+                                        </div>
+                                    </div>
+                                    <div class="block-content-area no-border table-responsive table-container">
+                                        <table class="table table-hover tr-color-contain">
+                                            <thead>
+                                              <tr>
+                                                <th>Sunday</th>
+                                                <th>Monday</th>
+                                                <th>Tuesday</th>
+                                                <th>Wednesday</th>
+                                                <th>Thursday</th>
+                                                <th>Friday</th>
+                                                <th>Saturday</th>
+                                                <th>Week Total</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td><span>1</span><br>08:00 Hours</td>
+                                                <td><span>2</span><br>08:00 Hours</td>
+                                                <td><span>3</span><br>-</td>
+                                                <td><span>4</span><br>08:00 Hours</td>
+                                                <td><span>5</span><br>-</td>
+                                                <td><span>6</span><br>08:00 Hours</td>
+                                                <td><span>7</span><br>08:00 Hours</td>
+                                                <td><span class="total-number">56:00</span><br>Hours</td>
+                                              </tr>
+                                              <tr>
+                                                <td><span>8</span><br>08:00 Hours</td>
+                                                <td><span>9</span><br>08:00 Hours</td>
+                                                <td><span>10</span><br>08:00 Hours</td>
+                                                <td><span>11</span><br>08:00 Hours</td>
+                                                <td><span>11</span><br>08:00 Hours</td>
+                                                <td><span>12</span><br>08:00 Hours</td>
+                                                <td><span>13</span><br>08:00 Hours</td>
+                                                <td><span class="total-number">56:00</span><br>Hours</td>
+                                              </tr>
+                                              <tr>
+                                                <td><span>14</span><br>08:00 Hours</td>
+                                                <td><span>15</span><br>08:00 Hours</td>
+                                                <td><span>16</span><br>-</td>
+                                                <td><span>17</span><br>08:00 Hours</td>
+                                                <td><span>18</span><br>-</td>
+                                                <td><span>19</span><br>08:00 Hours</td>
+                                                <td><span>20</span><br>08:00 Hours</td>
+                                                <td><span class="total-number">56:00</span><br>Hours</td>
+                                              </tr>
+                                              <tr>
+                                                <td><span>21</span><br>08:00 Hours</td>
+                                                <td><span>22</span><br>-</td>
+                                                <td><span>23</span><br>08:00 Hours</td>
+                                                <td><span>24</span><br>08:00 Hours</td>
+                                                <td><span>26</span><br>08:00 Hours</td>
+                                                <td><span>27</span><br>-</td>
+                                                <td><span>28</span><br>08:00 Hours</td>
+                                                <td><span class="total-number">56:00</span><br>Hours</td>
+                                              </tr>
+                                              <tr>
+                                                <td><span>29</span><br>08:00 Hours</td>
+                                                <td><span>30</span><br>08:00 Hours</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><span class="total-number">16:00</span><br>Hours</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="block-item collapse-widget table-full-container collapse-w">
+                                <div class="row block-title small collapse-t collapse-btn-m">
+                                    <span> Shift History </span>
+                                    <a class="collapse-action"><i id="shift-history" class="fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                                <div id="shift-history-content" class="row block-body collapse show collapse-content-m">
+                                    <div class="sub-block-header-area">
+                                        <div class="row">
+                                            <h3>April 2019
+                                            <span style="margin-left:10px;margin-right:10px;"><i class="fa fa-caret-left"></i></span>
+                                            <span><i class="fa fa-caret-right"></i></span></h3>
+                                        </div>
+                                    </div>
+                                    <div class="block-content-area no-border table-responsive table-container">
+                                        <table class="table table-hover tr-color-contain">
+                                            <thead>
+                                              <tr>
+                                                <th>Date</th>
+                                                <th>Shift time</th>
+                                                <th>Location</th>
+                                                <th>Notes</th>
+                                                <th>Type</th>
+                                                <th>Hours</th>
+                                                <th style="text-align: right; width:20px"></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Monday, Apr 04
+                                                </td>
+                                                <td class="double-cell shift-time-badge shift-badge-success">9:00 AM - 6:00 PM
+                                                    <br><span>Worked Full Shift</span></td>
+                                                <td>Pediatric Wing</td>
+                                                <td class="td-content"> 
+                                                    <span class="o-c">Long long long shift note...
+                                                        <a>
+                                                            See more
+                                                        </a>
+                                                    </span>
+                                                    <span class="r-c"><a>Show</a></span>
+                                                </td>
+                                                <td>Monnlighter</td>
+                                                <td>09h 03m</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Monday, Apr 03</td>
+                                                <td class="double-cell shift-time-badge shift-badge-warning">9:00 AM - 6:00 PM<br><span>Left Early by 10min</span></td>
+                                                <td>Emergency ward</td>
+                                                <td>-</td>
+                                                <td>Moonlighter</td>
+                                                <td>09h 25m</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Monday, Apr 02</td>
+                                                <td class="double-cell shift-time-badge shift-badge-warning">9:00 AM - 6:00 PM<br><span>Late Early by 10min</span></td>
+                                                <td>Pediatric Wing</td>
+                                                <td>-</td>
+                                                <td>Moonlighter</td>
+                                                <td>09h 11m</td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Monday, Apr 01</td>
+                                                <td class="double-cell shift-time-badge shift-badge-danger">
+                                                    9:00 AM - 6:00 PM<br><span>Absent</span></td>
+                                                <td>Pediatric Wing</td>
+                                                <td>-</td>
+                                                <td>Moonlighter</td>
+                                                <td>00h 00m</td>
+                                                <td></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="block-item collapse-widget collapse-w special-week-widget">
+                            <div class="row block-title small special-week collapse-t collapse-btn-m">
+                                <span> Special week history </span>
+                                <div class="row detail-row">
+                                    <div class="row detail-mark">
+                                        <span class="badge-m"></span>
+                                        <div class="badge-detail">
+                                            <div>
+                                                <span>Attendeing Week 1</span>
+                                            </div>
+                                            <div>
+                                                <span>07:00AM-07:00PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row detail-mark">
+                                        <span class="badge-m success-color"></span>
+                                        <div class="badge-detail">
+                                            <div>
+                                                <span>Attendeing Week 2</span>
+                                            </div>
+                                            <div>
+                                                <span>07:00AM-07:00PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="collapse-action"><i id="spec_week_history" class="fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                            </div>
+                            <div id="spec_week_history_content" class="row block-body collapse show collapse-content-m">
+                                <div class="row initial-block ib-1">
+                                    <div id="jan-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week jan-calendar">
+                                    </div>
+                                    <div id="feb-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week feb-calendar">
+                                    </div>
+                                    <div id="mar-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week mar-calendar">
+                                    </div>
+                                    <div id="apr-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week apr-calendar">
+                                    </div>
+                                    <div id="may-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week may-calendar">
+                                    </div>
+                                    <div id="jun-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week jun-calendar">
+                                    </div>
+                                </div>
+                                <div class="row initial-block ib-2">
+                                    <div id="jul-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week jul-calendar">
+                                    </div>
+                                    <div id="aug-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week aug-calendar">
+                                    </div>
+                                    <div id="sep-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week sep-calendar">
+                                    </div>
+                                    <div id="oct-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week oct-calendar">
+                                    </div>
+                                    <div id="nov-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week nov-calendar">
+                                    </div>
+                                    <div id="dec-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6 attending-week dec-calendar">
+                                    </div>
+                                </div>
+                                <div class="row responsive-block">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-item collapse-widget attendance-block collapse-w">
+                                <div class="row block-title small collapse-btn-m">
+                                    <span> Attendance </span>
+                                    <a class="collapse-action"><i id="attendance-history" class="fa fa-caret-up collapse-btn-m"></i></a>
+                                </div>
+                                <div id="attendance-history-content" class="block-body collapse show collapse-content-m">
+                                    <table class="attendence-title-tb">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 10%">
+                                                </td>
+                                                <td style="width: 90%">
+                                                    <div class="row sub-block-header-area">
+                                                        <div>
+                                                            <h3>Jan 1, 2019 - Dec 31, 2020
+                                                            </h3>
+                                                        </div>
+                                                        <div class="row detail-row">
+                                                            <div class="row detail-mark">
+                                                                <span class="badge-m danger-color"></span>
+                                                                <div class="badge-detail">
+                                                                    <div>
+                                                                        <span class="badge-number">5</span>
+                                                                        <span>Absent</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail-mark">
+                                                                <span class="badge-m warning-color"></span>
+                                                                <div class="badge-detail">
+                                                                    <div>
+                                                                        <span class="badge-number">11</span>
+                                                                        <span>Late/Left Early</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail-mark">
+                                                                <span class="badge-m primary-color"></span>
+                                                                <div class="badge-detail">
+                                                                    <div>
+                                                                        <span class="badge-number">23</span>
+                                                                        <span>Worked Full Shift</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="attendance-area block-content-area no-border">
+                                        <div class="table-responsive month-table-wrap">
+                                        </div>
+                                        <div class="table-wrap table-responsive">
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="directory-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Employee Directory</h4>
+                        <div class="options-select">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" id="active-btn" class="btn btn-primary active">Active</button>
+                              <button type="button" id="inactive-btn" class="btn btn-primary">Inactive</button>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row search-box">
+                            <div class="input-group">
+                              <input id="search-emp" type="text" class="form-control" name="search-text" placeholder="Search for employees">
+                              <span class="input-group-addon"><i class="fa fa-search"></i></span>   
+                            </div>
+                        </div>
+                        <div class="table-responsive  active-directory">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="60px"></th>
+                                    <th>Employee name</th>
+                                    <th>Role</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/img_avatar.jpg" /></td>
+                                    <td>Alan Marti</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar1.png" /></td>
+                                    <td>Gauthier Drewitt</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar2.png" /></td>
+                                    <td>Hashim Briscam</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar3.png" /></td>
+                                    <td>Jontray Arnold</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar4.png" /></td>
+                                    <td>kip Collison</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar1.png" /></td>
+                                    <td>Monica Bottger</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <div class="table-responsive  inactive-directory">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="60px"></th>
+                                    <th>Employee name</th>
+                                    <th>Role</th>
+                                    <th>Year left</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar5.png" /></td>
+                                    <td>Bartoloměj Dohnal</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar6.png" /></td>
+                                    <td>Boris Ukhtomsky</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar7.png" /></td>
+                                    <td>Chineze Afamefuna</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar8.png" /></td>
+                                    <td>Marco Alves</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar9.png" /></td>
+                                    <td>Oea Romana</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar10.png" /></td>
+                                    <td>Ya Chin-Ho</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="notes-modal modal" id="notes-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="note-title"> Note:</div>
+                        <div class="note-content"> This is a really important shift note and something new</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS here -->
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist-plugin-legend/0.6.2/chartist-plugin-legend.min.js"
+        integrity="sha256-LkXH5CAC8vTIG9oLUGvOv2Jx6wq8VDAQXgvBgohNolU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
+        integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+        integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript" src="js/jquery.stackpage.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/jquery-ui/jquery.weekpicker.js"></script>
+    <script src="js/main.js"></script>
+</body>
+<script type="text/javascript">
+    var chart1, chart2, chart3;
+    $(document).ready(function(){
+        $('#reportrange span').html("Jan 1, 2019 - Dec 31, 2020");
+        $("#reportrange span").html($("#reportrange span").html().split(" ").join("&nbsp;&nbsp;"));
+          $('#reportrange').daterangepicker({
+              opens: 'center'
+          }, function(start, end, label) {
+                $('#reportrange span').html(start.format('MMM D,'+ " " + 'YYYY') + ' - ' + end.format('MMM D, YYYY'));
+                $("#reportrange span").html($("#reportrange span").html().split(" ").join("&nbsp;&nbsp;"));
+              }
+          );
+
+        $(".inactive-directory").hide();
+        $(".search-box i").click(function(){
+            $("#directory-modal").modal({backdrop: 'static', keyboard: false});
+        })
+
+        var notes = '<div class="tooltip-title">Note:</div>' +
+                              '<div class="tooltip-content">This is a really important shift note and something new' + 
+                                '</div>';
+
+        $(".o-c a, .r-c a").tooltip({title: notes, offset: '-100, 0',html: true, placement: "bottom"}); 
+
+        $("#inactive-btn").click(function(){
+            $(".options-select button").removeClass("active");
+            $(this).addClass("active");
+            $(".active-directory").hide();
+            $(".inactive-directory").show();
+        })
+
+        $("#active-btn").click(function(){
+            $(".options-select button").removeClass("active");
+            $(this).addClass("active");
+            $(".active-directory").show();
+            $(".inactive-directory").hide();
+        })
+        $(".body-collapse").click(function(e){
+            if ($("a.print-action").is(e.target.parentElement) == false){
+                $(".body-content").collapse("hide");
+                var _p = $(this).parents('.body-area');
+                _p.find(".body-content").collapse('toggle'); // toggle collapse
+                drawChart();
+            }
+        });
+
+        $(".body-content").on('hidden.bs.collapse', function(e){
+            if ($(this).is(e.target)) {
+                var _p = $(this).parents('.body-area');
+                _p.find(".body-title-area").addClass("collapse-header");
+                var _a = _p.find("i.body-collapse");
+                toggleCollapseIcon(_a);
+            }
+        });
+
+        $(".body-content").on('show.bs.collapse', function(e){
+            if ($(this).is(e.target)) {
+                var _p = $(this).parents('.body-area');
+                _p.find(".body-title-area").removeClass("collapse-header");
+                var _a = _p.find("i.body-collapse");
+                toggleCollapseIcon(_a);
+            }
+        });
+
+        // var selScrollable = '.table-responsive';
+        // var scrollLeftPrev = 0;
+        // $('body').on('touchmove', selScrollable, function(e) {
+        //     if (e.currentTarget.scrollLeft <=0 ){
+        //         e.stopPropagation();
+        //         e.currentTarget.scrollLeft = 0;
+        //     }else{
+        //         var elem=$(this);
+        //         var newScrollLeft = elem.scrollLeft();
+        //         var width = elem.width();
+        //         var scrollWidth=elem.get(0).scrollWidth;
+        //         var offset = 10;
+        //         if (scrollWidth- newScrollLeft-width <= offset) {
+        //             e.currentTarget.scrollLeft = scrollLeftPrev;
+        //             return;
+        //         }
+        //         scrollLeftPrev = newScrollLeft;
+        //     }
+        // });
+
+        $(".collapse-btn-m").click(function(){
+            var _p = $(this).parents(".collapse-w");
+            _p.find(".collapse-content-m").collapse('toggle');
+        })
+
+        $(".collapse-content-m").on('hidden.bs.collapse', function(){
+            var _p = $(this).parents(".collapse-w");
+
+            if (_p.hasClass("attendance-block")){
+                
+                _p.addClass("collapse-padding");
+            }else{
+                _p.find(".collapse-t").addClass("block-title-no-space");
+            }
+
+            if (_p.hasClass("special-week-widget")){
+                _p.addClass("hide-badge");
+                _p.find(".detail-row .detail-mark").hide();
+            }
+            toggleCollapseIcon(_p.find("i.collapse-btn-m"));
+        });
+
+        $(".collapse-content-m").on('show.bs.collapse', function(){
+            var _p = $(this).parents(".collapse-w");
+            
+            if (_p.hasClass("attendance-block")){
+                _p.removeClass("collapse-padding");
+            }else{
+                _p.find(".collapse-t").removeClass("block-title-no-space");
+            }
+
+            if (_p.hasClass("special-week-widget")){
+                _p.removeClass("hide-badge");
+                _p.find(".detail-row .detail-mark").show();
+            }
+            toggleCollapseIcon(_p.find("i.collapse-btn-m"));
+        });
+
+        $(".body-area").each(function(){
+            $(this).find('#jan-calendar').weekpicker({"setDate":"01/12/2019", "isSelected":false});
+            $(this).find('#feb-calendar').weekpicker({"setDate":"02/12/2019", "isSelected":false});
+            $(this).find('#mar-calendar').weekpicker({"setDate":"03/12/2019", "isSelected":false});
+            $(this).find('#apr-calendar').weekpicker({"setDate":"04/12/2019", "isSelected":false});
+            $(this).find('#may-calendar').weekpicker({"setDate":"05/12/2019", "isSelected":false});
+            $(this).find('#jun-calendar').weekpicker({"setDate":"06/12/2019", "isSelected":false});
+            $(this).find('#jul-calendar').weekpicker({"setDate":"07/12/2019", "isSelected":false});
+            $(this).find('#aug-calendar').weekpicker({"setDate":"08/12/2019", "isSelected":false});
+            $(this).find('#sep-calendar').weekpicker({"setDate":"09/12/2019", "isSelected":false});
+            $(this).find('#oct-calendar').weekpicker({"setDate":"10/12/2019", "isSelected":false});
+            $(this).find('#nov-calendar').weekpicker({"setDate":"11/12/2019", "isSelected":false});
+            $(this).find('#dec-calendar').weekpicker({"setDate":"12/12/2019", "isSelected":false});
+
+            selectCurrentWeek1($(this).find('#jan-calendar'), 1);
+            selectCurrentWeek1($(this).find('#feb-calendar'), 1);
+            selectCurrentWeek1($(this).find('#mar-calendar'), 1);
+            selectCurrentWeek1($(this).find('#apr-calendar'), 1);
+            selectCurrentWeek1($(this).find('#may-calendar'), 1);
+            selectCurrentWeek2($(this).find('#jun-calendar'), 1);
+            selectCurrentWeek1($(this).find('#jul-calendar'), 1);
+            selectCurrentWeek1($(this).find('#aug-calendar'), 1);
+            selectCurrentWeek1($(this).find('#sep-calendar'), 1);
+            selectCurrentWeek1($(this).find('#oct-calendar'), 1);
+            selectCurrentWeek1($(this).find('#nov-calendar'), 1);
+            selectCurrentWeek2($(this).find('#dec-calendar'), 1);
+        })
+
+        renderAttendanceTable();
+        // $(".attendance-table").clone(true).appendTo('.attendance-area').addClass('clone'); 
+        
+        setAttendanceTableItem(1, 8, "danger");
+        setAttendanceTableItem(1, 10, "primary");
+        setAttendanceTableItem(1, 12, "warning");
+        setAttendanceTableItem(1, 24, "primary");
+        setAttendanceTableItem(2, 2, "primary");
+        setAttendanceTableItem(2, 5, "primary");
+        setAttendanceTableItem(2, 11, "warning");
+
+        var atdArray = [[2, 22, 'warning'], [2, 25, 'primary'], [3, 11, 'warning'], [3, 13, 'warning'],
+                        [3, 17, 'primary'], [3, 31, 'primary'], [5, 16, 'danger']];
+        for (var i = 0; i < atdArray.length; i ++){
+            setAttendanceTableItem(atdArray[i][0], atdArray[i][1], atdArray[i][2]);
+        }
+
+        showResponsiveTable();
+        $(window).resize(function(){
+            showResponsiveTable();
+        });
+    })
+
+    function showResponsiveTable(){
+        var w = $(window).width();
+        if (w <= 1100){
+            $(".responsive-block").each(function(){
+                $(this).show();
+                var _p = $(this).parents(".special-week-widget");
+                $(this).append(_p.find("#jan-calendar"));
+                $(this).append(_p.find("#feb-calendar"));
+                $(this).append(_p.find("#mar-calendar"));
+                $(this).append(_p.find("#apr-calendar"));
+                $(this).append(_p.find("#may-calendar"));
+                $(this).append(_p.find("#jun-calendar"));
+                $(this).append(_p.find("#jul-calendar"));
+                $(this).append(_p.find("#aug-calendar"));
+                $(this).append(_p.find("#sep-calendar"));
+                $(this).append(_p.find("#oct-calendar"));
+                $(this).append(_p.find("#nov-calendar"));
+                $(this).append(_p.find("#dec-calendar"));
+            });
+
+            $(".initial-block").html("");
+            $(".initial-block").hide();
+        }else{
+            $(".initial-block").show();
+
+            $(".ib-1").each(function(){
+                var _p = $(this).parents(".special-week-widget");
+                $(this).append(_p.find("#jan-calendar"));
+                $(this).append(_p.find("#feb-calendar"));
+                $(this).append(_p.find("#mar-calendar"));
+                $(this).append(_p.find("#apr-calendar"));
+                $(this).append(_p.find("#may-calendar"));
+                $(this).append(_p.find("#jun-calendar"));
+            });
+            $(".ib-2").each(function(){
+                var _p = $(this).parents(".special-week-widget");
+                $(this).append(_p.find("#jul-calendar"));
+                $(this).append(_p.find("#aug-calendar"));
+                $(this).append(_p.find("#sep-calendar"));
+                $(this).append(_p.find("#oct-calendar"));
+                $(this).append(_p.find("#nov-calendar"));
+                $(this).append(_p.find("#dec-calendar"));
+            });
+
+            $(".responsive-block").html("");
+            $(".responsive-block").hide();
+        }
+
+        // if (w <= 580){
+        //     $(".moonlighting .responsive-item").removeClass("col-4");
+        //     $(".moonlighting .responsive-item").addClass("col-3");
+
+        //     $(".moonlighting .responsive-item1").removeClass("col-8");
+        //     $(".moonlighting .responsive-item1").addClass("col-9");
+        //     // $(".empty-div").hide();
+        // }else{
+        //     $(".moonlighting .responsive-item").addClass("col-4");
+        //     $(".moonlighting .responsive-item").removeClass("col-3");
+
+        //     $(".moonlighting .responsive-item1").addClass("col-8");
+        //     $(".moonlighting .responsive-item1").removeClass("col-9");
+        //     $(".empty-div").show();
+        // }
+
+        // if (w <= 701){
+        //     $(".attendence-title-tb tr td:first-child").attr("style", "width:0");
+        //     $(".attendence-title-tb tr td:last-child").attr("style", "width:100%");
+        // }else{
+        //     $(".attendence-title-tb tr td:first-child").attr("style", "width:10%");
+        //     $(".attendence-title-tb tr td:last-child").attr("style", "width:90%");
+        // }
+
+        if (w <= 735){
+            $(".r-c").show();
+            $(".o-c").hide();
+        }else{
+            $(".r-c").hide();
+            $(".o-c").show()
+        }
+
+        if (w >= 1200){
+
+            $(".contain-circle").each(function(){
+                var color = $(this).attr("svg-fill");
+                var itemHtml = '<svg height="18" width="18">' +
+                            '<circle cx="9" cy="9" r="8" class="' + color +'">' +
+                            '</circle>' +
+                        '</svg>';
+                $(this).html(itemHtml);
+            })
+        }else{
+            $(".contain-circle").each(function(){
+                var color = $(this).attr("svg-fill");
+                var itemHtml = '<svg height="14" width="14">' +
+                            '<circle cx="7" cy="7" r="6" class="' + color +'">' +
+                            '</circle>' +
+                        '</svg>';
+                $(this).html(itemHtml);
+            })
+        }
+
+        // if (window.matchMedia('(max-width: 550px').matches){
+        //     var el = $(".special-week-widget .collapse-action");
+        //     $(".special-week-widget .collapse-action").remove();
+        //     $(".special-week-widget .detail-row").before(el);
+        //     $(".special-week-widget.hide-badge .detail-row").hide();
+        // }else{
+        //     var el = $(".special-week-widget .collapse-action");
+        //     $(".special-week-widget .collapse-action").remove();
+        //     $(".special-week-widget .detail-row").append(el);
+        //     $(".special-week-widget .detail-row").show();
+        // }
+
+        if ($(window).width() < 550){
+            var el = $(".special-week-widget .collapse-action");
+            $(".special-week-widget .collapse-action").remove();
+            $(".special-week-widget .block-title").append(el);
+            var el1 = $(".special-week-widget .detail-row");
+            el1.remove();
+            $(".ib-1").before(el1);
+        }else{
+            var el = $(".special-week-widget .collapse-action");
+            $(".special-week-widget .collapse-action").remove();
+            $(".special-week-widget .detail-row").append(el);
+            var el1 = $(".special-week-widget .detail-row");
+            el1.remove();
+            $(".special-week-widget .block-title").append(el1);
+        }
+
+        if ($(window).width() < 550){
+            $(".time-card-block tr td").each(function(){
+                var text = $(this).html();
+                text = text.replace("Hours", "Hrs");
+                $(this).html(text);
+            })
+            // ​$(".time-card-block tr td").text(function () {
+            //     return $(this).text().replace("Hours", "Hrs"); 
+            // });​​​​​
+        }
+
+        drawChart();
+
+        var atdTd_H = $("#attendance-history-content .month-table-wrap tbody tr:nth-child(3) th").outerHeight(true);
+        $("#attendance-history-content .table-wrap td").outerHeight(atdTd_H);
+        $("#attendance-history-content .table-wrap td").outerHeight(atdTd_H);            
+    }
+
+    function renderAttendanceTable(){
+        var html = '<ul class="month-calendar-comment">' +
+                            '<li> Pediatric Wing</li>' +
+                        '</ul>';
+            $(".attending-week .ui-datepicker").append(html);
+
+            var atdTable = '';
+            atdTable += '<table class="table attendance-table">';
+            atdTable += '<thead>' +
+                            '<tr>';
+            var w = 98 / 31;
+            for (var i = 1; i <= 31; i ++){
+                atdTable += '<th style="width:'+w+'%">' + i + '</th>';
+            }
+            atdTable += "</tr></thead>";
+
+            var months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October",
+                        "November", "December"];
+            atdTable += '<tbody>';
+            for (var i = 0; i < 12; i ++){
+                var trHtml = '';
+                trHtml += '<tr>';
+                for (var j = 1; j <= 31; j ++){
+                    var emptyContent = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                    trHtml += '<td>' + emptyContent + '</td>';
+                }
+                trHtml += '</tr>'
+                atdTable += trHtml;
+            } 
+
+            atdTable += '</tbody>';
+            atdTable += '</table>';
+
+            var monthTable = '';
+            monthTable += '<table class="table attendance-table">';
+            monthTable += '<thead>' +
+                            '<tr>' + 
+                                '<th class="fixed-side">1</th>';
+            monthTable += "</tr></thead>";
+            monthTable += '<tbody>';
+            for (var i = 0; i < 12; i ++){
+                var trHtml = '';
+                trHtml += '<tr>';
+                trHtml += '<th>' + months[i] + '</th>';
+                trHtml += '</tr>'
+                monthTable += trHtml;
+            } 
+
+            monthTable += '</tbody>';
+            monthTable += '</table>';
+
+            $("#attendance-history-content .block-content-area .month-table-wrap").html(monthTable);
+            $("#attendance-history-content .block-content-area .table-wrap").html(atdTable);
+    }
+
+    function setAttendanceTableItem(month, day, color){
+
+        color += '-color-svg';
+
+        var month = $("#attendance-history-content .table-wrap .table tbody tr:nth-child(" + month +")");
+        month.find("td:nth-child(" + (day) + ")").addClass("contain-circle");
+        month.find("td:nth-child(" + (day) + ")").attr("svg-fill", color);
+    }
+
+    function selectCurrentWeek1(obj, weekNumber) {
+            window.setTimeout(function () {
+
+                var i = 0;
+                obj.find('tbody tr:nth-child(' + weekNumber + ')').find('td').each(function(){
+                        var tt = $(this).find("a");
+                        if (tt.length == 0) {
+                            tt = $(this).find("span");
+                            $(this).addClass("enable-day");
+                        }
+                        var text = $.trim($(this).text());
+                        if (i == 0){
+                            tt.addClass("first-week-td-select");
+                        }
+                        if (i == 6){
+                            tt.addClass("last-week-td-select");
+                        }
+                        tt.addClass("ui-tr-week-selected");
+                        tt.addClass("attending-week-color1");
+                        i++;
+                    });
+            }, 1);
+
+    }
+
+    function selectCurrentWeek2(obj, weekNumber) {
+            window.setTimeout(function () {
+
+                var i = 0;
+                obj.find('tbody tr:nth-child(' + weekNumber + ')').find('td').each(function(){
+                        var tt = $(this).find("a");
+                        if (tt.length == 0) {
+                            tt = $(this).find("span");
+                            $(this).addClass("enable-day");
+                        }
+                        var text = $.trim($(this).text());
+                        if (i == 0){
+                            tt.addClass("first-week-td-select");
+                        }
+                        if (i == 6){
+                            tt.addClass("last-week-td-select");
+                        }
+                        tt.addClass("ui-tr-week-selected");
+                        tt.addClass("attending-week-color2");
+                        i++;
+                    });
+            }, 1);
+
+    }
+
+    function toggleCollapseIcon(obj){
+        if (obj.hasClass("fa-caret-up")){
+            obj.removeClass("fa-caret-up");
+            obj.addClass("fa-caret-down");
+        }else{
+            obj.removeClass("fa-caret-down");
+            obj.addClass("fa-caret-up");
+        }
+    }
+
+    function drawChart(){
+        
+        var height, width;
+        if (window.matchMedia('(max-width: 600px').matches){
+            height = 50;
+            width = 8
+        }else{
+            height = 55;
+            width = 11
+        }
+
+        var _w = $("#donut1-1").width();
+        if (window.matchMedia('(max-width: 991px').matches){
+            width = _w / 7.5;
+        }else{ 
+            width = _w / 5.5;
+        }
+        if (window.matchMedia('(max-width: 700px').matches){
+            width = _w / 6;
+        }
+
+        for (var i = 1; i < 3; i ++){
+
+            chart1 = new Chartist.Pie('#donut1-1',
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  showLabel: false,
+                  height: height+'px'
+                });
+            chart2 = new Chartist.Pie('#donut2-1',
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  showLabel: false,
+                  height: height+'px'
+                });
+            chart3 = new Chartist.Pie('#donut3-1',
+                {
+                  series: [5, 5]
+                },
+                {
+                  donut: true,
+                  donutWidth: width,
+                  donutSolid: true,
+                  startAngle: 0,
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  showLabel: false,
+                  height: height+'px'
+                });
+        }
+    }
+</script>
+</html>

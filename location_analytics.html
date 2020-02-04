@@ -1,0 +1,702 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/analytics.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#" class="active">Analytics & Archive</a></li>
+                                        <li><a href="#">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container location-analytics">
+            <div class="title-area">
+                <div class="row title-bar">
+                    <small class="title-badge">Analytics & Archive</small>
+                    <h2 class="title"><i class="flaticon-left-arrow"></i>Archive</h2>
+                </div>
+                <div class="row action-bar">
+                    <div class="col-12 col-lg-4 date-range-select">
+                        <div id="reportrange" class="btn">
+                            <span>Jan 1, 2019 - Dec 31, 2020</span> <i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4"></div>
+                    <div class="col-12 col-lg-4 search-box">
+                        <i class="fa fa-user"></i>
+                        <div class="input-group">
+                          <input id="search-text" type="text" class="form-control" name="search-text" placeholder="Search for Location">
+                          <span class="input-group-addon"><i class="fa fa-search"></i></span>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container container-fluid">
+                    <div class="row body-title-area body-collapse">
+                        <h3 class="body-title">Pediatric Wing</h3>
+                        <div class="row action-icon">
+                            <a class="print-action"><img src="img/printer.png" /></a>
+                            <a class="collapse-action"><i id="body-collapse" class="body-collapse fa fa-caret-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="body-content collapse show">
+                        <div class="block-item">
+                            <div class="block-title">
+                                <h4> Use of Roles </h4>
+                            </div>
+                            <div class="row block-body role-block">
+                                <div class="use-role-item">
+                                    <span class="circle-number">16
+                                    </span>
+                                    <div class="role-area">
+                                        <div class="role-title"><span>DOCTORS</span></div>
+                                        <div class="role-item"><span>10</span>&nbsp;CONTRACTUAL <span class="role-item-s">SHIFTS</span></div>
+                                        <div class="role-item"><span>10</span>&nbsp;MOONLIGHTING <span class="role-item-s">SHIFTS</span></div>
+                                        <div class="role-subitem role-subitem-title">Filled with:</div>
+                                        <div class="role-subitem"><span>5</span>&nbsp;by Contractuals</div>
+                                        <div class="role-subitem"><span>5</span>&nbsp;by Moonlighters</div>
+                                    </div>
+                                </div>
+                                <div class="use-role-item">
+                                    <span class="circle-number">16
+                                    </span>
+                                    <div class="role-area">
+                                        <div class="role-title"><span>NURSES</span></div>
+                                        <div class="role-item"><span>10</span>&nbsp;CONTRACTUAL <span class="role-item-s">SHIFTS</span></div>
+                                        <div class="role-item"><span>10</span>&nbsp;MOONLIGHTING <span class="role-item-s">SHIFTS</span></div>
+                                        <div class="role-subitem role-subitem-title">Filled with:</div>
+                                        <div class="role-subitem"><span>5</span>&nbsp;by Contractuals</div>
+                                        <div class="role-subitem"><span>5</span>&nbsp;by Moonlighters</div>
+                                    </div>
+                                </div>
+                                <div class="use-role-item">
+                                    <span class="circle-number">16
+                                    </span>
+                                    <div class="role-area">
+                                        <div class="role-title"><span>PA</span></div>
+                                        <div class="role-item"><span>10</span>&nbsp;CONTRACTUAL <span class="role-item-s">SHIFTS</span></div>
+                                        <div class="role-item"><span>10</span>&nbsp;MOONLIGHTING <span class="role-item-s">SHIFTS</span></div>
+                                        <div class="role-subitem role-subitem-title">Filled with:</div>
+                                        <div class="role-subitem"><span>5</span>&nbsp;by Contractuals</div>
+                                        <div class="role-subitem"><span>5</span>&nbsp;by Moonlighters</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-item collapse-widget spec_widget">
+                            <div class="row block-title spec_week_history_title" data-toggle="collapse" data-target="#spec_week_history_content">
+                                <h4> Special week history </h4>
+                                <div class="row detail-row ">
+                                    <div class="row detail-mark">
+                                        <span class="badge-m"></span>
+                                        <div class="badge-detail">
+                                            <div>
+                                                <span>Attendeing Week 1</span>
+                                            </div>
+                                            <div>
+                                                <span>07:00AM-07:00PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row detail-mark">
+                                        <span class="badge-m success-color"></span>
+                                        <div class="badge-detail">
+                                            <div>
+                                                <span>Attendeing Week 1</span>
+                                            </div>
+                                            <div>
+                                                <span>07:00AM-07:00PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="collapse-action">
+                                        <i id="spec_week_history" class="fa fa-caret-up" data-toggle="collapse" data-target="#spec_week_history_content"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="spec_week_history_content" class="row block-body collapse show">
+                                <div class="row initial-block ib-1">
+                                    <div id="jan-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                    <div id="feb-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                    <div id="mar-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                    <div id="apr-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                    <div id="may-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                    <div id="jun-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                </div>
+                                <div class="row initial-block ib-2">
+                                    <div id="jul-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                    <div id="aug-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                    <div id="sep-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                    <div id="oct-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                    <div id="nov-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                    <div id="dec-calendar"  class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    </div>
+                                </div>
+                                <div class="row responsive-block">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-item shifts">
+                            <div class="row block-title">
+                                <h4> Shifts </h4>
+                            </div>
+                            <div class="row block-body">
+                                <div class="block-content-area hasborder table-responsive table-container">
+                                    <table class="table table-hover number-contain loc-shifts-table">
+                                        <thead>
+                                          <tr>
+                                            <th style="text-align:center;width: 10px;"></th>
+                                            <th>Roles</th>
+                                            <th>Shift time</th>
+                                            <th>Days</th>
+                                            <th>Emplyee count</th>
+                                            <th style="text-align: right; width:20px"></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Doctor, Nurse, PA
+                                            </td>
+                                            <td class="">12:00 AM - 12:00 PM</td>
+                                            <td>Mon</td>
+                                            <td>1-5</td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Doctor</td>
+                                            <td class="">12:00 PM - 11:59 PM</span></td>
+                                            <td class="double-cell-td">Mon, Tue, Wed, <span class="block-disp">Thu, Fri, Sat, Sun</span></td>
+                                            <td>1-7</td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Nurse</td>
+                                            <td class="">06:00 AM - 12:00 PM
+                                            </td>
+                                            <td>Mon, Tue</td>
+                                            <td>3-6</td>
+                                            <td></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <div class="sub-block-header-area">
+                                    <div class="row">
+                                        <h3>Monday
+                                        <span style="margin-left:10px;margin-right:10px;"><i class="fa fa-caret-left"></i></span>
+                                        <span><i class="fa fa-caret-right"></i></span></h3>
+                                    </div>
+                                </div>
+                                <div class="sub-block-content-area table-responsive table-container">
+                                    <table class="table table-hover number-contain bar-container">
+                                        <thead>
+                                          <tr>
+                                            <th colspan="2" style="text-align:center;"></th>
+                                            <th>12:00 AM</th>
+                                            <th>06:00 AM</th>
+                                            <th>12:00 PM</th>
+                                            <th>06:00 PM</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Doctor, Nurse, PA(1-5)
+                                            </td>
+                                            <td>
+                                                <div class="bar-enabled">
+                                                </div>
+                                            </td>
+                                            <td><div class="bar-enabled">
+                                                </div></td>
+                                            <td><div class="bar-disabled">
+                                                </div></td>
+                                            <td><div class="bar-disabled">
+                                                </div></td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Doctor(0-7)</td>
+                                            <td><div class="bar-disabled">
+                                                </div></td>
+                                            <td><div class="bar-disabled">
+                                                </div></td>
+                                            <td><div class="bar-primary">
+                                                </div></td>
+                                            <td><div class="bar-primary">
+                                                </div></td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Nurse(3-6)</td>
+                                            <td><div class="bar-disabled">
+                                                </div></td>
+                                            <td><div class="bar-success">
+                                                </div></td>
+                                            <td><div class="bar-success">
+                                                </div></td>
+                                            <td><div class="bar-success">
+                                                </div></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="directory-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Employee Directory</h4>
+                        <div class="options-select">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" id="active-btn" class="btn btn-primary active">Active</button>
+                              <button type="button" id="inactive-btn" class="btn btn-primary">Inactive</button>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row search-box">
+                            <div class="input-group">
+                              <input id="search-emp" type="text" class="form-control" name="search-text" placeholder="Search for employees">
+                              <span class="input-group-addon"><i class="fa fa-search"></i></span>   
+                            </div>
+                        </div>
+                        <div class="table-responsive  active-directory">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="60px"></th>
+                                    <th>Employee name</th>
+                                    <th>Role</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/img_avatar.jpg" /></td>
+                                    <td>Alan Marti</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar1.png" /></td>
+                                    <td>Gauthier Drewitt</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar2.png" /></td>
+                                    <td>Hashim Briscam</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar3.png" /></td>
+                                    <td>Jontray Arnold</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar4.png" /></td>
+                                    <td>kip Collison</td>
+                                    <td>Doctor</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar1.png" /></td>
+                                    <td>Monica Bottger</td>
+                                    <td>Nurse</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <div class="table-responsive  inactive-directory">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th width="60px"></th>
+                                    <th>Employee name</th>
+                                    <th>Role</th>
+                                    <th>Year left</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar5.png" /></td>
+                                    <td>Bartoloměj Dohnal</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar6.png" /></td>
+                                    <td>Boris Ukhtomsky</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar7.png" /></td>
+                                    <td>Chineze Afamefuna</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar8.png" /></td>
+                                    <td>Marco Alves</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar9.png" /></td>
+                                    <td>Oea Romana</td>
+                                    <td>Doctor</td>
+                                    <td>2017</td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="user-avatar" src="img/avatar10.png" /></td>
+                                    <td>Ya Chin-Ho</td>
+                                    <td>Nurse</td>
+                                    <td>2017</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/jquery-ui/jquery.weekpicker.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('#reportrange span').html("Jan 1, 2019 - Dec 31, 2020");
+        $("#reportrange span").html($("#reportrange span").html().split(" ").join("&nbsp;&nbsp;"));
+          $('#reportrange').daterangepicker({
+              opens: 'center'
+          }, function(start, end, label) {
+                $('#reportrange span').html(start.format('MMM D,'+ " " + 'YYYY') + ' - ' + end.format('MMM D, YYYY'));
+                $("#reportrange span").html($("#reportrange span").html().split(" ").join("&nbsp;&nbsp;"));
+              }
+          );
+
+        $(".inactive-directory").hide();
+        $(".search-box i").click(function(){
+            $("#directory-modal").modal({backdrop: 'static', keyboard: false});
+        })
+
+        $("#inactive-btn").click(function(){
+            $(".options-select button").removeClass("active");
+            $(this).addClass("active");
+            $(".active-directory").hide();
+            $(".inactive-directory").show();
+        })
+
+        $("#active-btn").click(function(){
+            $(".options-select button").removeClass("active");
+            $(this).addClass("active");
+            $(".active-directory").show();
+            $(".inactive-directory").hide();
+        })
+
+        $(".body-collapse").click(function(e){
+            if ($("a.print-action").is(e.target.parentElement) == false){
+                $(".body-content").collapse("hide");
+                var _p = $(this).parents('.body-area');
+                _p.find(".body-content").collapse('toggle'); // toggle collapse
+            }
+        });
+
+        $(".body-content").on('hidden.bs.collapse', function(e){
+            if ($(this).is(e.target)) {
+                $(".body-container").addClass("collapse-padding");
+                collapseIcon("#body-collapse");
+            }
+        });
+
+        $(".body-content").on('show.bs.collapse', function(e){
+            if ($(this).is(e.target)) {
+                $(".body-container").removeClass("collapse-padding");
+                collapseIcon("#body-collapse");
+            }
+        });
+
+        $("#spec_week_history_content").on('hidden.bs.collapse', function(){
+            $(".spec_week_history_title").addClass("block-title-no-space");
+            $(".spec_widget").addClass("hide-badge");
+            $(".spec_widget .detail-row .detail-mark").hide();
+            collapseIcon(".spec_widget i");
+        });
+
+        $("#spec_week_history_content").on('show.bs.collapse', function(){
+            $(".spec_week_history_title").removeClass("block-title-no-space");
+            $(".spec_widget").removeClass("hide-badge");
+            $(".spec_widget .detail-row .detail-mark").show();
+            collapseIcon(".spec_widget i");
+        });
+
+        // var selScrollable = '.table-responsive';
+        // var scrollLeftPrev = 0;
+        // $('body').on('touchmove', selScrollable, function(e) {
+        //     if (e.currentTarget.scrollLeft <=0 ){
+        //         e.stopPropagation();
+        //         e.currentTarget.scrollLeft = 0;
+        //     }else{
+        //         var elem=$(this);
+        //         var newScrollLeft = elem.scrollLeft();
+        //         var width = elem.width();
+        //         var scrollWidth=elem.get(0).scrollWidth;
+        //         var offset = 10;
+        //         if (scrollWidth- newScrollLeft-width <= offset) {
+        //             e.currentTarget.scrollLeft = scrollLeftPrev;
+        //             return;
+        //         }
+        //         scrollLeftPrev = newScrollLeft;
+        //     }
+        // });
+
+        $('#jan-calendar').weekpicker({"setDate":"01/12/2019", "isSelected":false});
+        selectCurrentWeek1("jan-calendar", 1);
+        $('#feb-calendar').weekpicker({"setDate":"02/12/2019", "isSelected":false});
+        selectCurrentWeek1("feb-calendar", 1);
+        $('#mar-calendar').weekpicker({"setDate":"03/12/2019", "isSelected":false});
+        selectCurrentWeek1("mar-calendar", 1);
+        $('#apr-calendar').weekpicker({"setDate":"04/12/2019", "isSelected":false});
+        selectCurrentWeek1("apr-calendar", 1);
+        $('#may-calendar').weekpicker({"setDate":"05/12/2019", "isSelected":false});
+        selectCurrentWeek1("may-calendar", 1);
+        $('#jun-calendar').weekpicker({"setDate":"06/12/2019", "isSelected":false});
+        selectCurrentWeek2("jun-calendar", 1);
+        $('#jul-calendar').weekpicker({"setDate":"07/12/2019", "isSelected":false});
+        selectCurrentWeek1("jul-calendar", 1);
+        $('#aug-calendar').weekpicker({"setDate":"08/12/2019", "isSelected":false});
+        selectCurrentWeek1("aug-calendar", 1);
+        $('#sep-calendar').weekpicker({"setDate":"09/12/2019", "isSelected":false});
+        selectCurrentWeek1("sep-calendar", 1);
+        $('#oct-calendar').weekpicker({"setDate":"10/12/2019", "isSelected":false});
+        selectCurrentWeek1("oct-calendar", 1);
+        $('#nov-calendar').weekpicker({"setDate":"11/12/2019", "isSelected":false});
+        selectCurrentWeek1("nov-calendar", 1);
+        $('#dec-calendar').weekpicker({"setDate":"12/12/2019", "isSelected":false});
+        selectCurrentWeek2("dec-calendar", 1);
+
+        showResponsiveTable();
+        $(window).resize(function(){
+            showResponsiveTable();
+        });
+    })
+
+    function showResponsiveTable(){
+        var w = $(window).width();
+        if (w <= 1100){
+            $(".responsive-block").show();
+            $(".responsive-block").append($("#jan-calendar"));
+            $(".responsive-block").append($("#feb-calendar"));
+            $(".responsive-block").append($("#mar-calendar"));
+            $(".responsive-block").append($("#apr-calendar"));
+            $(".responsive-block").append($("#may-calendar"));
+            $(".responsive-block").append($("#jun-calendar"));
+            $(".responsive-block").append($("#jul-calendar"));
+            $(".responsive-block").append($("#aug-calendar"));
+            $(".responsive-block").append($("#sep-calendar"));
+            $(".responsive-block").append($("#oct-calendar"));
+            $(".responsive-block").append($("#nov-calendar"));
+            $(".responsive-block").append($("#dec-calendar"));
+
+            $(".initial-block").html("");
+            $(".initial-block").hide();
+        }else{
+            $(".initial-block").show();
+            $(".ib-1").append($("#jan-calendar"));
+            $(".ib-1").append($("#feb-calendar"));
+            $(".ib-1").append($("#mar-calendar"));
+            $(".ib-1").append($("#apr-calendar"));
+            $(".ib-1").append($("#may-calendar"));
+            $(".ib-1").append($("#jun-calendar"));
+            $(".ib-2").append($("#jul-calendar"));
+            $(".ib-2").append($("#aug-calendar"));
+            $(".ib-2").append($("#sep-calendar"));
+            $(".ib-2").append($("#oct-calendar"));
+            $(".ib-2").append($("#nov-calendar"));
+            $(".ib-2").append($("#dec-calendar"));
+
+            $(".responsive-block").html("");
+            $(".responsive-block").hide();
+        }
+        if ($(window).width() <= 500){
+            var el = $(".spec_widget .collapse-action");
+            $(".spec_widget .collapse-action").remove();
+            $(".spec_widget .spec_week_history_title").append(el);
+            var el1 = $(".spec_widget .detail-row");
+            el1.remove();
+            $(".ib-1").before(el1);
+        }else{
+            var el = $(".spec_widget .collapse-action");
+            $(".spec_widget .collapse-action").remove();
+            $(".spec_widget .detail-row").append(el);
+            var el1 = $(".spec_widget .detail-row");
+            el1.remove();
+            $(".spec_widget .spec_week_history_title").append(el1);
+        }
+    }
+
+    function collapseIcon(selector){
+        if ($(selector).hasClass("fa-caret-up")){
+            $(selector).removeClass("fa-caret-up");
+            $(selector).addClass("fa-caret-down");
+        }else{
+            $(selector).removeClass("fa-caret-down");
+            $(selector).addClass("fa-caret-up");
+        }
+    }
+
+    function selectCurrentWeek1(selectId, weekNumber) {
+            window.setTimeout(function () {
+
+                var i = 0;
+                $('#' + selectId + ' tbody tr:nth-child(' + weekNumber + ')').find('td').each(function(){
+                        var tt = $(this).find("a");
+                        if (tt.length == 0) {
+                            tt = $(this).find("span");
+                            $(this).addClass("enable-day");
+                        }
+                        var text = $.trim($(this).text());
+                        if (i == 0){
+                            tt.addClass("first-week-td-select");
+                        }
+                        if (i == 6){
+                            tt.addClass("last-week-td-select");
+                        }
+                        tt.addClass("ui-tr-week-selected");
+                        tt.addClass("attending-week-color1");
+                        i++;
+                    });
+            }, 1);
+
+    }
+
+    function selectCurrentWeek2(selectId, weekNumber) {
+            window.setTimeout(function () {
+
+                var i = 0;
+                $('#' + selectId + ' tbody tr:nth-child(' + weekNumber + ')').find('td').each(function(){
+                        var tt = $(this).find("a");
+                        if (tt.length == 0) {
+                            tt = $(this).find("span");
+                            $(this).addClass("enable-day");
+                        }
+                        var text = $.trim($(this).text());
+                        if (i == 0){
+                            tt.addClass("first-week-td-select");
+                        }
+                        if (i == 6){
+                            tt.addClass("last-week-td-select");
+                        }
+                        tt.addClass("ui-tr-week-selected");
+                        tt.addClass("attending-week-color2");
+                        i++;
+                    });
+            }, 1);
+
+    }
+</script>
+</html>

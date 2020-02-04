@@ -1,0 +1,361 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#">Analytics & Archive</a></li>
+                                        <li><a href="profile_main.html" class="active">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container sidebar-container">
+            <div class="title-area">
+                    <div class="row">
+                        <h2 class="title">Settings</h2>
+                    </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container settings-sidebar-container">
+                    <div class="settings-sidebar">
+                        <a class="" href="#home">Roles</a>
+                        <a class="" href="#news">Employees</a>
+                        <a href="#contact">Locations</a>
+                        <a class="active" href="#about">Special Weeks</a>
+                        <a href="" class="empty_menu"></a>
+                    </div>
+                    <div class="main-content-area spec-week-content-area">
+                        <div class="container-fluid content-header-area">
+                            <div class="row right-button">
+                                <h3 class="title"><i class="flaticon-left-arrow"></i> Edit Special Week</h3>
+                                <span><a id="delete-spec-week">Delete Special Week</a></span>
+                            </div>
+                        </div>
+                        <div class="container-fluid content-body-area special-week">
+                            <form>
+                                <div class="content-item form-group">
+                                    <label for="spec_week_name">Special Week name</label>
+                                    <div class="content item-div-400">
+                                        <input type="text" class="form-control" id="spec_week_name"/>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group">
+                                    <label for="">Type of Special Week</label>
+                                    <div class="content row">
+                                        <div class="radio radio-primary">
+                                            <span>
+                                              <input type="radio" name="special_week_type" style="outline: none" id="platform_gen" checked>
+                                              <label for="platform_gen">
+                                                Platform Generated
+                                              </label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" style="outline: none;" name="special_week_type" id="added_as_needed" >
+                                                <label for="added_as_needed">
+                                                    Added as needed
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group platform_generated">
+                                    <label for="max_week_hours">Role</label>
+                                    <div class="content custom-control custom-select1">
+                                        <select class="form-control selectpicker" id="Role">
+                                            <option disabled selected hidden>Select role</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group platform_generated">
+                                    <div class="row-flex">
+                                        <div class="item">
+                                            <label for="starts_on">Special week starts on</label>
+                                            <div class="content custom-control custom-select1">
+                                                <select class="form-control selectpicker" id="starts_on">
+                                                    <option disabled selected hidden>Select weekday</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <label for="ends_on">Special week ends on</label>
+                                            <div class="content custom-control custom-select1">
+                                                <select class="form-control selectpicker" id="ends_on">
+                                                    <option disabled selected hidden>Select weekday</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group added_as_needed">
+                                    <div class="row-flex">
+                                        <div class="item">
+                                            <label for="starts_on">Special week duration</label>
+                                            <div class="content custom-control custom-select1">
+                                                <select class="form-control selectpicker" id="starts_on">
+                                                    <option disabled selected hidden>Select no. days</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group">
+                                    <div class="row-flex">
+                                        <div class="item">
+                                            <label for="starts_time">Shift starts at</label>
+                                            <div class="content custom-control custom-select1">
+                                                <input type="text" class="form-control control-timepicker" id="starts_time" placeholder="Select time">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <label for="ends_time">Shift ends at</label>
+                                            <div class="content custom-control custom-select1">
+                                                <input type="text" class="form-control control-timepicker" id="ends_time" placeholder="Select time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group platform_generated">
+                                    <label for="location">Location</label>
+                                    <div class="content custom-control custom-select1">
+                                        <select class="form-control selectpicker" id="location">
+                                            <option disabled selected hidden>Select location</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group question platform_generated">
+                                    <label>How often does this special week occur?</label>
+                                </div>
+                                <div class="content-item-slider platform_generated">
+                                    <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
+                                      <div class="row carousel-inner">
+                                        <div class="row carousel-item ">
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker1"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker2"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker3"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker4"></div>
+                                        </div>
+                                        <div class="row carousel-item">
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker5"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker6"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker7"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker8"></div>
+                                        </div>
+                                        <div class="row carousel-item active">
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker9"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker10"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker11"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker12"></div>
+                                        </div>
+                                      </div>
+                                      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                        <span class="carousel-control-prev-icon"><i class="fa fa-caret-left"></i> </span>
+                                      </a>
+                                      <a class="carousel-control-next" href="#demo" data-slide="next">
+                                        <span class="carousel-control-next-icon"><i class="fa fa-caret-right"></i> </span>
+                                      </a>
+                                    </div>
+                                </div>
+                                <div class="row special-week-add-btn">
+                                    <button type="submit" class="genric-btn info circle arrow">Create new Special week</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="confirm-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Are you sure you want to delete<br>
+                    <span class="emp-to-del">Pediatric Wang</span> as a Special Week?
+                </div>
+
+                <div class="modal-footer">
+                    <button class="genric-btn info-border circle arrow" id="yes-btn">Yes</button>
+                    <button class="genric-btn info circle arrow" id="no-btn">No</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer_start -->
+    <footer class="footer">
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery-ui/jquery.weekpicker.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+        $('.selectpicker').selectpicker({dropupAuto:false, style:'btn-white'});
+
+        $('.week-picker1').weekpicker({"setDate":"01/12/2019"});
+        $('.week-picker2').weekpicker({"setDate":"02/12/2019"});
+        $('.week-picker3').weekpicker({"setDate":"03/12/2019"});
+        $('.week-picker4').weekpicker({"setDate":"04/12/2019"});
+        $('.week-picker5').weekpicker({"setDate":"05/12/2019"});
+        $('.week-picker6').weekpicker({"setDate":"06/12/2019"});
+        $('.week-picker7').weekpicker({"setDate":"07/12/2019"});
+        $('.week-picker8').weekpicker({"setDate":"08/12/2019"});
+        $('.week-picker9').weekpicker({"setDate":"09/12/2019"});
+        $('.week-picker10').weekpicker({"setDate":"10/12/2019"});
+        $('.week-picker11').weekpicker({"setDate":"11/12/2019"});
+        $('.week-picker12').weekpicker({"setDate":"12/12/2019"});
+
+        // $('#starts_time').timepicker({
+        //     format: 'hh:MM TT',
+        //     iconsLibrary: 'fontawesome',
+        //     // disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        // });
+
+        // $('#ends_time').timepicker({
+        //     format: 'hh:MM TT',
+        //     iconsLibrary: 'fontawesome',
+        //     // disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        // });
+
+        $(".added_as_needed").hide();
+
+        $("#platform_gen").click(function(){
+            $(".platform_generated").show();
+            $(".added_as_needed").hide();
+        })
+
+        $("#added_as_needed").click(function(){
+            $(".platform_generated").hide();
+            $(".added_as_needed").show();
+        })
+
+
+        $("#delete-spec-week").click(function(){
+            $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+        })
+
+        $("#yes-btn").click(function(){
+            $("#confirm-modal").modal("hide");
+        })
+
+        $("#no-btn").click(function(){
+            $("#confirm-modal").modal('hide');  
+        })
+
+    })
+</script>
+</html>

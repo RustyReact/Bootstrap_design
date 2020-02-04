@@ -1,0 +1,316 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#">Analytics & Archive</a></li>
+                                        <li><a href="profile_main.html" class="active">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container sidebar-container">
+            <div class="title-area">
+                    <div class="row">
+                        <h2 class="title">Settings</h2>
+                    </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container settings-sidebar-container">
+                    <div class="settings-sidebar">
+                        <a class="" href="add_new_role.html">Roles</a>
+                        <a class="active" href="add_new_emp.html">Employees</a>
+                        <a href="#">Locations</a>
+                        <a href="#">Special Weeks</a>
+                        <a href="" class="empty_menu"></a>
+                    </div>
+                    <div class="main-content-area">
+                        <div class="container-fluid content-header-area">
+                            <div class="row">
+                                <h3 class="title"><i class="flaticon-left-arrow"></i> Add new Employee</h3>
+                            </div>
+                        </div>
+                        <div class="container-fluid content-body-area">
+                            <form>
+                                <div class="content-item form-group">
+                                    <label for="emplyee">Employee</label>
+                                    <div class="content custom-control custom-select1">
+                                        <select class="form-control selectpicker" id="emplyee">
+                                            <option disabled selected hidden>Select employee</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group">
+                                    <label for="work_role">Work Role</label>
+                                    <div class="content custom-control custom-select1">
+                                        <select class="form-control selectpicker" id="work_role">
+                                            <option disabled selected hidden>Select work role</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group">
+                                    <label for="">Employee type</label>
+                                    <div class="content row">
+                                        <div class="radio radio-primary">
+                                            <span>
+                                              <input type="radio" name="emplyee-type" style="outline: none" id="contractual" checked />
+                                              <label for="contractual">
+                                                Contractual
+                                              </label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" style="outline: none;" name="emplyee-type" id="moonlighter" />
+                                                <label for="moonlighter">
+                                                    Moonlighter
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="content add-emp sub-row moon-div">
+                                        <label for="">Contractual type</label>
+                                        <small>It should be less than or equal to 1 FTE</small>
+                                        <div class="content item-div">
+                                            <input type="text" class="form-control" id="contractual_type" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group moon-div">
+                                    <label for="max_week_hours">Max. Weekly work hours</label>
+                                    <div class="content item-div">
+                                        <input type="text" class="form-control" id="max_week_hours"><span>Hours</span>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group moon-div">
+                                    <label for="">Paid time off</label>
+                                    <div class="sub-row-flex">
+                                        <div class="item">
+                                            <label for="vacation_days">Vacation Days</label>
+                                            <div class="content item-div">
+                                                <input type="text" class="form-control" id="vacation_days">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <label for="sick_days">Sick Days</label>
+                                            <div class="content item-div">
+                                                <input type="text" class="form-control" id="sick_days">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <label for="personal_days">Personal Days</label>
+                                            <div class="content item-div">
+                                                <input type="text" class="form-control" id="personal_days">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group moon-div">
+                                    <label for="">Admin Status</label>
+                                    <div class="row">
+                                        <div class="radio radio-primary">
+                                            <span>
+                                              <input type="radio" name="admin-status" style="outline: none" id="s_yes" checked>
+                                              <label for="s_yes">
+                                                Yes
+                                              </label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" style="outline: none;" name="admin-status" id="s_no" >
+                                                <label for="s_no">
+                                                    No
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="sub-row-1">
+                                        <label for="shift_hours">How long shift is?</label>
+                                        <div class="content item-div">
+                                            <input type="text" class="form-control" id="shift_hours" /><span>Hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="sub-row-1">
+                                        <label for="shifts">How many shifts?</label>
+                                        <div class="content item-div">
+                                            <input type="text" class="form-control" id="shifts" />
+                                        </div>
+                                    </div>
+                                    <div class="sub-row-1 time-pe">
+                                        <label for="how_often">How often?</label>
+                                        <div class="content item-div">
+                                            <select class="form-control selectpicker" id="how_often">
+                                                <option disabled selected hidden>Select time period</option>
+                                                <option>Every Week</option>
+                                                <option>Every Other Week</option>
+                                                <option>Custom</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="genric-btn info circle arrow">Create new Employee</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer_start -->
+    <footer class="footer">
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+<script type="text/javascript">
+
+    var selectObj = null;
+
+    $(document).ready(function(){
+        $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+        $('.selectpicker').selectpicker({dropupAuto:false, style:'btn-white'});
+
+
+        $("#s_yes").click(function(){
+            $(".sub-row-1").show();
+        })
+
+        $("#s_no").click(function(){
+            $(".sub-row-1").hide();
+        })
+
+        $("#moonlighter").click(function(){
+            $(".moon-div").hide();
+        })
+
+        $("#contractual").click(function(){
+            $(".moon-div").show();
+        });
+
+        var html = '<div class="custom-period" style="width: 240px;padding: 20px;padding-left: 12px;padding-right: 11px;margin-top: -12px;">' +
+                        '<div class="select-week-div" style="display: flex;align-items: center;">' +
+                            '<div style="width: 120px;color: #494860;font-size: 14px;">Every</div>' +
+                            '<div style="width: 120px;display: flex;align-items: center;">' +
+                                '<input id="c-p" class="form-control" type="number"><span style="margin-left: 10px !important;">Week</span>' +
+                            '</div>' + 
+                        '</div>' +
+                        '<div class="done-button" style="display: flex;justify-content: flex-end;margin-top: 14px;font-size: 14px;color: #2F89FC;">' +
+                            '<a style="cursor: pointer;">Done</a>'+
+                        '</div>    ' +
+                    '</div>';
+        selectObj = $(".time-pe .bootstrap-select > .dropdown-menu > div");
+
+        $(".time-pe .bootstrap-select > .dropdown-menu").append(html);
+
+        $(document).click(function(e){
+            if ($("ul.dropdown-menu.inner li:last-child a").is(e.target)){
+                setTimeout(function(){
+                    $(".time-pe .bootstrap-select > .dropdown-menu > div").hide();
+                    $(".time-pe .bootstrap-select > .dropdown-menu").addClass('show');
+                    $(".custom-period").show();
+                }, 100);
+            }
+
+            if ($("ul.dropdown-menu.inner li:last-child a span").is(e.target)){
+                setTimeout(function(){
+                    $(".time-pe .bootstrap-select > .dropdown-menu > div").hide();
+                    $(".time-pe .bootstrap-select > .dropdown-menu").addClass('show');
+                    $(".custom-period").show();
+                }, 100);
+            }
+        })
+
+        $(".done-button a").click(function(){
+            $(".time-pe .bootstrap-select > .dropdown-menu > div").show();
+            $(".time-pe .bootstrap-select > .dropdown-menu").removeClass('show');
+            $(".custom-period").hide();
+
+            $(".time-pe .filter-option-inner-inner").html("Every " + $("#c-p").val() + " Week");
+        })
+
+        $("ul.dropdown-menu.inner li:last-child a").click(function(){
+            alert("ok");
+        })
+    })
+</script>
+</html>

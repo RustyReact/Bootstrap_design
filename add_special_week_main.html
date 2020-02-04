@@ -1,0 +1,569 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/timepicki.css" >
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#">Analytics & Archive</a></li>
+                                        <li><a href="profile_main.html" class="active">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container sidebar-container">
+            <div class="title-area">
+                    <div class="row">
+                        <h2 class="title">Settings</h2>
+                    </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container settings-sidebar-container">
+                    <div class="settings-sidebar">
+                        <a class="" href="#home">Roles</a>
+                        <a class="" href="#news">Employees</a>
+                        <a href="#contact">Locations</a>
+                        <a class="active" href="#about">Special Weeks</a>
+                        <a href="" class="empty_menu"></a>
+                    </div>
+                    <div class="main-content-area spec-week-content-area">
+                        <div class="container-fluid content-header-area">
+                            <div class="row">
+                                <h3 class="title"><i class="flaticon-left-arrow"></i> Add new Special Week</h3>
+                            </div>
+                        </div>
+                        <div class="container-fluid content-body-area special-week">
+                            <form>
+                                <div class="content-item form-group">
+                                    <label for="spec_week_name">Special Week name</label>
+                                    <div class="content item-div-400">
+                                        <input type="text" class="form-control" id="spec_week_name"/>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group">
+                                    <label for="">Type of Special Week</label>
+                                    <div class="content row">
+                                        <div class="radio radio-primary">
+                                            <span>
+                                              <input type="radio" name="special_week_type" style="outline: none" id="platform_gen" checked>
+                                              <label for="platform_gen">
+                                                Platform Generated
+                                              </label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" style="outline: none;" name="special_week_type" id="added_as_needed" >
+                                                <label for="added_as_needed">
+                                                    Added as needed
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group platform_generated">
+                                    <label for="max_week_hours">Role</label>
+                                    <div class="content custom-control custom-select1">
+                                        <select class="form-control selectpicker" id="Role">
+                                            <option disabled selected hidden>Select role</option>
+                                            <option title="Doctor" value="Doctor">Doctor</option>
+                                            <option title="Nurse" value="Nurse">Nurse</option>
+                                            <option title="Physical Assistant" value="Physical Assistant">Physical Assistant</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group platform_generated">
+                                    <div class="row-flex">
+                                        <div class="item">
+                                            <label for="starts_on">Special week starts on</label>
+                                            <div class="content custom-control custom-select1">
+                                                <select class="form-control selectpicker" id="starts_on">
+                                                    <option disabled selected hidden>Select weekday</option>
+                                                    <option value="1">Monday</option>
+                                                    <option value="2">Tuesday</option>
+                                                    <option value="3">Wednesday</option>
+                                                    <option value="4">Thursday</option>
+                                                    <option value="5">Friday</option>
+                                                    <option value="6">Saturday</option>
+                                                    <option value="0">Sunday</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <label for="ends_on">Special week ends on</label>
+                                            <div class="content custom-control custom-select1">
+                                                <select class="form-control selectpicker" id="ends_on">
+                                                    <option disabled selected hidden>Select weekday</option>
+                                                    <option value="1">Monday</option>
+                                                    <option value="2">Tuesday</option>
+                                                    <option value="3">Wednesday</option>
+                                                    <option value="4">Thursday</option>
+                                                    <option value="5">Friday</option>
+                                                    <option value="6">Saturday</option>
+                                                    <option value="0">Sunday</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group added_as_needed">
+                                    <div class="row-flex">
+                                        <div class="item">
+                                            <label for="starts_on">Special week duration</label>
+                                            <div class="content custom-control custom-select1">
+                                                <select class="form-control selectpicker" id="starts_on">
+                                                    <option disabled selected hidden>Select no. days</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                    <option>Option 1</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group">
+                                    <div class="row-flex">
+                                        <div class="item">
+                                            <label for="starts_time">Shift starts at</label>
+                                            <div class="content custom-control custom-select1">
+                                                <input type="text" class="form-control control-timepicker" id="starts_time" placeholder="Select time">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <label for="ends_time">Shift ends at</label>
+                                            <div class="content custom-control custom-select1">
+                                                <input type="text" class="form-control control-timepicker" id="ends_time" placeholder="Select time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group platform_generated">
+                                    <label for="location">Location</label>
+                                    <div class="content custom-control custom-select1">
+                                        <select class="form-control selectpicker" id="location">
+                                            <option disabled selected hidden>Select location</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                            <option>Option 1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="content-item form-group question platform_generated">
+                                    <label>How often does this special week occur?</label>
+                                </div>
+                                <div class="content-item-slider platform_generated">
+                                    <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
+                                      <div class="row carousel-inner">
+                                        <div class="row carousel-item ">
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker1"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker2"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker3"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker4"></div>
+                                        </div>
+                                        <div class="row carousel-item">
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker5"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker6"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker7"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker8"></div>
+                                        </div>
+                                        <div class="row carousel-item active">
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker9"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker10"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker11"></div>
+                                          <div class="calendar-month col-6 col-lg-3 col-md-3 week-picker12"></div>
+                                        </div>
+                                      </div>
+                                      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                        <span class="carousel-control-prev-icon"><i class="fa fa-caret-left"></i> </span>
+                                      </a>
+                                      <a class="carousel-control-next" href="#demo" data-slide="next">
+                                        <span class="carousel-control-next-icon"><i class="fa fa-caret-right"></i> </span>
+                                      </a>
+                                    </div>
+                                </div>
+                                <div class="row special-week-add-btn">
+                                    <button type="submit" class="genric-btn info circle arrow">Create new Special week</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer_start -->
+    <footer class="footer">
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery-ui/jquery.weekpicker-custom.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/timepicki.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+<script type="text/javascript">
+    var weekData;
+    var year;
+    $(document).ready(function(){
+
+        $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+        $('.selectpicker').selectpicker({dropupAuto:false, style:'btn-white'});
+
+        year = 2020;
+        weekData = [];
+
+        for (var i = 0; i < 12; i ++){
+            weekData[i] = [];
+        }
+
+        for ( var i = 0; i < 12; i ++){
+            var selector = ".week-picker" + (i + 1);
+            var date = (i + 1);
+            if ( date < 10) date = "0" + date;
+            $(selector).weekpicker({"setDate":date+"/12/" + year,
+                                    onSelectWeek: function(result){
+                                        console.log(result);
+                                        setWeekData(result);
+                                        setMonthHighlight(result['month']);
+                                    },
+                                    onSelectMonth: function(result){
+
+                                        var m = result['month'];
+
+                                        for (var h = 0; h < result['data'].length; h ++){
+                                            var item = result['data'][h];
+                                            setWeekData(item);
+                                            //setHighlight(item['data'], 0)
+                                        }
+
+                                        weekData[m] = [];
+
+                                        if (getMonthStatus(m) == false){
+                                           
+                                            for (var h = 0; h < result['data'].length; h ++){
+                                                var item = result['data'][h];
+                                                setWeekData(item, 1)
+                                                // weekData[m].push(item);
+
+                                                // setHighlight(item['data'], 1)
+                                            }
+                                        }
+
+                                        setMonthHighlight(m);
+                                    },
+                                    onHoverWeek: function(result){
+
+                                        var exist = false;
+                                        var selMonth = result['month'];
+                                        for ( var i = 0; i < weekData[selMonth].length; i ++){
+                                            var item = weekData[selMonth][i];
+
+                                            if ( compare(item['weekstart'], result['weekstart']) 
+                                                && compare(item['weekend'], result['weekend'])) {
+                                                exist = true;
+                                            }
+                                        }
+
+                                        if (exist == false)
+                                            setHighlightHover(result['data'], 1);
+                                    },
+                                    onUnhoverWeek: function(result){
+                                        setHighlightHover(result['data'], 0);  
+                                    }
+                                });            
+        }
+
+        $(".added_as_needed").hide();
+
+        $("#platform_gen").click(function(){
+            $(".platform_generated").show();
+            $(".added_as_needed").hide();
+        })
+
+        $("#added_as_needed").click(function(){
+            $(".platform_generated").hide();
+            $(".added_as_needed").show();
+        })
+    })
+
+function setWeekData(param, f=0){
+    
+    var selMonth = param['month'];
+
+    var exist = false;
+    for ( var i = 0; i < weekData[selMonth].length; i ++){
+        var item = weekData[selMonth][i];
+
+        if ( compare(item['weekstart'], param['weekstart']) 
+            && compare(item['weekend'], param['weekend'])) {
+            exist = true;
+            if (f == 0) setHighlight(item['data'], 0)
+            if (f == 0) weekData[selMonth].splice(i, 1);
+        }
+    }
+
+    if (exist == false){
+        weekData[selMonth].push(param);
+        setHighlight(param['data'], 1);
+    }
+
+    if (param['weekstart'].getMonth() < selMonth){
+
+        selMonth = param['month'] - 1;
+        if (selMonth < 0) return;
+
+        var exist = false;
+        for ( var i = 0; i < weekData[selMonth].length; i ++){
+            var item = weekData[selMonth][i];
+
+            if ( compare(item['weekstart'], param['weekstart']) 
+                && compare(item['weekend'], param['weekend'])) {
+                exist = true;
+                if (f == 0) setHighlight(item['data'], 0)
+                if (f == 0) weekData[selMonth].splice(i, 1);
+            }
+        }
+
+        if (exist == false){
+            param['month'] = selMonth
+            weekData[selMonth].push(param);
+            setHighlight(param['data'], 1);
+        }
+
+        return;
+    }
+
+    if (param['weekend'].getMonth() > selMonth){
+
+        selMonth = param['month'] + 1;
+        if (selMonth > 12) return;
+
+        var exist = false;
+        for ( var i = 0; i < weekData[selMonth].length; i ++){
+            var item = weekData[selMonth][i];
+
+            if ( compare(item['weekstart'], param['weekstart']) 
+                && compare(item['weekend'], param['weekend'])) {
+                exist = true;
+                if (f == 0) setHighlight(item['data'], 0)
+                if (f == 0) weekData[selMonth].splice(i, 1);
+            }
+        }
+
+        if (exist == false){
+            param['month'] = selMonth
+            weekData[selMonth].push(param);
+            setHighlight(param['data'], 1);
+        }
+    }    
+}
+
+function compare(d1, d2){
+    if (d1.getDate() == d2.getDate() && d2.getFullYear() == d1.getFullYear() && d1.getMonth() == d2.getMonth()) return true;
+
+    return false;
+}
+
+function setHighlight(data, flag){
+    
+    for (var i = 0; i < data.length; i ++){
+        var item = data[i];
+
+        var selectId = ".week-picker" + parseInt(item['month']);
+
+        var first_el = null;
+        var last_el = null;
+
+        $(selectId + ' tbody tr').find('td').each(function(){
+
+            var text = $.trim($(this).text());
+            var el = $(this).find("a");
+            
+            if (el.hasClass("ui-priority-secondary") == false && el.length > 0){
+
+                for (var d = item['start']; d <= item['end']; d = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1)){
+                    var day = d.getDay();
+
+                    if ((d.getMonth()+1) != item['month']) continue;
+
+                    if (d.getFullYear() != year ) continue;
+
+                    if (d.getDate() == text){
+                            var w1 = item['day_start'];
+                            var w2 = item['day_end']
+                            if ( day >= w1 && day <= w2){
+                                if (flag == 1)
+                                    el.addClass("ui-tr-week-selected");
+                                else{
+                                    el.removeClass("ui-tr-week-selected");
+                                    el.removeClass("first-week-td-select");
+                                    el.removeClass("last-week-td-select");
+                                }
+                                if (first_el == null) first_el = el;
+                                last_el = el;
+                            }
+                    }
+                }
+            }
+        });
+
+        if (flag == 1){
+            if (first_el != null) first_el.addClass("first-week-td-select");
+            if (last_el != null) last_el.addClass("last-week-td-select");
+        }
+    }
+}
+
+function setHighlightHover(data, flag){
+    
+    for (var i = 0; i < data.length; i ++){
+        var item = data[i];
+
+        var selectId = ".week-picker" + parseInt(item['month']);
+
+        var first_el = null;
+        var last_el = null;
+
+        $(selectId + ' tbody tr').find('td').each(function(){
+
+            var text = $.trim($(this).text());
+            var el = $(this).find("a");
+            
+            if (el.hasClass("ui-priority-secondary") == false && el.length > 0){
+
+                for (var d = item['start']; d <= item['end']; d = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1)){
+                    var day = d.getDay();
+
+                    if ((d.getMonth()+1) != item['month']) continue;
+
+                    if (d.getFullYear() != year ) continue;
+
+                    if (d.getDate() == text){
+                            var w1 = item['day_start'];
+                            var w2 = item['day_end']
+                            if ( day >= w1 && day <= w2){
+                                if (flag == 1)
+                                    el.addClass("ui-tr-hover");
+                                else{
+                                    el.removeClass("ui-tr-hover");
+                                    el.removeClass("first-week-td");
+                                    el.removeClass("last-week-td");
+                                }
+
+                                if (first_el == null) first_el = el;
+                                last_el = el;
+                            }
+                    }
+                }
+            }
+        });
+
+        if (flag == 1){
+            if (first_el != null) first_el.addClass("first-week-td");
+            if (last_el != null) last_el.addClass("last-week-td");
+        }
+    }
+}
+
+function getMonthStatus(month){
+    var selectId = ".week-picker" + parseInt(month+1);
+    if ($( selectId + ' .ui-datepicker-month').hasClass('ui-datepicker-month-highlight'))
+        return true;
+
+    return false;
+}
+
+function setMonthHighlight(month){
+
+    console.log(weekData[month]);
+    for ( var m = 0; m < 12; m ++){
+
+        var selectId = ".week-picker" + parseInt(m+1);
+        if (weekData[m].length >= 5){
+            $( selectId + ' .ui-datepicker-month').addClass('ui-datepicker-month-highlight');
+        }else{
+            $( selectId + ' .ui-datepicker-month').removeClass('ui-datepicker-month-highlight');
+        }
+    }
+}
+
+</script>
+</html>

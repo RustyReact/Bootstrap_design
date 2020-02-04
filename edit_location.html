@@ -1,0 +1,1357 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Employee Scheduling Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="css/webfont.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/timepicki.css" >
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.php">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="" href="generation_main.html">Schedule</a></li>
+                                        <li><a href="#">Analytics & Archive</a></li>
+                                        <li><a href="profile_main.html" class="active">Settings</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                         <div class="col-xl-1 col-lg-1 d-none d-lg-block">
+                            <div class="noti-menu d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>
+                                            <img class="profile-img" alt="User Profile Image" src="img/img_avatar.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <div class="main-body"> 
+        <div class="container sidebar-container">
+            <div class="title-area">
+                    <div class="row">
+                        <h2 class="title">Settings</h2>
+                    </div>
+            </div>
+
+            <div class="body-area">
+                <div class="body-container settings-sidebar-container setting-add-location">
+                    <div class="settings-sidebar">
+                        <a class="" href="#home">Roles</a>
+                        <a href="#news">Employees</a>
+                        <a class="active" href="#contact">Locations</a>
+                        <a href="#about">Special Weeks</a>
+                        <a href="" class="empty_menu"></a>
+                    </div>
+                    <div class="main-content-area no-border setting-location">
+                        <div class="container-fluid content-header-area">
+                            <div class="row right-button">
+                                <h3 class="title"><i class="flaticon-left-arrow"></i> Edit Location</h3>
+                                <span><a id="delete-location">Delete Location</a></span>
+                            </div>
+                        </div>
+                        <div class="container-fluid content-body-area">
+                            <form>
+                                <div class="block-item first-block">
+                                    <div class="content-item form-group">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-md-6 item">
+                                                <label for="name">Name</label>
+                                                <div class="content item-div-100p">
+                                                    <input type="text" class="form-control" id="name"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 item address-item">
+                                                <label for="address"><i class="fa fa-map-marker"></i>Address</label>
+                                                <div class="content item-div-100p">
+                                                    <input type="text" class="form-control" id="address"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-item">
+                                    <div class="container-fluid block-header-area">
+                                        <div class="row">
+                                            <h3 class="title scroll-pos"> Add Shifts</h3>
+                                        </div>
+                                    </div>    
+                                    <div class="block-content-area addshifts-area">
+                                        <div class="content-item form-group">
+                                            <div class="row">
+                                                <div class="col-xl-3 col-md-3 item">
+                                                    <label for="shift_starts_at_time">Shift start time</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control control-timepicker" id="shift_starts_at_time" placeholder="Select time" /> 
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-3 item">
+                                                    <label for="ends_at">Shift end time</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control control-timepicker" id="shift_ends_at_time" placeholder="Select time" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row time-range-area" style="margin-top: 5px;">
+                                                <div class="col-xl-6 col-md-6 item">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-item form-group">
+                                            <div class="row">
+                                                <div class="col-xl-6 col-md-6">
+                                                    <label for="shift_days">Shift day <span class="l-s">&nbsp;&nbsp; (Multiselect)</span></label>
+                                                    <div class="content custom-control custom-select1 full-item-100p">
+                                                        <select class="" id="shift_days" multiple="multiple">
+                                                            <option title="Mon" value="Mon">Monday</option>
+                                                            <option title="Tue" value="Tue">Tuesday</option>
+                                                            <option title="Wed" value="Wed">Wednesday</option>
+                                                            <option title="Thu" value="Thu">Thursday</option>
+                                                            <option title="Fri" value="Fri">Friday</option>
+                                                            <option title="Sat" value="Sat">Saturday</option>
+                                                            <option title="Sun" value="Sun">Sunday</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-item form-group">
+                                            <div class="row">
+                                                <div class="col-xl-6 col-md-6 item rolese-select">
+                                                    <label for="roles">Roles <span class="l-s">&nbsp;&nbsp; (Multiselect)</span></label>
+                                                    <div class="content custom-control custom-select1 full-item-100p">
+                                                        <select class="form-control" id="roles" multiple="multiple">
+                                                            <option title="Doctor" value="Doctor">Doctor</option>
+                                                            <option title="Nurse" value="Nurse">Nurse</option>
+                                                            <option title="Physical Assistant" value="Physical Assistant">Physical Assistant</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-item form-group">
+                                            <div class="row">
+                                                <div class="col-xl-3 col-md-3 item">
+                                                    <label for="min_employees">Min. Emloyees</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="number" class="form-control" id="min_employees"/> 
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-3 item">
+                                                    <label for="max_employees">Max. Employees</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="number" class="form-control" id="max_employees"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" id="add_shift" flag=0 class="block-item-button genric-btn info-border circle arrow">Add Shift</button>
+
+                                        <div class="sub-block">
+                                            <div class="container-fluid block-header-area">
+                                                <div class="row">
+                                                    <h3 class="title">Shifts</h3>
+                                                </div>
+                                            </div>    
+                                            <div class="block-content-area table-responsive">
+                                                <table class="table table-hover r-t shift-table-r">
+                                                    <thead>
+                                                      <tr>
+                                                        <th style="text-align:center;width: 10px;"></th>
+                                                        <th>Roles</th>
+                                                        <th>Shift time</th>
+                                                        <th>Days</th>
+                                                        <th>Emplyee count</th>
+                                                        <th style="text-align: right; width:20px"></th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    </tbody>
+                                                  </table>
+                                            </div>
+                                            <div class="container-fluid sub-block-header-area monday-area">
+                                                <div class="row">
+                                                    <h3 class="subtitle" id="day-title" data-id=0 >Monday</h3>
+                                                    <span id="left-day"><i class="fa fa-caret-left"></i></span>
+                                                    <span id="right-day"><i class="fa fa-caret-right"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="sub-block-content-area table-responsive">
+                                                <table class="table table-hover r-t graph-table-r">
+                                                    <thead>
+                                                      <tr>
+                                                        <th colspan="2" style="text-align:center;width: 10px;"></th>
+                                                        <th>12:00 AM</th>
+                                                        <th>06:00 AM</th>
+                                                        <th>12:00 PM</th>
+                                                        <th>06:00 PM</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      
+                                                    </tbody>
+                                                  </table>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="block-item">
+                                    <div class="container-fluid block-header-area">
+                                        <div class="row">
+                                            <h3 class="title">Categorization</h3>
+                                        </div>
+                                    </div>    
+                                    <div class="block-content-area">
+                                        <div class="content-item form-group">
+                                            <div class="row category-responsive">
+                                                <div class="col-xl-3 col-md-4 item">
+                                                    <label for="m_shifts_start"><img src="img/morning.png" alt="" />Morning shifts start</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control control-timepicker" id="m_shifts_start" placeholder="Select time" /> 
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-4 item">
+                                                    <label for="a_shifts_start"><img src="img/afternoon.png" alt="" />Afternoon shifts start</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control control-timepicker" id="a_shifts_start" placeholder="Select time" /> 
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-4 item">
+                                                    <label for="n_shifts_start"><img src="img/night.png" alt="" />Night shifts start</label>
+                                                    <div class="content custom-control custom-select1">
+                                                        <input type="text" class="form-control control-timepicker" id="n_shifts_start" placeholder="Select time" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-item form-group">
+                                            <div class="row">
+                                                <div class="col-xl-4 col-md-6 item">
+                                                    <label>Weekday shifts starts at</label>
+                                                    <div class="row add-location sub-row">
+                                                        <div class="col-xl-6 col-md-6 sub-item">
+                                                            <div class="content custom-control custom-select1">
+                                                                <select class="form-control selectpicker" id="starts_at_weekday">
+                                                                    <option disabled selected hidden>Select Day</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-md-6 sub-item">
+                                                            <div class="content custom-control custom-select1">
+                                                                <input type="text" class="form-control control-timepicker" id="weekday_shifts_start" placeholder="Select time" /> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-md-6 item category-item category-item-11">
+                                                    <label class="category-sub-label">Weekend shifts starts at</label>
+                                                    <div class="row">
+                                                        <div class="col-xl-6 col-md-6 sub-item">
+                                                            <div class="content custom-control custom-select1">
+                                                                <select class="form-control selectpicker" id="starts_at_weekend" >
+                                                                    <option disabled selected hidden>Select Day</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 1</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-md-6 sub-item">
+                                                            <div class="content custom-control custom-select1">
+                                                                <input type="text" class="form-control control-timepicker" id="weekend_shifts_start" placeholder="Select time" /> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-item leisure">
+                                    <div class="container-fluid block-header-area">
+                                        <div class="row">
+                                            <h3 class="title">Leisure</h3>
+                                            <label class="l-f">How many hours would you like employees to have between shifts?This is aminimum number.
+                                            </label>
+                                        </div>
+                                    </div>    
+                                    <div class="block-content-area">
+                                        <div class="content-item form-group">
+                                            <div class="content-item form-group">
+                                                <div class="content item-div">
+                                                    <input type="text" class="form-control" name="leisure"><span>Hours</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class=" genric-btn info circle arrow">Create new Location</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="confirm-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                </div>
+
+                <div class="modal-footer">
+                    <button class="genric-btn info-border circle arrow" id="yes-btn">Ok</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="confirm-modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Are you sure you want to delete<br>
+                    <span class="emp-to-del">Pediatric Wang</span> as a Location?
+                </div>
+
+                <div class="modal-footer">
+                    <button class="genric-btn info-border circle arrow" id="yes1-btn">Yes</button>
+                    <button class="genric-btn info circle arrow" id="no-btn">No</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer_start -->
+    <footer class="footer">
+        
+    </footer>
+    <!-- footer_end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+    <script src="js/timepicki.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+<script type="text/javascript">
+    var shifts_table_data;
+    var graph_table_data;
+    var editClicked = false;
+    var orderCount = 0;
+    $(document).ready(function(){
+        $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+        $('.selectpicker').selectpicker({dropupAuto:false, style:'btn-white'});
+
+        $("#delete-location").click(function(){
+            $("#confirm-modal1").modal({backdrop: 'static', keyboard: false});
+        })
+
+        $("#yes1-btn").click(function(){
+            $("#confirm-modal1").modal("hide");
+        })
+
+        $("#no-btn").click(function(){
+            $("#confirm-modal1").modal('hide');  
+        })
+
+        $('.time-range-area').on('click', '.time-r', function(){
+            $(".time-range-area").attr("data-id", $(this).attr("data-id"));
+            $("#shift_starts_at_time").val($(this).attr("start"));
+            $("#shift_ends_at_time").val($(this).attr("end"));
+        })
+
+        shifts_table_data = [];
+        var item = {roles:{class:"dobule-cell", html:"Physical Assistant,<br>Nurse, Doctor", values:"Physical Assistant,Nurse,Doctor"},
+                    shift_time:{class:"",html:"12:00 AM - 12:00 PM", values:[{start:"12:00 AM", end: "12:00 PM"}]},
+                    days:{class:"", html:"Mon", values:"Mon"},
+                    emp_count:"1-5",
+                    emp_min:1,
+                    emp_max:5
+                    }
+        shifts_table_data.push(item);
+        item = {roles:{class:"", html:"Doctor", values:"Doctor"},
+                    shift_time:{class:"",html:"12:00 PM - 11:59 PM", values:[{start:"12:00 PM", end: "11:59 PM"}]},
+                    days:{class:"dobule-cell-td", html:"Mon, Tue, Wed,<span class='block-disp'>Thu, Fri, Sat, Sun</span>", values:"Mon,Tue,Wed,Thu,Fri,Sat,Sun"},
+                    emp_count:"1-7",
+                    emp_min:1,
+                    emp_max:7
+                    }
+        shifts_table_data.push(item);
+        item = {roles:{class:"", html:"Nurse", values:"Nurse"},
+                    shift_time:{class:"dobule-cell",html:"06:00 AM - 12:00 PM<br>12:00 PM - 06:00 PM", values:[{start:"06:00 AM", end: "12:00 PM"}, {start:"12:00 PM", end:"06:00 PM"}]},
+                    days:{class:"", html:"Mon, Tue",values:"Mon,Tue"},
+                    emp_count:"3-6",
+                    emp_min:3,
+                    emp_max:6
+                    }
+        shifts_table_data.push(item);
+        shift_table_build();
+
+        $('#shift_days').multiselect({buttonWidth: '100%',
+                                    nonSelectedText: 'Select day(s)',
+                                    selectAllNumber: false,
+                                    numberDisplayed: 20,
+                                    allSelectedText: false,
+                                    buttonText: function(options, select) {
+                                        if (options.length === 0) {
+                                            return 'Select day(s)';
+                                        }else {
+                                             var labels = [];
+                                             options.each(function() {
+                                                 if ($(this).attr('label') !== undefined) {
+                                                     labels.push($(this).attr('label'));
+                                                 }
+                                                 else {
+                                                     labels.push($(this).attr("title"));
+                                                 }
+                                             });
+                                             return labels.join(', ') + '';
+                                         }
+                                     }
+                                    });
+        $('#roles').multiselect({buttonWidth: '100%',
+                                    nonSelectedText: 'Select role(s)',
+                                    selectAllNumber: false,
+                                    numberDisplayed: 20,
+                                    allSelectedText: false,
+                                    onChange: function(option, checked) {
+                                        $(option).html();
+                                        if (checked) {
+                                            orderCount++;
+                                            $(option).data('order', orderCount);
+                                        }
+                                        else {
+                                            $(option).data('order', '');
+                                        }
+                                    },
+                                    buttonText: function(options) {
+                                        if (options.length === 0) {
+                                            $(".role-list-div").html('');
+                                            return 'Select role(s)';
+                                        }
+                                        else {
+                                            var selected = [];
+
+                                            options.each(function() {
+                                                selected.push([$(this).text(), $(this).data('order')]);
+                                            });
+
+                                            selected.sort(function(a, b) {
+                                                return a[1] - b[1];
+                                            });
+                                            
+                                            var html1 = '';
+                         
+                                            var text = '';
+                                            for (var i = 0; i < selected.length; i++) {
+                                                text += selected[i][0] + ', ';
+                                                html1 += '<div style="padding-top: 0px;padding-bottom: 13px;color: #494860;">' +
+                                                            ''+(i+1)+'. ' + selected[i][0] +
+                                                        '</div>';
+                                            }
+
+                                            $(".role-list-div").html(html1);
+
+                                            var leftPos = $("html, body").scrollTop();
+                                            $("html, body").animate({
+                                                scrollTop: leftPos + 1
+                                            }, 0.0000000001);
+
+                                            return text.substr(0, text.length -2);
+                                        }
+                                    },
+                                    // buttonText: function(options, select) {
+                                    //     if (options.length === 0) {
+                                    //         return 'Select role(s)';
+                                    //     }else {
+                                    //          var labels = [];
+                                    //          options.each(function() {
+                                    //              if ($(this).attr('label') !== undefined) {
+                                    //                  labels.push($(this).attr('label'));
+                                    //              }
+                                    //              else {
+                                    //                  labels.push($(this).attr("title"));
+                                    //              }
+                                    //          });
+                                    //          return labels.join(', ') + '';
+                                    //      }
+                                    //  }
+                               });
+
+        var html = '<div class="role-spliter" style="height: 2px;width: calc(100% + 39px);background: #E5E4E8;margin-left: -25px;margin-top: 19px;margin-bottom: 19px;"></div>' +
+                        '<div class="roles-select-div">' +
+                                    '<div style="color: #7B798E;padding-top: 0px;padding-bottom: 13px;">' +
+                                        'Shift coverage priority will be set according to  selection of roles' +
+                                    '</div>' +
+                                    '<div class="role-list-div">' +
+                                    '</div>'
+                                '</div>';
+        $(".rolese-select ul.multiselect-container").append(html);
+
+        $("#add_shift").click(function(){
+            if ($(this).attr("flag") == 0){
+                add_shift_data(0);
+                editClicked = false;
+            }
+            if ($(this).attr("flag") == 1){
+                editClicked = false;
+                update_shift();
+            }
+        })
+
+        $("#left-day").click(function(){
+            var weekArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            var idx = $("#day-title").attr("data-id");
+            idx = parseInt(idx) - 1;
+            if (idx < 0) return;
+            $("#day-title").html(weekArray[idx]);
+            $("#day-title").attr("data-id", idx);
+
+            graph_table();
+        });
+
+        $("#right-day").click(function(){
+            var weekArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            var idx = $("#day-title").attr("data-id");
+            idx = parseInt(idx) + 1;
+            if (idx > 6) return;
+            $("#day-title").html(weekArray[idx]);
+            $("#day-title").attr("data-id", idx);
+
+            graph_table();
+        });
+    })
+
+/*
+    Deselect all selected items of Multiselect dropdown
+*/
+function multiselect_deselectAll($el) {
+    $('option', $el).each(function(element) {
+        $el.multiselect('deselect', $(this).val());
+    });
+}
+// Clear all form data
+function clear_shift_form(){
+    $("#shift_starts_at_time").val("");
+    $("#shift_ends_at_time").val("");
+    
+    multiselect_deselectAll($("#shift_days"));
+    multiselect_deselectAll($("#roles"));
+    $("#min_employees").val("");
+    $("#max_employees").val("");
+}
+
+/* 
+    * When user click edit in shift table, the data of row clicked be showed into the form elements.
+    * @param id: index of Table Data array
+*/
+function populate_data(id){
+
+    var data = shifts_table_data[id];
+
+    var s1 = $.trim(toggle24hr1($.trim(data['shift_time']['start']), 1));
+    var e1 = $.trim(toggle24hr1($.trim(data['shift_time']['end']), 1));
+    var st = new Date('1970-01-01T' + s1);
+    var et = new Date('1970-01-01T' + e1);
+    s = st.getHours();
+    e = et.getHours();
+
+    var st = data['shift_time']['values'];
+    var html = "";
+    for (var i = 0; i < st.length; i ++){
+        if (i == 0){
+            $(".time-range-area").attr("data-id", i);
+            $("#shift_starts_at_time").val(st[i]['start']);
+            $("#shift_ends_at_time").val(st[i]['end']);
+
+            if (st.length > 1){
+                html += '<span style="cursor: pointer;color: #2F89FC;padding: 5px;"  class="time-r" start="' + st[i]['start'] + '" end="'+ st[i]['end'] + '" data-id=' +i+ '>' + st[i]['start'] + " - " + st[i]['end'] + '</span>';
+            }
+        }else{
+            
+            html += '<span style="cursor: pointer;color: #2F89FC;padding: 5px;" class="time-r" start="' + st[i]['start'] + '" end="'+ st[i]['end'] + '" data-id=' +i+ '>' + st[i]['start'] + " - " + st[i]['end'] + '</span>';
+        }
+    }
+
+    if (st.length > 1){
+        
+        $(".time-range-area .item").html(html);
+        $(".time-range-area").show();
+    }else{
+        $(".time-range-area .item").html("");
+        $(".time-range-area").hide();
+    }
+    
+    $("#min_employees").val(data['emp_min']);
+    $("#max_employees").val(data['emp_max']);
+
+    var roles = data['roles']['values'];
+    var days = data['days']['values'];
+
+    var rolesarray=roles.split(",");
+    var daysarray = days.split(",");
+    $("#roles").val(rolesarray);
+    for (var i = 0; i < rolesarray.length; i ++){
+        orderCount ++;
+        $("option[value='"+rolesarray[i]+"']").data('order', orderCount);
+    }
+    $("#roles").multiselect("refresh");
+    $("#shift_days").val(daysarray);
+    $("#shift_days").multiselect("refresh");
+}
+
+// After user click edit, then when user click update, all data be saved and redraw the table and graph.
+function update_shift(){
+    $("#add_shift").html("Add Shift");
+    $("#add_shift").attr("flag", 0);
+    $(".time-range-area").hide();
+    add_shift_data(1);
+}
+
+// Prepare the Graph Table data based on graph table data
+/*
+
+*/
+function buildGraphData(){
+
+    graph_table_data = {Mon: new Array(), Tue: new Array(), Wed: new Array(), Thu: new Array(), Fri: new Array(), Sat: new Array(), Sun: new Array()};
+    var week_array = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+    for (var i = 0; i < shifts_table_data.length; i ++){
+        var item = shifts_table_data[i];
+        var weekGraph = {};
+        weekGraph['Mon'] = {series:[0,6,12,18,24], workdays:[]};
+        weekGraph['Tue'] = {series:[0,6,12,18,24], workdays:[]};
+        weekGraph['Wed'] = {series:[0,6,12,18,24], workdays:[]};
+        weekGraph['Thu'] = {series:[0,6,12,18,24], workdays:[]};
+        weekGraph['Fri'] = {series:[0,6,12,18,24], workdays:[]};
+        weekGraph['Sat'] = {series:[0,6,12,18,24], workdays:[]};
+        weekGraph['Sun'] = {series:[0,6,12,18,24], workdays:[]};
+
+        for (var q = 0; q < item['shift_time']['values'].length; q ++){
+
+            var item1 = item['shift_time']['values'][q];
+
+            var s1 = $.trim(toggle24hr1($.trim(item1['start']), 1));
+            var e1 = $.trim(toggle24hr1($.trim(item1['end']), 1));
+            var st = new Date('1970-01-01T' + s1);
+            var et = new Date('1970-01-01T' + e1);
+            s = st.getHours();
+            e = et.getHours();
+
+            var str = "" + item['days']['values'];
+            var shiftDayArray = str.split(',');
+
+            var shift_day_values = shifts_table_data[i]['days']['values'];
+            var origin_day = shift_day_values;
+
+            if (et < st){ // if shift start time is greater than shift end time, add one more day.
+                var dd = add_one_day(shiftDayArray);
+
+                shiftDayArray = dd;
+
+                shift_day_values = '';
+                for (var k = 0; k < shiftDayArray.length; k ++){
+                    shift_day_values += shiftDayArray[k] + ",";
+                }
+                shift_day_values = shift_day_values.substr(0, shift_day_values.length - 1);
+                
+            }
+
+            var days = shift_day_values;
+            var graph_data = [];
+            var pos = "";
+            var start_d = item1['start'];
+            var end_d = item1['end'];
+            var obj = {};
+
+            var start_val = getValFromTime(start_d);
+            var end_val = getValFromTime(end_d);
+
+            for (var o = 0; o < week_array.length; o ++){
+
+                if (week_array[o] == "Mon" && days.includes("Mon") == false && shiftDayArray[shiftDayArray.length - 1] == "Null"){
+                    graph_data = getGraphSeries(weekGraph[week_array[o]]['series'], {start:"12:00 AM", end:end_d});
+                    weekGraph[week_array[o]]['series'] = graph_data;
+                    weekGraph[week_array[o]]['workdays'].push([0, end_val]);
+                }
+
+                if (days.includes(week_array[o])){
+
+                    if (et < st){ // when shift start time is greater than shift end time, graph data preparing.
+                        pos = getPosofWeek(week_array[o], shiftDayArray, origin_day);
+                        if (pos == "start"){
+                            graph_data = getGraphSeries(weekGraph[week_array[o]]['series'], {start:start_d, end:"23:59 PM"});
+                            weekGraph[week_array[o]]['series'] = graph_data;
+                            weekGraph[week_array[o]]['workdays'].push([start_val, 24]);
+                        }else if (pos == "end"){
+                            graph_data = getGraphSeries(weekGraph[week_array[o]]['series'], {start:"12:00 AM", end:end_d});
+                            weekGraph[week_array[o]]['series'] = graph_data;
+                            weekGraph[week_array[o]]['workdays'].push([0, end_val]);
+                        }else{
+                            graph_data = getGraphSeries(weekGraph[week_array[o]]['series'], {start:start_d, end:"23:59 PM"});
+                            weekGraph[week_array[o]]['series'] = graph_data;
+                            graph_data = getGraphSeries(weekGraph[week_array[o]]['series'], {start:"12:00 AM", end:end_d});
+                            weekGraph[week_array[o]]['series'] = graph_data;
+                            weekGraph[week_array[o]]['workdays'].push([start_val, 24]);
+                            weekGraph[week_array[o]]['workdays'].push([0, end_val]);
+                        }
+                    }else{ // Normal data preparing
+                        graph_data = getGraphSeries(weekGraph[week_array[o]]['series'], {start:start_d, end:end_d});
+                        weekGraph[week_array[o]]['series'] = graph_data;
+                        weekGraph[week_array[o]]['workdays'].push([start_val, end_val]);
+                    }
+                }
+            }
+        }
+
+        for (var o = 0; o < week_array.length; o ++){
+            var it = {class:item['roles']['class'], html:item['roles']['html']+"("+item['emp_count']+")", graph:weekGraph[week_array[o]]}
+            graph_table_data[week_array[o]].push(it);
+        }
+    }
+
+    console.log(graph_table_data);
+}
+
+// Prepare the Graph data
+/*
+    @params:
+    @data_array: the array of graph data.
+    @data: array of shift start time and end time
+
+    Initial graph data array is [0, 6, 12, 18, 24]
+    The shift time and end time be added into this array.
+*/
+function getGraphSeries(data_array, data){
+    
+    var s1 = $.trim(toggle24hr1(data['start'], 1));
+    var e1 = $.trim(toggle24hr1(data['end'], 1));
+    
+    var st = new Date('2000-01-01T' + s1);
+    var et = new Date('2000-01-01T' + e1);
+
+    var s1_array = s1.split(":");
+    var e1_array = e1.split(":");
+
+    var s = parseInt(s1_array[0]);// st.getHours();
+    var e = parseInt(e1_array[0]); //et.getHours();
+    if (et < st){
+        alert("Shft End Time must be greater than Start Time");
+        return;
+    }
+
+    // if (st.getMinutes() > 30) s = s + 1;
+    // if (et.getMinutes() > 30) e = e + 1;
+    s = parseFloat("" + s + "." + parseInt(s1_array[1]));
+    e = parseFloat("" + e + "." + parseInt(e1_array[1]))
+
+    var g = [];
+    
+    for (var i = 0; i < data_array.length - 1; i ++){
+        var item = data_array[i];
+        var item1 = data_array[i + 1];
+        g.push(item);
+        if (s > item && s < item1){
+            g.push(s);
+        }
+        if (e != s && e > item && e < item1){
+            g.push(e);
+        }
+    }
+
+    g.push(24);
+
+    return g;
+}
+
+// Unused function
+function getGraphNone(){
+    
+    var g = [{enable:0, width:0, margin:0, reversed:0}, {enable:0, width:0, margin:0, reversed:0}, {enable:0, width:0, margin:0, reversed:0}, {enable:0, width:0, margin:0, reversed:0}];
+    return g;
+}
+
+// Build Shift Table based on Shift array data
+function shift_table_build(){
+
+    buildGraphData();
+
+    var html = '';
+    $(".shift-table-r tbody").html("");
+    for (var i = 0; i < shifts_table_data.length; i ++){
+        html = '';
+        var item = shifts_table_data[i];
+        html += '<tr>' +
+                    '<td>' + (i + 1) +'</td>' +
+                    '<td class="'+item['roles']['class']+'">' + item['roles']['html'] +
+                    '</td>' +
+                    '<td class="' + item['shift_time']['class'] + '">'+item['shift_time']['html']+'</td>' +
+                    '<td class="' + item['days']['class']+'">'+item['days']['html']+'</td>' +
+                    '<td>'+item['emp_count']+'</td>' +
+                    '<td><a class="edit-shift" data-id="' + i +'">Edit</a></td>' +
+                  '</tr>';
+        $(".shift-table-r tbody").append(html);
+    }
+
+    $(".edit-shift").click(function(){
+
+        $("#add_shift").html("Update Shift");
+        $("#add_shift").attr("flag", 1);
+        $("#add_shift").attr("data-id", $(this).attr("data-id"))
+
+        populate_data($(this).attr("data-id"));
+
+          $('html, body').animate({
+                scrollTop: $("#name").offset().top + 20
+          }, 1000);
+
+    })
+
+    graph_table();
+}
+
+/* Add the new shift data from form elements into the shift table data array
+
+    @param 
+    f==0: add shift data
+    f==1: update shift data
+*/
+function add_shift_data(f){
+    var lastIndex = parseInt($.trim($(".shift-table-r tbody tr:last-child td").html()));
+    if ($(".shift-table-r tbody tr").length == 0) lastIndex = 0
+    lastIndex += 1;
+    var shift_day = $("#shift_days").val();
+    if (shift_day == null || shift_day.length == 0){
+         $("#confirm-modal .modal-body").html("Please select shift days");
+         $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+
+        $("#yes-btn").click(function(){
+            $("#confirm-modal").modal("hide");
+        })
+        return;
+    }
+
+    var shift_day_td_class = "";
+    var shift_day_html = '';
+    var shift_day_values = '';
+
+    for (var i = 0; i < shift_day.length; i ++){
+        if (i == 3){
+            shift_day_html += "<span class='block-disp'>";
+        }
+        shift_day_html += shift_day[i] + ", "
+        shift_day_values += shift_day[i]+","
+    }
+    shift_day_html = shift_day_html.substr(0, shift_day_html.length - 2 );
+    shift_day_values = shift_day_values.substr(0, shift_day_values.length - 1);
+    if (shift_day.length > 3) {
+        shift_day_html += "</span>";
+        shift_day_td_class = "dobule-cell-td";
+    }
+
+    var roles = $.trim($(".rolese-select .multiselect-selected-text").html()).split(",");//$("#roles").val();
+    if (roles == null || roles.length == 0){
+        $("#confirm-modal .modal-body").html("Please select Roles");
+         $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+
+        $("#yes-btn").click(function(){
+            $("#confirm-modal").modal("hide");
+        })
+        return;
+    }
+    var roles_html = '';
+    var roles_td_class = ''
+    var contain = false;
+    var roles_value = '';
+    for (var i = 0; i < roles.length; i ++){
+        if (roles[i].includes('Physical')){
+            contain = true;
+        }
+        roles_value += $.trim(roles[i])+",";
+    }
+    roles_value = roles_value.substr(0, roles_value.length - 1);
+    if (contain && roles.length > 1){
+        roles_td_class = "dobule-cell";
+    }
+
+    for (var i = 0; i < roles.length; i ++){
+        roles_html += roles[i];
+        if (i < roles.length - 1){
+            roles_html += ",";
+        }
+        if (roles[i].includes("Physical") && i < roles.length - 1){
+            roles_html += "<br>";
+        }
+
+        if (i < roles.length - 1 && roles[i + 1].includes("Physical")){
+            roles_html += "<br>";
+        }
+    }
+
+    var shift_time_html = '';
+    var shift_starts_at_time = $("#shift_starts_at_time").val();
+    var shift_ends_at_time = $("#shift_ends_at_time").val();
+    var shift_time_td_class = "";
+
+    if (shift_starts_at_time == ""){
+        $("#confirm-modal .modal-body").html("Please Input Shift Starts Time.");
+         $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+
+        $("#yes-btn").click(function(){
+            $("#confirm-modal").modal("hide");
+        })
+        return;
+    }
+
+    if (shift_ends_at_time == ""){
+        $("#confirm-modal .modal-body").html("Please Input Shift End Time.");
+         $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+
+        $("#yes-btn").click(function(){
+            $("#confirm-modal").modal("hide");
+        })
+        return;
+    }
+
+    var s1 = $.trim(toggle24hr1($.trim(shift_starts_at_time), 1));
+    var e1 = $.trim(toggle24hr1($.trim(shift_ends_at_time), 1));
+    var st = new Date('1970-01-01T' + s1);
+    var et = new Date('1970-01-01T' + e1);
+    s = st.getHours();
+    e = et.getHours();
+    if (et == st){
+        $("#confirm-modal .modal-body").html("Shft End Time must be greater or less than Start Time");
+        $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+
+        $("#yes-btn").click(function(){
+            $("#confirm-modal").modal("hide");
+        })
+        return;
+    }
+
+   shift_time_html += shift_starts_at_time + " - " + shift_ends_at_time;
+
+
+   var emp_count_html = "";
+   var min_emp = $("#min_employees").val();
+   var max_emp = $("#max_employees").val();
+   if (min_emp == "" || max_emp == ""){
+        $("#confirm-modal .modal-body").html("Please Input Employee Value.");
+         $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+
+        $("#yes-btn").click(function(){
+            $("#confirm-modal").modal("hide");
+        })
+        return;
+   }
+   min_emp = parseInt(min_emp);
+   max_emp = parseInt(max_emp);
+
+   emp_count_html += min_emp + "-" + max_emp;
+
+    var item = {roles:{class:roles_td_class, html:roles_html,values:roles_value},
+                shift_time:{class:"", html: shift_time_html, values:[{start:shift_starts_at_time, end: shift_ends_at_time}]},
+                days:{class:shift_day_td_class, html:shift_day_html,values:shift_day_values},
+                emp_count:emp_count_html,
+                emp_min:min_emp,
+                emp_max:max_emp
+                    }
+    
+    var dif_idx = -1;
+    if (f == 0){
+        for (var i = 0; i < shifts_table_data.length; i ++){
+            var t = shifts_table_data[i];
+            if (item['roles']['values'] == t['roles']['values'] &&
+                t['days']['values'].includes(item['days']['values']) &&
+                item['emp_min'] == t['emp_min'] && 
+                item['emp_max'] == t['emp_max']){
+
+                var sh = t['shift_time']['values'];
+                for (var l = 0; l < sh.length;  l ++){
+                    if (shift_starts_at_time == sh[l]['start'] &&
+                        shift_ends_at_time == sh[l]['end']){    // if the added data is exist, return.
+                        $("#confirm-modal .modal-body").html("Already Exsit!");
+                         $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+
+                        $("#yes-btn").click(function(){
+                            $("#confirm-modal").modal("hide");
+                        })
+                        return;
+                    }
+                }
+
+                shifts_table_data[i]['shift_time']['class'] = "dobule-cell";
+                shifts_table_data[i]['shift_time']['html'] += '<br>' + item['shift_time']['html'];
+                shifts_table_data[i]['shift_time']['values'].push(item['shift_time']['values'][0]);
+
+                shift_table_build();         
+                clear_shift_form();
+                return;
+            }
+        }
+
+        for (var i = 0; i < shifts_table_data.length; i ++){
+            var t = shifts_table_data[i];
+            if (item['roles']['values'] == t['roles']['values'] &&
+                item['emp_min'] == t['emp_min'] && 
+                item['emp_max'] == t['emp_max']){  //if same role, emp count, time exist, update the day.
+
+                var sh = t['shift_time']['values'];
+                var hasTime = false;
+                for (var l = 0; l < sh.length;  l ++){
+                    if (shift_starts_at_time == sh[l]['start'] ||
+                        shift_ends_at_time == sh[l]['end']){
+                        hasTime = true;
+                    }
+                }
+
+                if (hasTime){
+
+                    var hasDay = false;
+                    var sa = t['days']['values'].split(",");
+                    var le = sa.length;
+                    for ( var u = 0; u < shift_day.length; u ++){
+                        if (t['days']['values'].includes(shift_day[u])){
+                            continue;
+                        }
+                        sa.push(shift_day[u]);
+                    }
+
+                    if (sa.length == le){
+                        $("#confirm-modal .modal-body").html("Already Exsit!");
+                         $("#confirm-modal").modal({backdrop: 'static', keyboard: false});
+
+                        $("#yes-btn").click(function(){
+                            $("#confirm-modal").modal("hide");
+                        })
+                        return;
+                    }
+
+                    shift_day_td_class = "";
+                    shift_day_html = '';
+                    shift_day_values = '';
+
+                    for (var w = 0; w < sa.length; w ++){
+                        if (w == 3){
+                            shift_day_html += "<span class='block-disp'>";
+                        }
+                        shift_day_html += sa[w] + ","
+                        shift_day_values += sa[w]+","
+                    }
+                    shift_day_html = shift_day_html.substr(0, shift_day_html.length - 1 );
+                    shift_day_values = shift_day_values.substr(0, shift_day_values.length - 1);
+                    if (sa.length > 3) {
+                        shift_day_html += "</span>";
+                        shift_day_td_class = "dobule-cell-td";
+                    }
+
+                    shifts_table_data[i]['days']['class'] = shift_day_td_class;
+                    shifts_table_data[i]['days']['html'] = shift_day_html;
+                    shifts_table_data[i]['days']['values'] = shift_day_values;
+
+                    shift_table_build();         
+                    clear_shift_form();
+                    return;
+                }
+            }
+        }
+    }
+
+    if (f == 0){
+        shifts_table_data.push(item);
+    }else{
+        var idx = $("#add_shift").attr("data-id");
+
+        var timeIdx = parseInt($(".time-range-area").attr("data-id"));
+        shifts_table_data[parseInt(idx)]['shift_time']['values'][timeIdx] = {start:shift_starts_at_time, end: shift_ends_at_time};
+        var sh = shifts_table_data[parseInt(idx)]['shift_time'];
+        var sh_h = '';
+        var sh_c = '';
+        var sh_v = [];
+        for (var t = 0; t < sh['values'].length; t ++){
+            var sh_i = sh['values'][t];
+            sh_h += sh_i['start'] + " - " + sh_i['end'];
+            if (sh['values'].length > 0 && t < sh['values'].length - 1 ){
+                sh_h += "<br>";
+            }
+        }
+
+        shifts_table_data[parseInt(idx)]['shift_time']['html'] = sh_h;
+        shifts_table_data[parseInt(idx)]['roles'] = item['roles'];
+        shifts_table_data[parseInt(idx)]['days'] = item['days'];
+        shifts_table_data[parseInt(idx)]['emp_count'] = item['emp_count'];
+        shifts_table_data[parseInt(idx)]['emp_min'] = item['emp_min'];
+        shifts_table_data[parseInt(idx)]['emp_max'] = item['emp_max'];
+    }
+
+    shift_table_build();         
+    clear_shift_form();
+}
+
+
+// Draw the graph based on graph table data
+function graph_table(){
+
+    var mA = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    var mA_idx = parseInt($("#day-title").attr("data-id"));
+    var month = mA[mA_idx];
+
+    var table_html = '';
+
+    var color = ["#94b0b7", "#7697a0", "#4a707a", "#44586a", "#0b212f", "#010812","#0b212f", "#010812","#44586a"];
+    var disabled_color = "#ddddda";
+
+    for (var i = 0; i < graph_table_data[month].length; i ++){
+        var item = graph_table_data[month][i];
+
+        var divHtml = '';
+        var g = getGraphPointArray(item['graph']);
+        var tdHtml = '';
+
+        console.log(g);
+
+        for (var j = 0; j < 4; j ++){
+
+            var td_array = g[j];
+            divHtml = '<div class="shift-bar-container">';
+
+            for (var q = 0; q < td_array.length; q ++){
+                var td_item_array = td_array[q];
+                var bar_color = disabled_color;
+                if (td_item_array[2] == 1) bar_color = color[i%8];
+                var width = (td_item_array[1] - td_item_array[0]) * 100 / 6;
+                divHtml += '<div class="bar-disabled" style="background:' + bar_color +';width:' + width + '%;">' + '</div>';
+            }
+
+            divHtml += '</div>';
+
+            tdHtml += '<td>' + divHtml + '</td>';
+        }
+
+        table_html += '<tr>' + 
+                        '<td>' + (i + 1) + '</td>' + 
+                        '<td class="'+item['class']+ '">' + item['html'] +
+                        '</td>' +
+                        tdHtml +
+                      '</tr>';
+                      
+    }
+    $(".graph-table-r tbody").html(table_html);
+}
+
+
+/*
+    If selected time range exist in shift day, return 1. Else, return 0;
+    If 1, graph has the color. Else graph has no color.
+*/
+function getGraphPointArray(data){
+    var x = [[0,6], [6,12], [12,18], [18,24]];
+    var workday = data['workdays'];
+    var series = data['series'];
+
+    var result = [[],[],[],[]];
+    for (var i = 0; i < x.length; i ++){
+        var x_item = x[i];
+        var start = x_item[0];
+        var end = x_item[1];
+
+        for (var k = 0; k < series.length - 1; k ++){
+
+            var s = series[k];
+            var e = series[k + 1];
+
+            var work_range = 0;
+            for (var j = 0; j < workday.length; j ++){
+                var s1 = workday[j][0];
+                var e1 = workday[j][1];
+
+                if (s >= s1 && e <= e1) {
+                    work_range = 1;
+                }
+            }
+
+            if (s >= start && e <= end){
+                result[i].push([s,e,work_range]);
+            }
+        }
+    }
+    return result;
+}
+
+// if shift start time is greater than end time, add one more day.
+function add_one_day(data){
+    var ma = {Mon:0, Tue:1, Wed:2, Thu:3, Fri:4, Sat:5, Sun:6};
+    var ma_a = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+    // var add = ma[data[data.length - 1]] + 1;
+    // if (add > 6) {
+    //     add = 6;
+    //     return "Null";
+    // }
+
+    var result = [];
+    for (var i = 0; i < data.length; i ++){
+        var item = data[i];
+        var exist = false;
+        for (var j = 0; j < result.length; j ++){
+            if (item == result[j]) exist = true;
+        }
+
+        if (exist == false){
+            result.push(item);
+        }
+        var add = ma[item] + 1;
+        if (add > 6){
+            result.push("Null");
+        }else{
+            result.push(ma_a[add])
+        }
+    }
+
+    return result;
+}
+
+// Get position of selected day from Shift day array
+function getPosofWeek(w, d, o){
+    var re = "middle";
+    var l = d.length;
+
+    var exist = false;
+    if (o.includes(w) == true) exist = true;
+
+    if (exist == false) {
+        re = "end";
+        return re;
+    }
+
+    // if (d[d.length - 1] == "Null") l = d.length - 1;
+    for (var i = 0; i < d.length; i ++){
+        if (w == d[i] && i == 0) re = "start";
+        if (w == d[i] && i ==0 && w == "Mon" && d[l - 1] == "Null") re = "middle";
+        if ( i > 0 && w != "Mon" && existBeforeDay(w, d, o) == false) re = "start";
+        if (w == d[i] && i == l - 1) re = "end";
+    }
+
+    return re;
+}
+
+function existBeforeDay(w, d, o){
+    var week_array = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+    var beforeDay = "";
+    for (var i = 1; i < week_array.length; i ++){
+        if (w == week_array[i]) beforeDay = week_array[ i - 1];
+    }
+
+    for (var i = 0; i < d.length; i ++){
+        if (beforeDay == d[i] && o.includes(beforeDay)) return true;
+    }
+
+    return false;
+}
+
+// From the string of Time, get the float value
+// For example, if time is "07:32", return 7.32
+function getValFromTime(time){
+
+    var time1 = $.trim(toggle24hr1(time, 1));
+    var s1_array = time1.split(":");
+
+    s = parseInt(s1_array[0]);// st.getHours();
+    s1 = parseInt(s1_array[1]);
+
+    if (parseInt(s1_array[1]) > 55) {
+        s = s + 1;
+        s1 = 0;
+    }
+
+    return parseFloat(s + "." + s1);
+}
+
+// convert time string to 12 hour format or 24 hour format.
+// onoff = 1: 24 format, 0: 12 format
+function toggle24hr1(time, onoff){
+    if(onoff==undefined) onoff = isNaN(time.replace(':',''))//auto-detect format
+    var pm = time.toString().toLowerCase().indexOf('pm')>-1 //check if 'pm' exists in the time string
+    time = time.toString().toLowerCase().replace(/[ap]m/,'').split(':') //convert time to an array of numbers
+    time[0] = Number(time[0])
+    if(onoff){//convert to 24 hour:
+        if((pm && time[0]!=12)) time[0] += 12
+        else if(!pm && time[0]==12) time[0] = '00'  //handle midnight
+        if(String(time[0]).length==1) time[0] = '0'+time[0] //add leading zeros if needed
+    }else{ //convert to 12 hour:
+        pm = time[0]>=12
+        if(!time[0]) time[0]=12 //handle midnight
+        else if(pm && time[0]!=12) time[0] -= 12
+        if(String(time[0]).length==1) time[0] = '0'+time[0] //add leading zeros if needed
+    }
+    return onoff ? time.join(':') : time.join(':')+(pm ? ' PM' : ' AM')
+}
+</script>
+</html>
